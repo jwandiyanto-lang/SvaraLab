@@ -1,0 +1,835 @@
+{
+  "metadata": {
+    "mode": "listen",
+    "totalItems": 70,
+    "topicsPerSession": 1,
+    "minutesPerTopic": 5,
+    "version": "1.0.0",
+    "lastUpdated": "2026-01-06"
+  },
+  "topics": [
+    {
+      "id": "lis-001",
+      "title": "Morning Greeting",
+      "level": "beginner",
+      "category": "conversation",
+      "duration": 30,
+      "audioText": "Good morning! How are you today? I hope you slept well. The weather is nice today, isn't it?",
+      "questions": [
+        {"prompt": "Say hello back", "expectedAnswer": "Good morning", "acceptedVariations": ["Good morning", "Morning", "Hello", "Hi"]},
+        {"prompt": "Answer how you are", "expectedAnswer": "I am fine thank you", "acceptedVariations": ["I'm fine", "I'm good", "Good", "Fine thanks"]}
+      ]
+    },
+    {
+      "id": "lis-002",
+      "title": "At the Coffee Shop",
+      "level": "beginner",
+      "category": "conversation",
+      "duration": 45,
+      "audioText": "Hello! Welcome to our coffee shop. What would you like to order today? We have coffee, tea, and fresh juice. Would you like something to eat as well?",
+      "questions": [
+        {"prompt": "Order a drink", "expectedAnswer": "I would like a coffee please", "acceptedVariations": ["Coffee please", "I want coffee", "Can I have coffee", "One coffee"]},
+        {"prompt": "Say no thank you to food", "expectedAnswer": "No thank you", "acceptedVariations": ["No thanks", "Just the drink", "I'm good", "No food"]}
+      ]
+    },
+    {
+      "id": "lis-003",
+      "title": "Asking for Directions",
+      "level": "beginner",
+      "category": "conversation",
+      "duration": 40,
+      "audioText": "Excuse me, do you need help? The train station is straight ahead. Walk for about five minutes. It's on your left. You can't miss it.",
+      "questions": [
+        {"prompt": "Thank them for help", "expectedAnswer": "Thank you very much", "acceptedVariations": ["Thank you", "Thanks a lot", "Thanks", "Thank you so much"]}
+      ]
+    },
+    {
+      "id": "lis-004",
+      "title": "Weather Chat",
+      "level": "beginner",
+      "category": "conversation",
+      "duration": 35,
+      "audioText": "It's a beautiful day today! The sun is shining and it's not too hot. Do you like this weather? I think it's perfect for a walk in the park.",
+      "questions": [
+        {"prompt": "Say if you like the weather", "expectedAnswer": "Yes I like it", "acceptedVariations": ["Yes I like it", "Yes it's nice", "Yes beautiful", "I love it"]}
+      ]
+    },
+    {
+      "id": "lis-005",
+      "title": "Simple Introduction",
+      "level": "beginner",
+      "category": "conversation",
+      "duration": 40,
+      "audioText": "Hi there! My name is Sarah. I'm from Australia. I work as a teacher. What about you? What's your name and where are you from?",
+      "questions": [
+        {"prompt": "Introduce yourself", "expectedAnswer": "My name is", "acceptedVariations": ["My name is", "I'm", "I am", "Hello my name is"]},
+        {"prompt": "Say where you're from", "expectedAnswer": "I am from Indonesia", "acceptedVariations": ["I'm from Indonesia", "I come from Indonesia", "From Indonesia", "Indonesia"]}
+      ]
+    },
+    {
+      "id": "lis-006",
+      "title": "Shopping Numbers",
+      "level": "beginner",
+      "category": "conversation",
+      "duration": 35,
+      "audioText": "This shirt costs twenty five dollars. We also have pants for thirty dollars. If you buy both, you get a ten percent discount. Would you like to buy anything?",
+      "questions": [
+        {"prompt": "Ask about the price again", "expectedAnswer": "How much is the shirt", "acceptedVariations": ["How much", "What's the price", "How much does it cost", "The price"]}
+      ]
+    },
+    {
+      "id": "lis-007",
+      "title": "At the Restaurant",
+      "level": "beginner",
+      "category": "conversation",
+      "duration": 45,
+      "audioText": "Good evening! Table for two? Please follow me. Here's your menu. Today's special is grilled fish with vegetables. Can I get you something to drink while you decide?",
+      "questions": [
+        {"prompt": "Order a drink", "expectedAnswer": "Water please", "acceptedVariations": ["Water please", "Just water", "Some water", "I'll have water"]}
+      ]
+    },
+    {
+      "id": "lis-008",
+      "title": "Phone Number Exchange",
+      "level": "beginner",
+      "category": "conversation",
+      "duration": 30,
+      "audioText": "Can I have your phone number? I'll call you tomorrow about the meeting. My number is 0812-3456-7890. What's yours?",
+      "questions": [
+        {"prompt": "Give a phone number", "expectedAnswer": "My number is", "acceptedVariations": ["My number is", "It's", "My phone number"]}
+      ]
+    },
+    {
+      "id": "lis-009",
+      "title": "Time and Schedule",
+      "level": "beginner",
+      "category": "conversation",
+      "duration": 35,
+      "audioText": "The meeting starts at nine o'clock in the morning. It will last about one hour. After that, we'll have a short break. Then lunch is at twelve.",
+      "questions": [
+        {"prompt": "Confirm the meeting time", "expectedAnswer": "Nine o'clock", "acceptedVariations": ["Nine o'clock", "At nine", "9 AM", "Nine in the morning"]}
+      ]
+    },
+    {
+      "id": "lis-010",
+      "title": "Family Talk",
+      "level": "beginner",
+      "category": "conversation",
+      "duration": 40,
+      "audioText": "I have a big family. I have two brothers and one sister. My parents live nearby. We get together every Sunday for dinner. Do you have any siblings?",
+      "questions": [
+        {"prompt": "Answer about your siblings", "expectedAnswer": "I have", "acceptedVariations": ["I have", "Yes I have", "No I don't", "I'm an only child"]}
+      ]
+    },
+    {
+      "id": "lis-011",
+      "title": "Airport Announcement",
+      "level": "beginner",
+      "category": "announcement",
+      "duration": 45,
+      "audioText": "Attention please. Flight GA 123 to Singapore is now boarding at gate 5. Please have your boarding pass and passport ready. Thank you.",
+      "questions": [
+        {"prompt": "What gate number", "expectedAnswer": "Gate five", "acceptedVariations": ["Gate five", "Gate 5", "Five", "Number 5"]}
+      ]
+    },
+    {
+      "id": "lis-012",
+      "title": "Store Closing",
+      "level": "beginner",
+      "category": "announcement",
+      "duration": 30,
+      "audioText": "Dear customers, our store will be closing in fifteen minutes. Please bring your items to the checkout counter. Thank you for shopping with us today.",
+      "questions": [
+        {"prompt": "How many minutes until closing", "expectedAnswer": "Fifteen minutes", "acceptedVariations": ["Fifteen minutes", "15 minutes", "Fifteen"]}
+      ]
+    },
+    {
+      "id": "lis-013",
+      "title": "Train Delay",
+      "level": "beginner",
+      "category": "announcement",
+      "duration": 35,
+      "audioText": "We apologize for the delay. The train to Central Station will arrive in approximately ten minutes. We thank you for your patience.",
+      "questions": [
+        {"prompt": "How long is the delay", "expectedAnswer": "Ten minutes", "acceptedVariations": ["Ten minutes", "10 minutes", "About ten minutes"]}
+      ]
+    },
+    {
+      "id": "lis-014",
+      "title": "Daily Routine",
+      "level": "beginner",
+      "category": "story",
+      "duration": 60,
+      "audioText": "Every morning, I wake up at six o'clock. I take a shower and eat breakfast. Then I go to work by bus. I usually arrive at the office at eight. I work until five in the afternoon.",
+      "questions": [
+        {"prompt": "What time does the person wake up", "expectedAnswer": "Six o'clock", "acceptedVariations": ["Six o'clock", "At six", "6 AM", "Six in the morning"]},
+        {"prompt": "How do they go to work", "expectedAnswer": "By bus", "acceptedVariations": ["By bus", "They take the bus", "Bus"]}
+      ]
+    },
+    {
+      "id": "lis-015",
+      "title": "Hobby Discussion",
+      "level": "beginner",
+      "category": "conversation",
+      "duration": 45,
+      "audioText": "In my free time, I like to read books and watch movies. I also enjoy cooking. On weekends, I sometimes play football with my friends. What do you like to do?",
+      "questions": [
+        {"prompt": "Name one hobby you have", "expectedAnswer": "I like", "acceptedVariations": ["I like", "I enjoy", "My hobby is", "I love"]}
+      ]
+    },
+    {
+      "id": "lis-016",
+      "title": "Hotel Check-in",
+      "level": "elementary",
+      "category": "conversation",
+      "duration": 60,
+      "audioText": "Good evening, welcome to the Grand Hotel. Do you have a reservation? I see, the booking is for three nights. Your room is on the fifth floor, room 512. Breakfast is served from 7 to 10 AM. Here's your key card. Do you need help with your luggage?",
+      "questions": [
+        {"prompt": "Say your room number", "expectedAnswer": "Room 512", "acceptedVariations": ["Room 512", "Five one two", "512"]},
+        {"prompt": "Ask about breakfast time", "expectedAnswer": "What time is breakfast", "acceptedVariations": ["What time is breakfast", "When is breakfast", "Breakfast time"]}
+      ]
+    },
+    {
+      "id": "lis-017",
+      "title": "Doctor's Office",
+      "level": "elementary",
+      "category": "conversation",
+      "duration": 75,
+      "audioText": "Hello, how can I help you today? I see you've been having headaches. How long has this been going on? About a week? Okay, I'll prescribe some medicine. Take it twice a day, after meals. If it doesn't get better in three days, please come back.",
+      "questions": [
+        {"prompt": "Say how you feel", "expectedAnswer": "I have a headache", "acceptedVariations": ["I have a headache", "My head hurts", "I've been having headaches", "Headache"]},
+        {"prompt": "Ask how to take the medicine", "expectedAnswer": "How should I take it", "acceptedVariations": ["How do I take it", "When should I take it", "How often"]}
+      ]
+    },
+    {
+      "id": "lis-018",
+      "title": "Job Interview Basics",
+      "level": "elementary",
+      "category": "conversation",
+      "duration": 90,
+      "audioText": "Thank you for coming in today. Please tell me about yourself. What experience do you have? Why are you interested in this position? When would you be able to start if we offered you the job?",
+      "questions": [
+        {"prompt": "Introduce yourself briefly", "expectedAnswer": "My name is and I am", "acceptedVariations": ["My name is", "I am", "I have experience in"]},
+        {"prompt": "Say when you can start", "expectedAnswer": "I can start", "acceptedVariations": ["I can start", "I'm available", "Immediately", "In two weeks"]}
+      ]
+    },
+    {
+      "id": "lis-019",
+      "title": "Booking a Table",
+      "level": "elementary",
+      "category": "conversation",
+      "duration": 50,
+      "audioText": "Thank you for calling Milano Restaurant. How can I help you? A reservation? For how many people? And what date and time would you like? Let me check... Yes, we have a table available. May I have your name please?",
+      "questions": [
+        {"prompt": "Make a reservation for 4 people", "expectedAnswer": "For four people please", "acceptedVariations": ["For four people", "A table for four", "Four people", "Party of four"]},
+        {"prompt": "Give your name", "expectedAnswer": "My name is", "acceptedVariations": ["My name is", "It's", "Under the name"]}
+      ]
+    },
+    {
+      "id": "lis-020",
+      "title": "Public Transport",
+      "level": "elementary",
+      "category": "instruction",
+      "duration": 60,
+      "audioText": "To get to the museum, take bus number 42 from this stop. It runs every fifteen minutes. Get off at Park Street, the fourth stop. The museum is a five-minute walk from there. Turn right and you'll see it on your left.",
+      "questions": [
+        {"prompt": "Which bus to take", "expectedAnswer": "Bus number 42", "acceptedVariations": ["Bus 42", "Number 42", "The 42"]},
+        {"prompt": "Which stop to get off", "expectedAnswer": "Park Street", "acceptedVariations": ["Park Street", "The fourth stop", "At Park Street"]}
+      ]
+    },
+    {
+      "id": "lis-021",
+      "title": "Making Plans",
+      "level": "elementary",
+      "category": "conversation",
+      "duration": 55,
+      "audioText": "What are you doing this weekend? There's a new movie at the cinema. Would you like to watch it together? We could meet at around 3 PM. After the movie, maybe we can grab dinner somewhere?",
+      "questions": [
+        {"prompt": "Accept the invitation", "expectedAnswer": "Yes I'd love to", "acceptedVariations": ["Yes I'd love to", "Sure sounds good", "Yes let's do it", "That sounds great"]},
+        {"prompt": "Suggest a meeting place", "expectedAnswer": "Let's meet at", "acceptedVariations": ["Let's meet at", "How about meeting at", "We could meet at"]}
+      ]
+    },
+    {
+      "id": "lis-022",
+      "title": "Flight Information",
+      "level": "elementary",
+      "category": "announcement",
+      "duration": 50,
+      "audioText": "Ladies and gentlemen, this is your captain speaking. We are currently flying at 35,000 feet. Our estimated arrival time in Tokyo is 3:45 PM local time. The weather in Tokyo is sunny with a temperature of 22 degrees. Thank you for flying with us.",
+      "questions": [
+        {"prompt": "What is the arrival time", "expectedAnswer": "3:45 PM", "acceptedVariations": ["3:45 PM", "Quarter to four", "Three forty-five"]},
+        {"prompt": "What is the weather in Tokyo", "expectedAnswer": "Sunny", "acceptedVariations": ["Sunny", "It's sunny", "Sunny and warm"]}
+      ]
+    },
+    {
+      "id": "lis-023",
+      "title": "Product Return",
+      "level": "elementary",
+      "category": "conversation",
+      "duration": 65,
+      "audioText": "Good morning. I'd like to return this shirt. Oh, what's wrong with it? I see, it's the wrong size. Do you have your receipt? Great. Would you like an exchange or a refund? We can process that for you right away.",
+      "questions": [
+        {"prompt": "Explain the problem", "expectedAnswer": "It's the wrong size", "acceptedVariations": ["Wrong size", "It doesn't fit", "Too small", "Too big"]},
+        {"prompt": "Ask for a refund", "expectedAnswer": "I'd like a refund please", "acceptedVariations": ["A refund please", "I want a refund", "Can I get a refund"]}
+      ]
+    },
+    {
+      "id": "lis-024",
+      "title": "Gym Tour",
+      "level": "elementary",
+      "category": "instruction",
+      "duration": 70,
+      "audioText": "Welcome to our fitness center. Let me show you around. Here's the cardio area with treadmills and bikes. The weight room is over there. We have yoga classes on Mondays and Thursdays at 6 PM. The membership is 50 dollars per month.",
+      "questions": [
+        {"prompt": "Ask about classes", "expectedAnswer": "What classes do you have", "acceptedVariations": ["What classes do you have", "When are the classes", "What classes are available"]},
+        {"prompt": "Ask about the price", "expectedAnswer": "How much is the membership", "acceptedVariations": ["How much is it", "What's the cost", "How much per month"]}
+      ]
+    },
+    {
+      "id": "lis-025",
+      "title": "Birthday Party",
+      "level": "elementary",
+      "category": "conversation",
+      "duration": 55,
+      "audioText": "I'm having a birthday party next Saturday at my house. It starts at 7 PM. There will be food, music, and games. Can you come? You can bring a friend if you want. I really hope you can make it!",
+      "questions": [
+        {"prompt": "Accept the invitation", "expectedAnswer": "Yes I'd love to come", "acceptedVariations": ["Yes I'll come", "Sure I'll be there", "I'd love to", "Count me in"]},
+        {"prompt": "Ask what to bring", "expectedAnswer": "Should I bring anything", "acceptedVariations": ["Should I bring something", "Can I bring anything", "What should I bring"]}
+      ]
+    },
+    {
+      "id": "lis-026",
+      "title": "Technology Help",
+      "level": "elementary",
+      "category": "instruction",
+      "duration": 60,
+      "audioText": "To connect to the WiFi, go to your settings. Select the network called 'Office WiFi'. Enter the password: capital A, lowercase b, c, 1, 2, 3. Click connect. If it doesn't work, try restarting your device.",
+      "questions": [
+        {"prompt": "Ask for the password again", "expectedAnswer": "What is the password", "acceptedVariations": ["What's the password", "Can you repeat the password", "Password please"]},
+        {"prompt": "Say it's not working", "expectedAnswer": "It's not working", "acceptedVariations": ["It doesn't work", "It's not connecting", "I can't connect"]}
+      ]
+    },
+    {
+      "id": "lis-027",
+      "title": "Apartment Viewing",
+      "level": "intermediate",
+      "category": "conversation",
+      "duration": 90,
+      "audioText": "This apartment is 60 square meters with two bedrooms. The rent is 800 dollars per month, utilities not included. It comes furnished with basic appliances. There's a security deposit of one month's rent. The lease is for a minimum of one year. Would you like to see the bedrooms?",
+      "questions": [
+        {"prompt": "Ask about utilities", "expectedAnswer": "Are utilities included", "acceptedVariations": ["Are utilities included", "Is electricity included", "What about utilities"]},
+        {"prompt": "Ask about the deposit", "expectedAnswer": "How much is the deposit", "acceptedVariations": ["How much is the deposit", "What's the security deposit", "Deposit amount"]}
+      ]
+    },
+    {
+      "id": "lis-028",
+      "title": "Bank Account",
+      "level": "intermediate",
+      "category": "conversation",
+      "duration": 85,
+      "audioText": "Good afternoon. I'd like to open a savings account. We have several options. Our basic account has no monthly fee but requires a minimum balance of 500 dollars. The premium account offers higher interest rates but has a 10 dollar monthly fee. What type of account would suit you best?",
+      "questions": [
+        {"prompt": "Ask about interest rates", "expectedAnswer": "What are the interest rates", "acceptedVariations": ["What are the interest rates", "How much interest", "What's the interest rate"]},
+        {"prompt": "Choose an account type", "expectedAnswer": "I'd like the basic account", "acceptedVariations": ["Basic account please", "I'll take the basic", "The basic one"]}
+      ]
+    },
+    {
+      "id": "lis-029",
+      "title": "Conference Call",
+      "level": "intermediate",
+      "category": "conversation",
+      "duration": 100,
+      "audioText": "Good morning everyone. Let's get started with our weekly update. First, I'd like to discuss the progress on the marketing campaign. The deadline is next Friday. Sarah, can you give us an update on your team's progress? Then we'll move on to budget review.",
+      "questions": [
+        {"prompt": "Ask for clarification on deadline", "expectedAnswer": "Could you clarify the deadline", "acceptedVariations": ["What's the deadline", "When is the deadline", "Which Friday"]},
+        {"prompt": "Offer to contribute", "expectedAnswer": "I can help with that", "acceptedVariations": ["I can help", "I'd be happy to assist", "Let me help with that"]}
+      ]
+    },
+    {
+      "id": "lis-030",
+      "title": "Car Rental",
+      "level": "intermediate",
+      "category": "conversation",
+      "duration": 80,
+      "audioText": "Welcome to Quick Car Rental. What type of vehicle are you looking for? We have economy, midsize, and SUV options. How many days do you need it? I'll also need your driver's license and credit card. Do you want full insurance coverage?",
+      "questions": [
+        {"prompt": "Request a specific car type", "expectedAnswer": "I'd like an SUV please", "acceptedVariations": ["I need an SUV", "An SUV please", "Can I have the SUV"]},
+        {"prompt": "Ask about insurance options", "expectedAnswer": "What insurance options do you have", "acceptedVariations": ["What insurance do you have", "Tell me about the insurance", "What does insurance cover"]}
+      ]
+    },
+    {
+      "id": "lis-031",
+      "title": "Project Update",
+      "level": "intermediate",
+      "category": "conversation",
+      "duration": 95,
+      "audioText": "I wanted to give you an update on the project. We've completed 70 percent of the work. However, we're facing some challenges with the software integration. We might need an additional week to finish. I'd like to propose moving the deadline from March 15th to March 22nd.",
+      "questions": [
+        {"prompt": "Ask about the challenges", "expectedAnswer": "What challenges are you facing", "acceptedVariations": ["What are the challenges", "What's the problem", "What issues have come up"]},
+        {"prompt": "Agree to the extension", "expectedAnswer": "That should be fine", "acceptedVariations": ["That's acceptable", "I can agree to that", "Okay that works"]}
+      ]
+    },
+    {
+      "id": "lis-032",
+      "title": "Restaurant Review",
+      "level": "intermediate",
+      "category": "story",
+      "duration": 90,
+      "audioText": "Last weekend, I tried a new Italian restaurant downtown. The atmosphere was cozy and romantic. I ordered the seafood pasta, which was absolutely delicious. The portion was generous and the price was reasonable - about 25 dollars per person. The service was excellent too. I would definitely recommend it.",
+      "questions": [
+        {"prompt": "Ask for the restaurant name", "expectedAnswer": "What is the name of the restaurant", "acceptedVariations": ["What's the restaurant called", "Which restaurant", "What's the name"]},
+        {"prompt": "Ask about the location", "expectedAnswer": "Where is it located", "acceptedVariations": ["Where is it", "What's the address", "Where exactly downtown"]}
+      ]
+    },
+    {
+      "id": "lis-033",
+      "title": "Insurance Claim",
+      "level": "intermediate",
+      "category": "conversation",
+      "duration": 100,
+      "audioText": "I understand you need to file a claim for a damaged laptop. When did the damage occur? Do you have the receipt or proof of purchase? Our policy covers accidental damage up to 2000 dollars. You'll need to fill out this form and provide photos of the damage. Processing usually takes 5-7 business days.",
+      "questions": [
+        {"prompt": "Describe when it happened", "expectedAnswer": "It happened last week", "acceptedVariations": ["Last week", "It happened yesterday", "Two days ago"]},
+        {"prompt": "Ask about processing time", "expectedAnswer": "How long will it take", "acceptedVariations": ["How long does it take", "When will I hear back", "How many days"]}
+      ]
+    },
+    {
+      "id": "lis-034",
+      "title": "University Lecture",
+      "level": "intermediate",
+      "category": "instruction",
+      "duration": 120,
+      "audioText": "Today we'll be discussing climate change and its impact on agriculture. There are three main points I want to cover. First, rising temperatures. Second, changing rainfall patterns. Third, the adaptation strategies farmers are using. Please take notes as there will be a quiz next week.",
+      "questions": [
+        {"prompt": "Ask a question about the topic", "expectedAnswer": "Could you explain more about adaptation strategies", "acceptedVariations": ["Can you explain more", "What are the adaptation strategies", "Could you give an example"]},
+        {"prompt": "Confirm the quiz date", "expectedAnswer": "Is the quiz next week", "acceptedVariations": ["When is the quiz", "The quiz is next week right", "Quiz next week"]}
+      ]
+    },
+    {
+      "id": "lis-035",
+      "title": "Travel Agency",
+      "level": "intermediate",
+      "category": "conversation",
+      "duration": 85,
+      "audioText": "Welcome to Sunshine Travel. Are you looking for a package tour or planning your own itinerary? I see, you're interested in Bali. We have a 5-day tour that includes flights, hotel, and some activities. It's 1500 dollars per person, all inclusive. Would you like more details?",
+      "questions": [
+        {"prompt": "Ask what's included", "expectedAnswer": "What does the package include", "acceptedVariations": ["What's included", "What activities", "What does it cover"]},
+        {"prompt": "Ask about payment options", "expectedAnswer": "Can I pay in installments", "acceptedVariations": ["What are the payment options", "Can I pay monthly", "Do you offer payment plans"]}
+      ]
+    },
+    {
+      "id": "lis-036",
+      "title": "News Report",
+      "level": "intermediate",
+      "category": "news",
+      "duration": 75,
+      "audioText": "In today's top story, the government has announced new environmental regulations. Companies will be required to reduce carbon emissions by 30 percent over the next five years. Environmental groups have welcomed the decision, while some business leaders express concerns about the economic impact.",
+      "questions": [
+        {"prompt": "Summarize the main point", "expectedAnswer": "Companies must reduce emissions", "acceptedVariations": ["New environmental rules", "Reduce carbon by 30 percent", "Emission reduction required"]}
+      ]
+    },
+    {
+      "id": "lis-037",
+      "title": "Tech Support Call",
+      "level": "intermediate",
+      "category": "conversation",
+      "duration": 90,
+      "audioText": "Thank you for calling Tech Support. I understand your computer won't start. Have you tried holding the power button for 10 seconds? Still nothing? Let's try disconnecting the power cable, waiting 30 seconds, then reconnecting it. If that doesn't work, it might be a hardware issue.",
+      "questions": [
+        {"prompt": "Describe the problem", "expectedAnswer": "My computer won't turn on", "acceptedVariations": ["It won't start", "Computer not starting", "Won't power on"]},
+        {"prompt": "Ask about warranty", "expectedAnswer": "Is this covered under warranty", "acceptedVariations": ["Is it under warranty", "Does warranty cover this", "Am I covered"]}
+      ]
+    },
+    {
+      "id": "lis-038",
+      "title": "Business Negotiation",
+      "level": "advanced",
+      "category": "conversation",
+      "duration": 120,
+      "audioText": "We've reviewed your proposal carefully. While we find the pricing competitive, we'd like to negotiate the payment terms. Our standard practice is 50 percent upfront and 50 percent upon completion. Additionally, we'd like to discuss the timeline. Could you deliver in 8 weeks instead of 12?",
+      "questions": [
+        {"prompt": "Respond to the timeline request", "expectedAnswer": "We could consider 10 weeks", "acceptedVariations": ["We could do 10 weeks", "8 weeks might be possible", "Let me check with my team"]},
+        {"prompt": "Counter the payment terms", "expectedAnswer": "We typically require 30 percent upfront", "acceptedVariations": ["Our standard is 30 percent", "We usually ask for 30 up front", "Can we do 30 70"]}
+      ]
+    },
+    {
+      "id": "lis-039",
+      "title": "Medical Consultation",
+      "level": "advanced",
+      "category": "conversation",
+      "duration": 130,
+      "audioText": "Based on your test results, your cholesterol levels are slightly elevated. I'd recommend some lifestyle modifications - reducing saturated fat intake, increasing physical activity, and considering dietary supplements. We should monitor this over the next three months. If there's no improvement, we may need to discuss medication options.",
+      "questions": [
+        {"prompt": "Ask about specific recommendations", "expectedAnswer": "What specific changes should I make", "acceptedVariations": ["What should I change specifically", "What diet changes", "What exercises do you recommend"]},
+        {"prompt": "Ask about medication side effects", "expectedAnswer": "What are the potential side effects", "acceptedVariations": ["Are there side effects", "What side effects", "Risks of medication"]}
+      ]
+    },
+    {
+      "id": "lis-040",
+      "title": "Investment Advice",
+      "level": "advanced",
+      "category": "conversation",
+      "duration": 140,
+      "audioText": "Given your risk tolerance and investment horizon of 20 years, I'd suggest a diversified portfolio. We could allocate 60 percent to equity funds, 30 percent to bonds, and 10 percent to alternative investments. This should give you growth potential while managing volatility. Would you like to review some specific fund options?",
+      "questions": [
+        {"prompt": "Ask about fees", "expectedAnswer": "What are the management fees", "acceptedVariations": ["What are the fees", "How much are the fees", "What's the cost"]},
+        {"prompt": "Ask about risk", "expectedAnswer": "What is the downside risk", "acceptedVariations": ["What are the risks", "How much could I lose", "What's the worst case"]}
+      ]
+    },
+    {
+      "id": "lis-041",
+      "title": "Legal Consultation",
+      "level": "advanced",
+      "category": "conversation",
+      "duration": 135,
+      "audioText": "I've reviewed the contract and identified several concerning clauses. The liability section is particularly one-sided. I'd recommend renegotiating paragraphs 7 and 12. Also, the termination clause should include a 30-day notice period. Without these changes, I wouldn't advise signing.",
+      "questions": [
+        {"prompt": "Ask for specific changes", "expectedAnswer": "What changes would you recommend", "acceptedVariations": ["What should we change", "Which clauses need revision", "What are your recommendations"]},
+        {"prompt": "Ask about consequences", "expectedAnswer": "What happens if we sign as is", "acceptedVariations": ["What if we sign anyway", "What are the risks", "What could happen"]}
+      ]
+    },
+    {
+      "id": "lis-042",
+      "title": "Strategy Presentation",
+      "level": "advanced",
+      "category": "instruction",
+      "duration": 150,
+      "audioText": "Our five-year strategic plan focuses on three pillars: digital transformation, market expansion, and operational excellence. We're targeting 20 percent revenue growth annually. Key initiatives include launching an e-commerce platform, entering Southeast Asian markets, and implementing automation across manufacturing.",
+      "questions": [
+        {"prompt": "Ask about implementation timeline", "expectedAnswer": "What is the timeline for these initiatives", "acceptedVariations": ["When will this be implemented", "What's the timeline", "How long will this take"]},
+        {"prompt": "Ask about resource allocation", "expectedAnswer": "How will resources be allocated", "acceptedVariations": ["What's the budget", "How much will this cost", "What resources are needed"]}
+      ]
+    },
+    {
+      "id": "lis-043",
+      "title": "Research Findings",
+      "level": "advanced",
+      "category": "instruction",
+      "duration": 160,
+      "audioText": "Our research indicates a strong correlation between employee engagement and productivity. Teams with high engagement scores showed 21 percent higher profitability. Key drivers include meaningful work, recognition, and growth opportunities. We recommend implementing quarterly feedback sessions and a mentorship program.",
+      "questions": [
+        {"prompt": "Ask about methodology", "expectedAnswer": "How was this research conducted", "acceptedVariations": ["What was the methodology", "How did you measure this", "What was the sample size"]},
+        {"prompt": "Ask about implementation", "expectedAnswer": "How should we implement these recommendations", "acceptedVariations": ["How do we start", "What's the first step", "How to implement this"]}
+      ]
+    },
+    {
+      "id": "lis-044",
+      "title": "Crisis Management",
+      "level": "advanced",
+      "category": "conversation",
+      "duration": 140,
+      "audioText": "We need to address this situation immediately. The product recall affects approximately 50,000 units. Our priority is customer safety, followed by transparent communication. I've prepared a press statement. We should also set up a dedicated hotline and update our website with recall information.",
+      "questions": [
+        {"prompt": "Suggest additional steps", "expectedAnswer": "We should also notify regulatory authorities", "acceptedVariations": ["Should we contact regulators", "We need to inform authorities", "What about the media"]},
+        {"prompt": "Ask about compensation", "expectedAnswer": "What compensation will we offer customers", "acceptedVariations": ["How will we compensate customers", "What about refunds", "Customer compensation"]}
+      ]
+    },
+    {
+      "id": "lis-045",
+      "title": "Merger Discussion",
+      "level": "advanced",
+      "category": "conversation",
+      "duration": 155,
+      "audioText": "The proposed merger would create significant synergies. We estimate cost savings of 50 million dollars annually through consolidation. However, cultural integration is a key risk factor. We'd need to carefully manage the transition to retain key talent. Due diligence will take approximately three months.",
+      "questions": [
+        {"prompt": "Ask about employee impact", "expectedAnswer": "How will this affect employees", "acceptedVariations": ["What about job losses", "Will there be layoffs", "Employee implications"]},
+        {"prompt": "Ask about next steps", "expectedAnswer": "What are the next steps in the process", "acceptedVariations": ["What happens next", "What's the timeline", "Next steps"]}
+      ]
+    },
+    {
+      "id": "lis-046",
+      "title": "Academic Defense",
+      "level": "advanced",
+      "category": "instruction",
+      "duration": 165,
+      "audioText": "Your thesis presents an interesting hypothesis. However, I have concerns about the sample size in your quantitative analysis. Could you elaborate on why you chose 50 participants? Additionally, the literature review seems to overlook some recent publications in this field from 2025.",
+      "questions": [
+        {"prompt": "Justify your methodology", "expectedAnswer": "The sample size was limited due to resource constraints but statistically significant", "acceptedVariations": ["We had limited resources", "Statistical significance was achieved", "50 was sufficient for the study"]},
+        {"prompt": "Address the literature gap", "expectedAnswer": "I will review and incorporate the recent publications", "acceptedVariations": ["I'll update the literature review", "I wasn't aware of those", "I'll include those references"]}
+      ]
+    },
+    {
+      "id": "lis-047",
+      "title": "Environmental Assessment",
+      "level": "advanced",
+      "category": "instruction",
+      "duration": 145,
+      "audioText": "The environmental impact assessment reveals several concerns. The proposed development would affect a wetland ecosystem. We've identified three endangered species in the area. Mitigation measures must include a buffer zone of at least 200 meters and water quality monitoring. Construction timing should avoid breeding seasons.",
+      "questions": [
+        {"prompt": "Ask about alternative locations", "expectedAnswer": "Have alternative sites been considered", "acceptedVariations": ["Are there other locations", "Can we build elsewhere", "Alternative site options"]},
+        {"prompt": "Ask about timeline impact", "expectedAnswer": "How will this affect the project timeline", "acceptedVariations": ["What's the delay", "Timeline impact", "How long will this add"]}
+      ]
+    },
+    {
+      "id": "lis-048",
+      "title": "Diplomatic Briefing",
+      "level": "advanced",
+      "category": "news",
+      "duration": 170,
+      "audioText": "The trade negotiations have reached a critical phase. Both parties have agreed on tariff reductions for manufactured goods. However, agricultural subsidies remain contentious. The next round of talks is scheduled for next month in Geneva. We anticipate a framework agreement by year end if progress continues.",
+      "questions": [
+        {"prompt": "Ask about contentious issues", "expectedAnswer": "What are the main sticking points", "acceptedVariations": ["What's the disagreement", "Which issues are unresolved", "What's holding things up"]},
+        {"prompt": "Ask about expected outcomes", "expectedAnswer": "What is the best case scenario", "acceptedVariations": ["What do you expect", "Likely outcome", "What can we hope for"]}
+      ]
+    },
+    {
+      "id": "lis-049",
+      "title": "Cybersecurity Incident",
+      "level": "advanced",
+      "category": "conversation",
+      "duration": 150,
+      "audioText": "We've detected a security breach affecting customer data. Approximately 10,000 accounts may be compromised. Our forensic team has contained the intrusion. We're required by law to notify affected customers within 72 hours. I recommend engaging a third-party security firm for independent assessment.",
+      "questions": [
+        {"prompt": "Ask about the type of data", "expectedAnswer": "What type of data was compromised", "acceptedVariations": ["What data was affected", "Which information was breached", "What was stolen"]},
+        {"prompt": "Suggest preventive measures", "expectedAnswer": "We should implement additional security measures", "acceptedVariations": ["We need better security", "Suggest improvements", "How do we prevent this"]}
+      ]
+    },
+    {
+      "id": "lis-050",
+      "title": "Economic Forecast",
+      "level": "advanced",
+      "category": "news",
+      "duration": 140,
+      "audioText": "The central bank has revised its growth forecast downward to 2.5 percent for this year. Inflation is expected to moderate to 3 percent by Q4. Interest rates will likely remain stable through June but could increase in the second half if inflationary pressures persist. Consumer spending remains resilient.",
+      "questions": [
+        {"prompt": "Ask about interest rate timing", "expectedAnswer": "When might interest rates increase", "acceptedVariations": ["When will rates go up", "Interest rate outlook", "Rate increase timing"]},
+        {"prompt": "Ask about implications for businesses", "expectedAnswer": "What does this mean for businesses", "acceptedVariations": ["How will this affect companies", "Business implications", "What should businesses do"]}
+      ]
+    },
+    {
+      "id": "lis-051",
+      "title": "Grocery Shopping",
+      "level": "beginner",
+      "category": "conversation",
+      "duration": 40,
+      "audioText": "Can I help you find something? The fruits and vegetables are in aisle three. The dairy products are at the back of the store. We have a special offer on rice this week - buy two, get one free.",
+      "questions": [
+        {"prompt": "Ask where milk is", "expectedAnswer": "Where is the milk", "acceptedVariations": ["Where's the milk", "Where can I find milk", "Milk please"]}
+      ]
+    },
+    {
+      "id": "lis-052",
+      "title": "Lost and Found",
+      "level": "beginner",
+      "category": "conversation",
+      "duration": 35,
+      "audioText": "I found this wallet near the entrance. Does it belong to you? There's an ID card inside with the name John Smith. If it's yours, can you describe what else is inside?",
+      "questions": [
+        {"prompt": "Respond if it's yours or not", "expectedAnswer": "Yes that's mine", "acceptedVariations": ["That's my wallet", "Yes it's mine", "No that's not mine"]}
+      ]
+    },
+    {
+      "id": "lis-053",
+      "title": "Cooking Instructions",
+      "level": "elementary",
+      "category": "instruction",
+      "duration": 70,
+      "audioText": "To make fried rice, first heat oil in a pan. Add garlic and stir for one minute. Then add the rice and mix well. Push the rice to the side and scramble an egg. Finally, add soy sauce and vegetables. Stir everything together for two minutes.",
+      "questions": [
+        {"prompt": "Ask what to add after the garlic", "expectedAnswer": "What do I add after the garlic", "acceptedVariations": ["What's next", "Then what", "After the garlic"]},
+        {"prompt": "Ask how long to cook", "expectedAnswer": "How long should I cook it", "acceptedVariations": ["How many minutes", "How long", "Cooking time"]}
+      ]
+    },
+    {
+      "id": "lis-054",
+      "title": "Fitness Class",
+      "level": "elementary",
+      "category": "instruction",
+      "duration": 65,
+      "audioText": "Welcome to spinning class! We'll start with a five-minute warm-up. Then we'll increase the resistance for 20 minutes. After that, there's a cool-down period. Remember to stay hydrated. If you feel dizzy, please slow down.",
+      "questions": [
+        {"prompt": "Ask about water breaks", "expectedAnswer": "Can I take a water break", "acceptedVariations": ["When can I drink water", "Water break", "Can I have water"]}
+      ]
+    },
+    {
+      "id": "lis-055",
+      "title": "Museum Audio Guide",
+      "level": "elementary",
+      "category": "instruction",
+      "duration": 80,
+      "audioText": "You are now viewing 'The Starry Night' by Vincent van Gogh. Painted in 1889, this masterpiece shows a swirling night sky over a village. Van Gogh created this while staying at a mental asylum. Notice the bright colors and thick brushstrokes that make his style unique.",
+      "questions": [
+        {"prompt": "Ask about the artist", "expectedAnswer": "Who painted this", "acceptedVariations": ["Who's the artist", "Who made this", "The painter"]},
+        {"prompt": "Ask about the year", "expectedAnswer": "When was it painted", "acceptedVariations": ["What year", "When did he paint it", "Date of painting"]}
+      ]
+    },
+    {
+      "id": "lis-056",
+      "title": "Sports Commentary",
+      "level": "elementary",
+      "category": "news",
+      "duration": 60,
+      "audioText": "Welcome back to the football match! The score is 2-1. There are 15 minutes left in the game. The home team is attacking. Number 10 has the ball. He passes to number 7. Great shot! But it hits the post! So close!",
+      "questions": [
+        {"prompt": "Ask about the score", "expectedAnswer": "What is the score", "acceptedVariations": ["What's the score", "Score please", "How much"]}
+      ]
+    },
+    {
+      "id": "lis-057",
+      "title": "Emergency Instructions",
+      "level": "intermediate",
+      "category": "instruction",
+      "duration": 75,
+      "audioText": "In case of fire, remain calm and follow these instructions. Locate the nearest exit - they are marked with green signs. Do not use elevators. Cover your nose and mouth if there's smoke. Meet at the designated assembly point in the parking lot.",
+      "questions": [
+        {"prompt": "Ask about the meeting point", "expectedAnswer": "Where should we meet", "acceptedVariations": ["Where is the meeting point", "Assembly point where", "Where to go"]}
+      ]
+    },
+    {
+      "id": "lis-058",
+      "title": "Customer Service Call",
+      "level": "intermediate",
+      "category": "conversation",
+      "duration": 95,
+      "audioText": "Thank you for calling. Your call is important to us. I can see your order was placed on January 3rd. It shows the package was delivered on January 6th. You didn't receive it? I'm sorry to hear that. Let me file a claim and arrange a replacement. You should receive it within 3-5 business days.",
+      "questions": [
+        {"prompt": "Confirm the issue", "expectedAnswer": "Yes I didn't receive my package", "acceptedVariations": ["I never got it", "Package not received", "It didn't arrive"]},
+        {"prompt": "Ask about tracking", "expectedAnswer": "Can you track the original package", "acceptedVariations": ["Where is my package", "Can you find it", "Tracking information"]}
+      ]
+    },
+    {
+      "id": "lis-059",
+      "title": "Workshop Feedback",
+      "level": "intermediate",
+      "category": "conversation",
+      "duration": 85,
+      "audioText": "Thank you for attending today's workshop. Before you leave, we'd appreciate your feedback. What did you find most useful? Were there any topics you'd like us to cover in more depth? We're planning another workshop next month on advanced techniques.",
+      "questions": [
+        {"prompt": "Give positive feedback", "expectedAnswer": "I found the practical examples very helpful", "acceptedVariations": ["The examples were great", "Very informative", "I learned a lot"]},
+        {"prompt": "Suggest a topic", "expectedAnswer": "I'd like to learn more about", "acceptedVariations": ["Can you cover", "I'm interested in", "Please add"]}
+      ]
+    },
+    {
+      "id": "lis-060",
+      "title": "Podcast Interview",
+      "level": "intermediate",
+      "category": "story",
+      "duration": 110,
+      "audioText": "Today I'm talking with Sarah, a successful entrepreneur. Sarah, you started your business with just 1000 dollars. Now it's worth millions. What was your secret? Well, I focused on solving a real problem. I listened to customers and kept improving. The key is persistence and being willing to learn from failures.",
+      "questions": [
+        {"prompt": "Ask about the biggest challenge", "expectedAnswer": "What was your biggest challenge", "acceptedVariations": ["What was hardest", "Biggest obstacle", "What was difficult"]},
+        {"prompt": "Ask for advice", "expectedAnswer": "What advice would you give", "acceptedVariations": ["Any tips", "What would you recommend", "Your advice"]}
+      ]
+    },
+    {
+      "id": "lis-061",
+      "title": "Government Service",
+      "level": "intermediate",
+      "category": "conversation",
+      "duration": 90,
+      "audioText": "Welcome to the passport office. Do you have an appointment? I'll need your current passport, two recent photos, and the completed application form. The processing fee is 150 dollars. Regular processing takes 4-6 weeks. Expedited service is available for an additional 60 dollars.",
+      "questions": [
+        {"prompt": "Ask about expedited service", "expectedAnswer": "How fast is expedited service", "acceptedVariations": ["How long for expedited", "Faster option", "Expedited timeline"]},
+        {"prompt": "Ask about payment methods", "expectedAnswer": "What payment methods do you accept", "acceptedVariations": ["How can I pay", "Do you take cards", "Cash or card"]}
+      ]
+    },
+    {
+      "id": "lis-062",
+      "title": "Property Viewing",
+      "level": "advanced",
+      "category": "conversation",
+      "duration": 125,
+      "audioText": "This property was built in 2020 and features energy-efficient design. The solar panels generate approximately 80 percent of the electricity needs. The property includes 3 bedrooms, 2.5 bathrooms, and an office space. The HOA fee covers landscaping, pool maintenance, and exterior repairs. Property taxes are approximately 8000 dollars annually.",
+      "questions": [
+        {"prompt": "Ask about maintenance costs", "expectedAnswer": "What are the total monthly costs", "acceptedVariations": ["Monthly expenses", "Total costs", "How much per month"]},
+        {"prompt": "Ask about the neighborhood", "expectedAnswer": "What is the neighborhood like", "acceptedVariations": ["Tell me about the area", "Is it safe", "Nearby amenities"]}
+      ]
+    },
+    {
+      "id": "lis-063",
+      "title": "Board Meeting",
+      "level": "advanced",
+      "category": "conversation",
+      "duration": 145,
+      "audioText": "Moving to item 5 on the agenda - capital expenditure. The CFO has proposed a 2 million dollar investment in new manufacturing equipment. This would increase production capacity by 40 percent. The payback period is estimated at 3 years. The finance committee recommends approval. Are there any questions before we vote?",
+      "questions": [
+        {"prompt": "Ask about ROI", "expectedAnswer": "What is the expected return on investment", "acceptedVariations": ["What's the ROI", "Return projection", "Expected returns"]},
+        {"prompt": "Ask about risks", "expectedAnswer": "What are the potential risks", "acceptedVariations": ["Any risks", "Downside", "What could go wrong"]}
+      ]
+    },
+    {
+      "id": "lis-064",
+      "title": "Scientific Presentation",
+      "level": "advanced",
+      "category": "instruction",
+      "duration": 155,
+      "audioText": "Our research demonstrates a 35 percent improvement in battery efficiency using the new graphene composite. The testing was conducted over 500 charge cycles. The results were statistically significant with a p-value of 0.001. Commercial applications could include electric vehicles and portable electronics. Patent applications are pending.",
+      "questions": [
+        {"prompt": "Ask about commercial timeline", "expectedAnswer": "When could this reach the market", "acceptedVariations": ["Commercial availability", "When can we buy this", "Market timeline"]},
+        {"prompt": "Ask about limitations", "expectedAnswer": "What are the limitations of this technology", "acceptedVariations": ["Any limitations", "Drawbacks", "What doesn't work"]}
+      ]
+    },
+    {
+      "id": "lis-065",
+      "title": "Regulatory Briefing",
+      "level": "advanced",
+      "category": "instruction",
+      "duration": 160,
+      "audioText": "The new data privacy regulations take effect March 1st. Key requirements include explicit consent for data collection, 30-day data deletion requests, and mandatory breach notification within 48 hours. Non-compliance penalties can reach 4 percent of annual revenue. We recommend completing a compliance audit by February 15th.",
+      "questions": [
+        {"prompt": "Ask about exemptions", "expectedAnswer": "Are there any exemptions", "acceptedVariations": ["Who is exempt", "Any exceptions", "Does this apply to everyone"]},
+        {"prompt": "Ask about the audit process", "expectedAnswer": "How do we conduct the compliance audit", "acceptedVariations": ["Audit process", "How to audit", "What does audit involve"]}
+      ]
+    },
+    {
+      "id": "lis-066",
+      "title": "Supply Chain Update",
+      "level": "advanced",
+      "category": "conversation",
+      "duration": 135,
+      "audioText": "Global shipping disruptions continue to affect our supply chain. Lead times have increased from 4 to 8 weeks. We've identified two alternative suppliers in Vietnam. The transition would take 3 months but could reduce costs by 15 percent long-term. We need to balance short-term stability with strategic sourcing.",
+      "questions": [
+        {"prompt": "Ask about risks of switching suppliers", "expectedAnswer": "What are the risks of switching suppliers", "acceptedVariations": ["Switching risks", "Supplier change risks", "What could go wrong"]},
+        {"prompt": "Suggest a contingency plan", "expectedAnswer": "Should we maintain backup inventory", "acceptedVariations": ["We need backup stock", "Increase inventory", "Safety stock"]}
+      ]
+    },
+    {
+      "id": "lis-067",
+      "title": "Health Policy Discussion",
+      "level": "advanced",
+      "category": "news",
+      "duration": 150,
+      "audioText": "The healthcare reform bill includes several key provisions. Insurance coverage will expand to include mental health services. Prescription drug prices will be negotiated annually. Healthcare providers will receive incentives for preventive care. Critics argue the funding mechanism is unsustainable. Supporters cite improved public health outcomes.",
+      "questions": [
+        {"prompt": "Ask about implementation", "expectedAnswer": "When will these changes take effect", "acceptedVariations": ["Implementation date", "When does this start", "Effective date"]},
+        {"prompt": "Ask about cost", "expectedAnswer": "What is the cost to implement this", "acceptedVariations": ["How much will it cost", "Budget required", "Funding needed"]}
+      ]
+    },
+    {
+      "id": "lis-068",
+      "title": "Venture Capital Pitch",
+      "level": "advanced",
+      "category": "conversation",
+      "duration": 165,
+      "audioText": "We're seeking 5 million dollars in Series A funding for a 20 percent equity stake. Our platform has 100,000 active users with 25 percent month-over-month growth. Current monthly revenue is 200,000 dollars. We project profitability within 18 months. Funds will be allocated to product development and market expansion.",
+      "questions": [
+        {"prompt": "Ask about the valuation basis", "expectedAnswer": "How did you arrive at that valuation", "acceptedVariations": ["Valuation justification", "Why that valuation", "Explain the valuation"]},
+        {"prompt": "Ask about the competitive landscape", "expectedAnswer": "Who are your main competitors", "acceptedVariations": ["Competition", "Who else does this", "Market competition"]}
+      ]
+    },
+    {
+      "id": "lis-069",
+      "title": "Cultural Exchange",
+      "level": "advanced",
+      "category": "story",
+      "duration": 140,
+      "audioText": "Living abroad taught me valuable lessons about cultural differences. In Japan, I learned the importance of harmony and indirect communication. In Brazil, I experienced the warmth of personal relationships in business. These experiences shaped my approach to international negotiations. Understanding cultural context is often more important than language fluency.",
+      "questions": [
+        {"prompt": "Ask about challenges faced", "expectedAnswer": "What was the biggest cultural challenge", "acceptedVariations": ["Biggest challenge", "Most difficult adjustment", "What was hard"]},
+        {"prompt": "Ask for advice", "expectedAnswer": "What advice do you have for someone going abroad", "acceptedVariations": ["Tips for expats", "Advice for living abroad", "What should I know"]}
+      ]
+    },
+    {
+      "id": "lis-070",
+      "title": "Sustainability Report",
+      "level": "advanced",
+      "category": "instruction",
+      "duration": 155,
+      "audioText": "Our sustainability targets for 2030 include carbon neutrality, zero waste to landfill, and 100 percent renewable energy. We've reduced emissions by 40 percent since 2020. Supply chain emissions remain our biggest challenge, accounting for 70 percent of our footprint. We're implementing supplier engagement programs and exploring carbon offset projects.",
+      "questions": [
+        {"prompt": "Ask about measurement methodology", "expectedAnswer": "How do you measure carbon emissions", "acceptedVariations": ["Measurement method", "How is this calculated", "Emission tracking"]},
+        {"prompt": "Ask about accountability", "expectedAnswer": "How do you ensure accountability for these targets", "acceptedVariations": ["Who is accountable", "How do you enforce this", "Accountability measures"]}
+      ]
+    }
+  ]
+}

@@ -6,170 +6,130 @@
 |------|------|-------|
 | **Development** | | |
 | App Development (5 sprints) | $0 | Self-developed |
-| Emergent Pro Plan | $20/month | First month for backend |
 | Apple Developer Account | $99/year | Required for iOS |
 | Google Play Developer | $25 (one-time) | Required for Android |
 | **Content Creation** | | |
 | ElevenLabs Audio Generation | $22 | ~120K characters for all content |
-| Content Writing (320 items) | $0 | Self-created or AI-generated |
+| Content Writing (580 items) | $0 | Self-created or AI-generated |
 | **Infrastructure** | | |
 | Domain Name | $12/year | svaralab.com |
-| Initial OpenAI Credits | $20 | Testing budget |
+| Initial API Credits | $20 | Testing budget |
 | | | |
-| **TOTAL SETUP** | **~$200** | First-time costs |
+| **TOTAL SETUP** | **~$180** | First-time costs |
 
 ---
 
-## 2. API Costs (Per Use)
+## 2. AI Services Used
 
-### OpenAI Whisper (Speech-to-Text)
+### Primary: xAI Grok Voice API
+Real-time voice agent that handles everything in one WebSocket connection:
+- **Speech-to-Text (STT)** - Transcribes user speech
+- **LLM Processing** - Evaluates pronunciation and generates feedback
+- **Text-to-Speech (TTS)** - Speaks responses back to user
+
 | Metric | Value |
 |--------|-------|
-| Cost | $0.006 per minute |
-| Avg recording | 10 seconds = $0.001 |
-| Per exercise | ~$0.001 |
+| Cost | **$0.05 per minute** of connection |
+| Latency | <1 second (fastest in market) |
+| Features | VAD, barge-in, tool calling |
 
-### GPT-4o-mini (AI Evaluation)
-| Metric | Value |
-|--------|-------|
-| Input | $0.00015 per 1K tokens |
-| Output | $0.0006 per 1K tokens |
-| Avg evaluation | ~500 tokens = **$0.0004** |
+### Secondary: ElevenLabs TTS (Optional)
+Pre-generated audio for content that doesn't need real-time interaction.
 
-### ElevenLabs (Text-to-Speech) - Pre-generated
 | Metric | Value |
 |--------|-------|
 | Cost | $0.18 per 1K characters |
 | All content (~120K chars) | **$22 one-time** |
-| Real-time (if needed) | $0.003 per sentence |
 
 ---
 
-## 3. Cost Per Exercise
+## 3. Cost Per Session
 
-### Mode 1: Repeat (Cheapest)
-| Component | Cost |
-|-----------|------|
-| Whisper transcription | $0.001 |
-| Fuzzy matching (local) | $0.000 |
-| **Total per exercise** | **$0.001** |
+### xAI Grok Voice (All Modes)
+| Metric | Value |
+|--------|-------|
+| Average session | 5 minutes |
+| Cost per session | **$0.25** |
 
-### Mode 2: Respond (AI Evaluation)
-| Component | Cost |
-|-----------|------|
-| Whisper transcription | $0.001 |
-| GPT-4o-mini evaluation | $0.0004 |
-| **Total per exercise** | **$0.0014** |
-
-### Mode 3: Listen
-| Component | Cost |
-|-----------|------|
-| Audio playback (pre-generated) | $0.000 |
-| Whisper transcription | $0.001 |
-| **Total per exercise** | **$0.001** |
-
-### Mode 4: Situation (Most Expensive)
-| Component | Cost |
-|-----------|------|
-| Whisper transcription (30 sec) | $0.003 |
-| GPT-4o-mini evaluation | $0.0006 |
-| **Total per exercise** | **$0.0036** |
+### Cost by Usage Level
+| Usage Level | Sessions/Day | Cost/Day | Cost/Month |
+|-------------|--------------|----------|------------|
+| Light (1 session) | 1 | $0.25 | **$7.50** |
+| Medium (2 sessions) | 2 | $0.50 | **$15.00** |
+| Heavy (4 sessions) | 4 | $1.00 | **$30.00** |
+| Power (6 sessions) | 6 | $1.50 | **$45.00** |
 
 ---
 
-## 4. Heavy User Cost (All Day Usage)
+## 4. Pricing Strategy
 
-### Assumptions for "All Day" User
-- Active usage: **4 hours/day**
-- Exercises per hour: **30** (2 min per exercise including review)
-- Total exercises: **120 per day**
-
-### Daily Cost Breakdown
-| Mode | Exercises | Cost Each | Daily Cost |
-|------|-----------|-----------|------------|
-| Repeat (40%) | 48 | $0.001 | $0.048 |
-| Respond (25%) | 30 | $0.0014 | $0.042 |
-| Listen (20%) | 24 | $0.001 | $0.024 |
-| Situation (15%) | 18 | $0.0036 | $0.065 |
-| | | | |
-| **TOTAL DAILY** | 120 | | **$0.18** |
-
-### Monthly Heavy User Cost
-| Usage Level | Exercises/Day | Cost/Day | Cost/Month |
-|-------------|---------------|----------|------------|
-| Light (30 min) | 15 | $0.02 | **$0.60** |
-| Medium (1 hour) | 30 | $0.05 | **$1.50** |
-| Heavy (2 hours) | 60 | $0.09 | **$2.70** |
-| Power (4 hours) | 120 | $0.18 | **$5.40** |
-
----
-
-## 5. Pricing Strategy
-
-### Single Plan with 7-Day Free Trial
+### Single Plan: Rp 599,000/month
 
 | Channel | Price | Your Revenue | Agent Commission |
 |---------|-------|--------------|------------------|
-| **Direct Sales** | Rp 349,000/mo | Rp 349,000 | - |
-| **Agent Sales** | Rp 349,000/mo | Rp 300,000 | Rp 49,000 |
+| **Direct Sales** | Rp 599,000/mo | Rp 599,000 | - |
+| **Agent Sales** | Rp 599,000/mo | Rp 520,000 | Rp 79,000 |
 
 **USD Equivalent** (1 USD = Rp 16,000):
-- Price: $21.81/month
-- Direct: You get $21.81
-- Agent: You get $18.75, agent gets $3.06
+- Price: **$37.44/month**
+- Direct: You get $37.44
+- Agent: You get $32.50, agent gets $4.94
 
 ### Plan Features (All Access)
 - **7-day free trial** (no credit card required)
-- Unlimited exercises
-- All 4 game modes (Repeat, Respond, Listen, Situation)
-- All 4 difficulty levels
-- AI-powered evaluation
-- Progress tracking
-- Offline content (pre-downloaded)
-
-### Free Trial Limits
-During 7-day trial:
-- Full access to all features
-- Usage tracking for conversion analysis
-- Push notification reminders before trial ends
+- Unlimited practice sessions
+- All 4 game modes (Speak Fast, Think & Answer, Listen Sharp, Real Talk)
+- All 4 difficulty levels (Beginner → Advanced)
+- 580+ content items
+- AI-powered real-time evaluation
+- Progress tracking & statistics
+- Multiple accent options (US, UK, Australian)
 
 ---
 
-## 6. Revenue per User
+## 5. Revenue per User
 
 ### Direct Sales
 | Metric | Value (IDR) | Value (USD) |
 |--------|-------------|-------------|
-| Monthly Revenue | Rp 349,000 | $21.81 |
-| Avg User Cost | Rp 48,000 | $3.00 |
-| **Net Profit** | **Rp 301,000** | **$18.81** |
-| **Margin** | **86%** | |
+| Monthly Revenue | Rp 599,000 | $37.44 |
+| Avg User Cost (heavy) | Rp 480,000 | $30.00 |
+| **Net Profit** | **Rp 119,000** | **$7.44** |
+| **Margin** | **20%** | |
 
-### Agent Sales
+### Light User (More Typical)
 | Metric | Value (IDR) | Value (USD) |
 |--------|-------------|-------------|
-| Monthly Revenue | Rp 349,000 | $21.81 |
-| Agent Commission | Rp 49,000 | $3.06 |
-| Your Revenue | Rp 300,000 | $18.75 |
-| Avg User Cost | Rp 48,000 | $3.00 |
-| **Net Profit** | **Rp 252,000** | **$15.75** |
-| **Margin** | **84%** | |
+| Monthly Revenue | Rp 599,000 | $37.44 |
+| Avg User Cost (light) | Rp 120,000 | $7.50 |
+| **Net Profit** | **Rp 479,000** | **$29.94** |
+| **Margin** | **80%** | |
+
+### Agent Sales (Light User)
+| Metric | Value (IDR) | Value (USD) |
+|--------|-------------|-------------|
+| Monthly Revenue | Rp 599,000 | $37.44 |
+| Agent Commission | Rp 79,000 | $4.94 |
+| Your Revenue | Rp 520,000 | $32.50 |
+| Avg User Cost | Rp 120,000 | $7.50 |
+| **Net Profit** | **Rp 400,000** | **$25.00** |
+| **Margin** | **77%** | |
 
 ---
 
-## 7. Profit Projections
+## 6. Profit Projections
 
 ### Scenario: 500 Paid Users (Month 3)
-*Assuming 60% direct, 40% via agents*
+*Assuming 60% direct, 40% via agents, light usage*
 
 | Channel | Users | Revenue (IDR) | Your Take | Costs | Profit |
 |---------|-------|---------------|-----------|-------|--------|
-| Direct | 300 | Rp 104,700,000 | Rp 104,700,000 | Rp 14,400,000 | Rp 90,300,000 |
-| Agent | 200 | Rp 69,800,000 | Rp 60,000,000 | Rp 9,600,000 | Rp 50,400,000 |
+| Direct | 300 | Rp 179,700,000 | Rp 179,700,000 | Rp 36,000,000 | Rp 143,700,000 |
+| Agent | 200 | Rp 119,800,000 | Rp 104,000,000 | Rp 24,000,000 | Rp 80,000,000 |
 | | | | | | |
-| **TOTAL** | 500 | **Rp 174,500,000** | **Rp 164,700,000** | Rp 24,000,000 | **Rp 140,700,000** |
+| **TOTAL** | 500 | **Rp 299,500,000** | **Rp 283,700,000** | Rp 60,000,000 | **Rp 223,700,000** |
 
-**Monthly Profit: Rp 140.7 million (~$8,794 USD)**
+**Monthly Profit: Rp 223.7 million (~$13,980 USD)**
 
 ---
 
@@ -178,26 +138,26 @@ During 7-day trial:
 
 | Channel | Users | Revenue (IDR) | Your Take | Costs | Profit |
 |---------|-------|---------------|-----------|-------|--------|
-| Direct | 500 | Rp 174,500,000 | Rp 174,500,000 | Rp 24,000,000 | Rp 150,500,000 |
-| Agent | 500 | Rp 174,500,000 | Rp 150,000,000 | Rp 24,000,000 | Rp 126,000,000 |
+| Direct | 500 | Rp 299,500,000 | Rp 299,500,000 | Rp 60,000,000 | Rp 239,500,000 |
+| Agent | 500 | Rp 299,500,000 | Rp 260,000,000 | Rp 60,000,000 | Rp 200,000,000 |
 | | | | | | |
-| **TOTAL** | 1,000 | **Rp 349,000,000** | **Rp 324,500,000** | Rp 48,000,000 | **Rp 276,500,000** |
+| **TOTAL** | 1,000 | **Rp 599,000,000** | **Rp 559,500,000** | Rp 120,000,000 | **Rp 439,500,000** |
 
-**Monthly Profit: Rp 276.5 million (~$17,281 USD)**
+**Monthly Profit: Rp 439.5 million (~$27,469 USD)**
 
 ---
 
 ### Scenario: 5,000 Paid Users (Year 1)
-*Assuming 40% direct, 60% via agents (mature agent network)*
+*Assuming 40% direct, 60% via agents*
 
 | Channel | Users | Revenue (IDR) | Your Take | Costs | Profit |
 |---------|-------|---------------|-----------|-------|--------|
-| Direct | 2,000 | Rp 698,000,000 | Rp 698,000,000 | Rp 96,000,000 | Rp 602,000,000 |
-| Agent | 3,000 | Rp 1,047,000,000 | Rp 900,000,000 | Rp 144,000,000 | Rp 756,000,000 |
+| Direct | 2,000 | Rp 1,198,000,000 | Rp 1,198,000,000 | Rp 240,000,000 | Rp 958,000,000 |
+| Agent | 3,000 | Rp 1,797,000,000 | Rp 1,560,000,000 | Rp 360,000,000 | Rp 1,200,000,000 |
 | | | | | | |
-| **TOTAL** | 5,000 | **Rp 1,745,000,000** | **Rp 1,598,000,000** | Rp 240,000,000 | **Rp 1,358,000,000** |
+| **TOTAL** | 5,000 | **Rp 2,995,000,000** | **Rp 2,758,000,000** | Rp 600,000,000 | **Rp 2,158,000,000** |
 
-**Monthly Profit: Rp 1.36 billion (~$84,875 USD)**
+**Monthly Profit: Rp 2.16 billion (~$134,875 USD)**
 
 ---
 
@@ -206,100 +166,101 @@ During 7-day trial:
 
 | Channel | Users | Revenue (IDR) | Your Take | Costs | Profit |
 |---------|-------|---------------|-----------|-------|--------|
-| Direct | 3,000 | Rp 1,047,000,000 | Rp 1,047,000,000 | Rp 144,000,000 | Rp 903,000,000 |
-| Agent | 7,000 | Rp 2,443,000,000 | Rp 2,100,000,000 | Rp 336,000,000 | Rp 1,764,000,000 |
+| Direct | 3,000 | Rp 1,797,000,000 | Rp 1,797,000,000 | Rp 360,000,000 | Rp 1,437,000,000 |
+| Agent | 7,000 | Rp 4,193,000,000 | Rp 3,640,000,000 | Rp 840,000,000 | Rp 2,800,000,000 |
 | | | | | | |
-| **TOTAL** | 10,000 | **Rp 3,490,000,000** | **Rp 3,147,000,000** | Rp 480,000,000 | **Rp 2,667,000,000** |
+| **TOTAL** | 10,000 | **Rp 5,990,000,000** | **Rp 5,437,000,000** | Rp 1,200,000,000 | **Rp 4,237,000,000** |
 
-**Monthly Profit: Rp 2.67 billion (~$166,688 USD)**
+**Monthly Profit: Rp 4.24 billion (~$264,813 USD)**
 
 ---
 
-## 8. Agent Commission Structure
+## 7. Agent Commission Structure
 
 ### For Agents
 | Metric | Value |
 |--------|-------|
-| Commission per sale | Rp 49,000/month |
+| Commission per sale | Rp 79,000/month |
 | Recurring (monthly) | Yes, as long as user stays subscribed |
-| 10 active users | Rp 490,000/month passive income |
-| 50 active users | Rp 2,450,000/month passive income |
-| 100 active users | Rp 4,900,000/month passive income |
+| 10 active users | Rp 790,000/month passive income |
+| 50 active users | Rp 3,950,000/month passive income |
+| 100 active users | Rp 7,900,000/month passive income |
 
 ### Agent Incentive Tiers
 | Active Users | Bonus | Total per User |
 |--------------|-------|----------------|
-| 1-10 users | - | Rp 49,000 |
-| 11-25 users | +Rp 5,000 | Rp 54,000 |
-| 26-50 users | +Rp 10,000 | Rp 59,000 |
-| 50+ users | +Rp 15,000 | Rp 64,000 |
+| 1-10 users | - | Rp 79,000 |
+| 11-25 users | +Rp 10,000 | Rp 89,000 |
+| 26-50 users | +Rp 15,000 | Rp 94,000 |
+| 50+ users | +Rp 20,000 | Rp 99,000 |
 
 ---
 
-## 9. Fixed Monthly Costs
+## 8. Fixed Monthly Costs
 
 | Item | Cost/Month | Notes |
 |------|------------|-------|
-| Emergent Hosting | $20 | Backend + database |
+| Backend Hosting | $20 | Server + database |
 | Domain | $1 | Annual prorated |
 | Apple Developer | $8.25 | Annual prorated |
 | Error Monitoring | $0 | Free tier (Sentry) |
-| Analytics | $0 | Free tier (Mixpanel) |
+| Analytics | $0 | Free tier |
 | | | |
 | **TOTAL FIXED** | **~$30/month** | ~Rp 480,000 |
 
 ---
 
-## 10. Break-Even Analysis
+## 9. Competitive Comparison
 
-### Direct Sales Only
-| Metric | Value |
-|--------|-------|
-| Fixed costs | Rp 480,000/month |
-| Profit per user | Rp 301,000/month |
-| **Break-even** | **2 paid users** |
+| App | Monthly Price | AI Features |
+|-----|---------------|-------------|
+| **SvaraLab** | **Rp 599,000** | Real-time AI speech evaluation, 4 modes |
+| Duolingo Plus | Rp 169,000 | No speaking practice |
+| ELSA Speak | Rp 299,000 | Speech only, no conversation |
+| Cambly | Rp 1,500,000+ | Live human tutors |
+| italki | Rp 200,000+ per lesson | Live human tutors |
 
-### Including Free Trial Costs
-| Metric | Value |
-|--------|-------|
-| Assume 30% trial conversion | |
-| 100 trial users → 30 paid | |
-| Trial user cost | Rp 5,000 (7 days light usage) |
-| 100 trials cost | Rp 500,000 |
-| 30 paid × Rp 301,000 | Rp 9,030,000 profit |
-| **Net after trials** | **Rp 8,530,000** |
+### Value Proposition
+- **vs Duolingo/ELSA**: More comprehensive speaking practice with real-time AI feedback
+- **vs Cambly/italki**: Fraction of the cost, unlimited practice, available 24/7
 
 ---
 
-## 11. Summary
+## 10. Summary
 
 ### Key Numbers
 | Metric | IDR | USD |
 |--------|-----|-----|
-| Setup cost | Rp 3,200,000 | ~$200 |
-| Cost per user/month | Rp 48,000 | ~$3.00 |
-| Price (all channels) | Rp 349,000/mo | $21.81 |
-| Agent commission | Rp 49,000/mo | $3.06 |
-| Direct profit margin | 86% | |
-| Agent profit margin | 84% | |
-| Break-even | 2 users | |
+| Setup cost | Rp 2,880,000 | ~$180 |
+| Price (all channels) | **Rp 599,000/mo** | $37.44 |
+| Agent commission | Rp 79,000/mo | $4.94 |
+| Cost per user (light) | Rp 120,000/mo | $7.50 |
+| Direct profit margin | 80% (light user) | |
+| Agent profit margin | 77% (light user) | |
+| Break-even | 1 user | |
+
+### AI Services
+| Service | Purpose | Cost |
+|---------|---------|------|
+| **xAI Grok Voice** | STT + LLM + TTS (all-in-one) | $0.05/min |
+| ElevenLabs | Pre-generated audio (optional) | $0.18/1K chars |
 
 ### Growth Milestones
 
 | Users | Monthly Revenue | Monthly Profit |
 |-------|-----------------|----------------|
-| 100 | Rp 35M | Rp 28M (~$1,750) |
-| 500 | Rp 175M | Rp 141M (~$8,800) |
-| 1,000 | Rp 349M | Rp 277M (~$17,300) |
-| 5,000 | Rp 1.75B | Rp 1.36B (~$85,000) |
-| 10,000 | Rp 3.49B | Rp 2.67B (~$167,000) |
+| 100 | Rp 60M | Rp 48M (~$3,000) |
+| 500 | Rp 300M | Rp 224M (~$14,000) |
+| 1,000 | Rp 599M | Rp 440M (~$27,500) |
+| 5,000 | Rp 3.0B | Rp 2.2B (~$135,000) |
+| 10,000 | Rp 6.0B | Rp 4.2B (~$265,000) |
 
 ### Recommendation
-Launch with **Rp 349,000/month** for everyone with 7-day free trial. Agents get **Rp 49,000 commission** per subscriber.
+Launch with **Rp 599,000/month** with 7-day free trial. Agents get **Rp 79,000 commission** per subscriber.
 
 **Why this pricing works:**
-- Rp 349,000 ≈ Rp 11,600/day - affordable for serious learners
-- 86% profit margin (direct) covers growth and unexpected costs
-- Agent commission (Rp 49,000) is attractive for referrals
-- 7-day trial removes barrier to entry
-- Single price simplifies messaging and reduces confusion
+- Rp 599,000 ≈ Rp 20,000/day - premium positioning for serious learners
+- 80% profit margin (light users) provides healthy business
+- Higher price = higher perceived value = more committed users
+- Still cheaper than ANY live tutor option
+- Agent commission (Rp 79,000) is very attractive for referrals

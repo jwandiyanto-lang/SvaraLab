@@ -1,174 +1,236 @@
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Image } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useGameStore, LEVEL_XP_REQUIREMENTS } from '../../stores/gameStore';
+import { Ionicons, MaterialIcons } from '@expo/vector-icons';
+import { useGameStore, LEVEL_XP_REQUIREMENTS, FREE_DAILY_MINUTES } from '../../stores/gameStore';
 import { colors, spacing, borderRadius, typography, shadows } from '../../constants/theme';
+import WordOfDay from '../../components/WordOfDay';
+import DailyCapBanner from '../../components/DailyCapBanner';
 
 type ModeInfo = {
   id: string;
   name: string;
-  emoji: string;
+  nameId: string;
+  icon: keyof typeof MaterialIcons.glyphMap;
   description: string;
   color: string;
+  bgColor: string;
+  tag: string;
   route: string;
 };
 
 const MODES: ModeInfo[] = [
   {
     id: 'repeat',
-    name: 'Svara 1: Ucapkan',
-    emoji: '🔁',
-    description: 'Lihat Indonesia, ucapkan Inggris',
+    name: 'Speak Fast',
+    nameId: 'Ucapkan',
+    icon: 'bolt',
+    description: 'Boost your speaking speed and fluidity with rapid-fire drills.',
     color: colors.repeat,
+    bgColor: colors.repeatBg,
+    tag: 'Speed',
     route: '/course/repeat',
   },
   {
     id: 'respond',
-    name: 'Svara 2: Jawab',
-    emoji: '💬',
-    description: 'Jawab pertanyaan dengan natural',
+    name: 'Think & Answer',
+    nameId: 'Jawab',
+    icon: 'psychology',
+    description: 'Sharpen cognitive reflexes to respond instantly in conversation.',
     color: colors.respond,
+    bgColor: colors.respondBg,
+    tag: 'Logic',
     route: '/course/respond',
   },
   {
     id: 'listen',
-    name: 'Svara 3: Simak',
-    emoji: '👂',
-    description: 'Dengarkan dan ulangi',
+    name: 'Listen Sharp',
+    nameId: 'Simak',
+    icon: 'headphones',
+    description: 'Train your ears to catch details in different English accents.',
     color: colors.listen,
+    bgColor: colors.listenBg,
+    tag: 'Focus',
     route: '/course/listen',
   },
   {
     id: 'situation',
-    name: 'Svara 4: Situasi',
-    emoji: '🎭',
-    description: 'Praktik percakapan nyata',
+    name: 'Real Talk',
+    nameId: 'Situasi',
+    icon: 'storefront',
+    description: 'Practical scenarios for travel, work, and social interactions.',
     color: colors.situation,
+    bgColor: colors.situationBg,
+    tag: 'Real World',
     route: '/course/situation',
   },
 ];
 
+// Get greeting based on time of day
+const getGreeting = () => {
+  const hour = new Date().getHours();
+  if (hour < 12) return 'Good Morning';
+  if (hour < 17) return 'Good Afternoon';
+  return 'Good Evening';
+};
+
 export default function HomeScreen() {
   const router = useRouter();
-  const { stats, getNextLevelProgress } = useGameStore();
+  const { stats, profile, getNextLevelProgress, canStartSession, resetDailyUsageIfNeeded } = useGameStore();
   const progress = getNextLevelProgress();
+  const usageStatus = canStartSession();
 
-  const accuracy = stats.totalAnswers > 0
-    ? Math.round((stats.correctAnswers / stats.totalAnswers) * 100)
-    : 0;
+  // Reset daily usage if needed (on app open)
+  resetDailyUsageIfNeeded();
+
+  // Calculate daily goal progress from actual usage
+  const dailyGoalMinutes = profile.dailyCommitment || 15;
+  const completedMinutes = stats.dailyUsage.minutesUsed;
+  const dailyProgress = Math.min((completedMinutes / dailyGoalMinutes) * 100, 100);
+
+  const userName = profile.name || 'Learner';
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
+      {/* Header */}
+      <View style={styles.header}>
+        <TouchableOpacity
+          style={styles.headerLeft}
+          onPress={() => router.push('/(tabs)/settings')}
+          activeOpacity={0.7}
+        >
+          <View style={styles.avatar}>
+            <View style={styles.avatarInner}>
+              <Ionicons name="person" size={20} color={colors.primary} />
+            </View>
+          </View>
+          <View style={styles.headerInfo}>
+            <Text style={styles.greeting}>{getGreeting()}</Text>
+            <View style={styles.userNameRow}>
+              <Text style={styles.userName}>{userName}</Text>
+              <MaterialIcons name="chevron-right" size={16} color={colors.textTertiary} />
+            </View>
+          </View>
+        </TouchableOpacity>
+        <View style={styles.headerRight}>
+          {/* Streak Badge */}
+          {stats.currentDayStreak > 0 && (
+            <View style={styles.streakBadge}>
+              <MaterialIcons name="local-fire-department" size={16} color={colors.repeat} />
+              <Text style={styles.streakText}>{stats.currentDayStreak}</Text>
+            </View>
+          )}
+          <TouchableOpacity
+            style={styles.reminderBtn}
+            onPress={() => {
+              // TODO: Open reminder settings
+            }}
+          >
+            <MaterialIcons name="alarm" size={24} color={colors.textSecondary} />
+          </TouchableOpacity>
+        </View>
+      </View>
+
       <ScrollView
         style={styles.scrollView}
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >
-        {/* Header */}
-        <View style={styles.header}>
-          <View>
-            <Text style={styles.greeting}>Welcome back</Text>
-            <Text style={styles.title}>SvaraLab</Text>
-          </View>
-          <View style={styles.xpBadge}>
-            <Text style={styles.xpBadgeText}>{stats.totalXP} XP</Text>
-          </View>
+        {/* Daily Cap Banner */}
+        <View style={styles.capBannerContainer}>
+          <DailyCapBanner />
         </View>
 
-        {/* Progress Card */}
-        <View style={styles.progressCard}>
-          <View style={styles.progressHeader}>
-            <Text style={styles.progressTitle}>Your Progress</Text>
-            <Text style={styles.progressPercent}>{Math.round(progress.percentage)}%</Text>
+        {/* Daily Goal Progress */}
+        <View style={styles.dailyGoalSection}>
+          <View style={styles.dailyGoalHeader}>
+            <Text style={styles.dailyGoalLabel}>Daily Goal</Text>
+            <Text style={styles.dailyGoalTime}>{completedMinutes}/{dailyGoalMinutes} mins</Text>
           </View>
           <View style={styles.progressBarBg}>
-            <View
-              style={[
-                styles.progressBarFill,
-                { width: `${Math.max(5, progress.percentage)}%` },
-              ]}
-            />
-          </View>
-          <Text style={styles.progressSubtext}>
-            {progress.required > stats.totalXP
-              ? `${progress.required - stats.totalXP} XP to unlock next level`
-              : 'All levels unlocked!'}
-          </Text>
-        </View>
-
-        {/* Stats Row */}
-        <View style={styles.statsRow}>
-          <View style={styles.statCard}>
-            <Text style={styles.statEmoji}>📚</Text>
-            <Text style={styles.statValue}>{stats.wordsLearned}</Text>
-            <Text style={styles.statLabel}>Learned</Text>
-          </View>
-          <View style={styles.statCard}>
-            <Text style={styles.statEmoji}>🔥</Text>
-            <Text style={styles.statValue}>{stats.currentStreak}</Text>
-            <Text style={styles.statLabel}>Day Streak</Text>
-          </View>
-          <View style={styles.statCard}>
-            <Text style={styles.statEmoji}>🎯</Text>
-            <Text style={styles.statValue}>{accuracy}%</Text>
-            <Text style={styles.statLabel}>Accuracy</Text>
+            <View style={[styles.progressBarFill, { width: `${dailyProgress}%` }]} />
           </View>
         </View>
 
-        {/* Game Modes */}
-        <Text style={styles.sectionTitle}>Practice Modes</Text>
-        <Text style={styles.sectionSubtitle}>Choose how you want to practice today</Text>
+        {/* Word of the Day */}
+        <View style={styles.wordOfDayContainer}>
+          <WordOfDay />
+        </View>
 
+        {/* Section Title */}
+        <Text style={styles.sectionTitle}>Training Modules</Text>
+
+        {/* Game Mode Cards */}
         <View style={styles.modesContainer}>
           {MODES.map((mode) => (
             <TouchableOpacity
               key={mode.id}
-              style={styles.modeCard}
-              onPress={() => router.push(mode.route as any)}
-              activeOpacity={0.7}
+              style={[
+                styles.modeCard,
+                !usageStatus.allowed && styles.modeCardDisabled,
+              ]}
+              onPress={() => {
+                if (usageStatus.allowed) {
+                  router.push(mode.route as any);
+                }
+              }}
+              activeOpacity={usageStatus.allowed ? 0.7 : 1}
             >
-              <View style={[styles.modeIconContainer, { backgroundColor: mode.color + '15' }]}>
-                <Text style={styles.modeEmoji}>{mode.emoji}</Text>
+              <View style={styles.modeCardContent}>
+                <View style={[styles.modeIconContainer, { backgroundColor: mode.bgColor }]}>
+                  <MaterialIcons name={mode.icon} size={26} color={mode.color} />
+                </View>
+                <View style={styles.modeInfo}>
+                  <View style={styles.modeHeader}>
+                    <Text style={styles.modeName}>{mode.nameId}</Text>
+                    <View style={[styles.modeTag, { backgroundColor: mode.bgColor }]}>
+                      <Text style={[styles.modeTagText, { color: mode.color }]}>{mode.tag}</Text>
+                    </View>
+                  </View>
+                  <Text style={styles.modeSubtitle}>{mode.name}</Text>
+                  <Text style={styles.modeDescription}>{mode.description}</Text>
+                </View>
               </View>
-              <View style={styles.modeContent}>
-                <Text style={styles.modeName}>{mode.name}</Text>
-                <Text style={styles.modeDescription}>{mode.description}</Text>
-              </View>
-              <View style={[styles.modeArrow, { backgroundColor: mode.color + '15' }]}>
-                <Text style={[styles.modeArrowText, { color: mode.color }]}>→</Text>
-              </View>
+              {!usageStatus.allowed && (
+                <View style={styles.lockedOverlay}>
+                  <MaterialIcons name="lock" size={16} color={colors.textTertiary} />
+                </View>
+              )}
             </TouchableOpacity>
           ))}
         </View>
 
-        {/* Level Requirements */}
-        <Text style={styles.sectionTitle}>Difficulty Levels</Text>
-        <View style={styles.levelsCard}>
-          {(['beginner', 'elementary', 'intermediate', 'advanced'] as const).map((level, index) => {
-            const isUnlocked = stats.totalXP >= LEVEL_XP_REQUIREMENTS[level];
-            const isLast = index === 3;
-            return (
-              <View
-                key={level}
-                style={[styles.levelRow, !isLast && styles.levelRowBorder]}
-              >
-                <View style={[
-                  styles.levelIcon,
-                  isUnlocked ? styles.levelIconUnlocked : styles.levelIconLocked
-                ]}>
-                  <Text style={styles.levelIconText}>{isUnlocked ? '✓' : '🔒'}</Text>
-                </View>
-                <View style={styles.levelInfo}>
-                  <Text style={[styles.levelName, !isUnlocked && styles.textMuted]}>
-                    {level.charAt(0).toUpperCase() + level.slice(1)}
-                  </Text>
-                  <Text style={styles.levelXp}>
-                    {LEVEL_XP_REQUIREMENTS[level]} XP required
-                  </Text>
-                </View>
-              </View>
-            );
-          })}
+        {/* Quick Stats */}
+        <View style={styles.quickStats}>
+          <View style={styles.quickStatItem}>
+            <View style={[styles.quickStatIcon, { backgroundColor: colors.repeatBg }]}>
+              <MaterialIcons name="star" size={18} color={colors.repeat} />
+            </View>
+            <View>
+              <Text style={styles.quickStatValue}>{stats.totalXP.toLocaleString()}</Text>
+              <Text style={styles.quickStatLabel}>Total XP</Text>
+            </View>
+          </View>
+          <View style={styles.quickStatDivider} />
+          <View style={styles.quickStatItem}>
+            <View style={[styles.quickStatIcon, { backgroundColor: colors.listenBg }]}>
+              <MaterialIcons name="menu-book" size={18} color={colors.listen} />
+            </View>
+            <View>
+              <Text style={styles.quickStatValue}>{stats.wordsLearned}</Text>
+              <Text style={styles.quickStatLabel}>Words</Text>
+            </View>
+          </View>
+          <View style={styles.quickStatDivider} />
+          <View style={styles.quickStatItem}>
+            <View style={[styles.quickStatIcon, { backgroundColor: colors.respondBg }]}>
+              <MaterialIcons name="trending-up" size={18} color={colors.respond} />
+            </View>
+            <View>
+              <Text style={styles.quickStatValue}>{progress.currentLevel}</Text>
+              <Text style={styles.quickStatLabel}>Level</Text>
+            </View>
+          </View>
         </View>
 
         {/* Bottom spacing */}
@@ -183,65 +245,116 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.background,
   },
-  scrollView: {
-    flex: 1,
-  },
-  content: {
-    padding: spacing.xl,
-  },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: spacing.xxl,
+    paddingHorizontal: spacing.xl,
+    paddingTop: spacing.lg,
+    paddingBottom: spacing.lg,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border,
+    backgroundColor: colors.background,
+  },
+  headerLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.md,
+  },
+  headerRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.md,
+  },
+  avatar: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: colors.repeatBg,
+    borderWidth: 1,
+    borderColor: colors.border,
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'hidden',
+  },
+  avatarInner: {
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  headerInfo: {
+    gap: 2,
   },
   greeting: {
-    fontSize: typography.sm,
+    fontSize: typography.xs,
+    fontWeight: typography.medium,
     color: colors.textSecondary,
-    marginBottom: 2,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
   },
-  title: {
-    fontSize: typography.xxl,
+  userName: {
+    fontSize: typography.sm,
     fontWeight: typography.bold,
     color: colors.textPrimary,
   },
-  xpBadge: {
-    backgroundColor: colors.warning + '15',
-    paddingHorizontal: spacing.md,
-    paddingVertical: spacing.sm,
+  userNameRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 2,
+  },
+  streakBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.xs,
+    backgroundColor: colors.repeatBg,
+    paddingHorizontal: spacing.sm,
+    paddingVertical: spacing.xs,
     borderRadius: borderRadius.full,
   },
-  xpBadgeText: {
-    color: colors.warning,
-    fontSize: typography.sm,
-    fontWeight: typography.semibold,
+  streakText: {
+    fontSize: typography.xs,
+    fontWeight: typography.bold,
+    color: colors.repeat,
   },
-  progressCard: {
-    backgroundColor: colors.card,
-    borderRadius: borderRadius.xl,
-    padding: spacing.xl,
-    marginBottom: spacing.xl,
-    ...shadows.md,
+  reminderBtn: {
+    padding: spacing.sm,
+    borderRadius: borderRadius.lg,
   },
-  progressHeader: {
+  scrollView: {
+    flex: 1,
+  },
+  content: {
+    paddingHorizontal: spacing.xl,
+    paddingTop: spacing.lg,
+  },
+  capBannerContainer: {
+    marginBottom: spacing.lg,
+  },
+  dailyGoalSection: {
+    marginBottom: spacing.lg,
+  },
+  dailyGoalHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: spacing.md,
+    marginBottom: spacing.sm,
   },
-  progressTitle: {
-    fontSize: typography.base,
+  dailyGoalLabel: {
+    fontSize: typography.xs,
     fontWeight: typography.semibold,
-    color: colors.textPrimary,
+    color: colors.textSecondary,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
   },
-  progressPercent: {
-    fontSize: typography.base,
-    fontWeight: typography.bold,
-    color: colors.primary,
+  dailyGoalTime: {
+    fontSize: typography.xs,
+    fontWeight: typography.medium,
+    color: colors.textSecondary,
   },
   progressBarBg: {
     height: 8,
-    backgroundColor: colors.cardAlt,
+    backgroundColor: colors.border,
     borderRadius: borderRadius.full,
     overflow: 'hidden',
   },
@@ -250,142 +363,117 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     borderRadius: borderRadius.full,
   },
-  progressSubtext: {
-    fontSize: typography.xs,
-    color: colors.textMuted,
-    marginTop: spacing.sm,
+  wordOfDayContainer: {
+    marginBottom: spacing.xl,
   },
-  statsRow: {
-    flexDirection: 'row',
-    gap: spacing.md,
-    marginBottom: spacing.xxl,
-  },
-  statCard: {
-    flex: 1,
-    backgroundColor: colors.card,
-    borderRadius: borderRadius.lg,
-    padding: spacing.lg,
-    alignItems: 'center',
-    ...shadows.sm,
-  },
-  statEmoji: {
-    fontSize: 24,
-    marginBottom: spacing.xs,
-  },
-  statValue: {
+  sectionTitle: {
     fontSize: typography.xl,
     fontWeight: typography.bold,
     color: colors.textPrimary,
-  },
-  statLabel: {
-    fontSize: typography.xs,
-    color: colors.textMuted,
-    marginTop: 2,
-  },
-  sectionTitle: {
-    fontSize: typography.lg,
-    fontWeight: typography.bold,
-    color: colors.textPrimary,
-    marginBottom: spacing.xs,
-  },
-  sectionSubtitle: {
-    fontSize: typography.sm,
-    color: colors.textSecondary,
     marginBottom: spacing.lg,
   },
   modesContainer: {
-    gap: spacing.md,
-    marginBottom: spacing.xxl,
+    gap: spacing.lg,
+    marginBottom: spacing.xl,
   },
   modeCard: {
-    flexDirection: 'row',
-    alignItems: 'center',
     backgroundColor: colors.card,
     borderRadius: borderRadius.xl,
-    padding: spacing.lg,
-    ...shadows.sm,
+    borderWidth: 1,
+    borderColor: colors.border,
+    padding: spacing.xl,
+    ...shadows.notion,
+  },
+  modeCardDisabled: {
+    opacity: 0.6,
+  },
+  modeCardContent: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: spacing.lg,
   },
   modeIconContainer: {
     width: 48,
     height: 48,
-    borderRadius: borderRadius.md,
+    borderRadius: borderRadius.lg,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  modeEmoji: {
-    fontSize: 24,
-  },
-  modeContent: {
+  modeInfo: {
     flex: 1,
-    marginLeft: spacing.md,
+  },
+  modeHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 4,
   },
   modeName: {
     fontSize: typography.base,
-    fontWeight: typography.semibold,
+    fontWeight: typography.bold,
     color: colors.textPrimary,
-    marginBottom: 2,
+  },
+  modeTag: {
+    paddingHorizontal: spacing.sm,
+    paddingVertical: 2,
+    borderRadius: borderRadius.full,
+  },
+  modeTagText: {
+    fontSize: 10,
+    fontWeight: typography.semibold,
+  },
+  modeSubtitle: {
+    fontSize: typography.xs,
+    fontWeight: typography.medium,
+    color: colors.textSecondary,
+    marginBottom: 4,
   },
   modeDescription: {
-    fontSize: typography.sm,
+    fontSize: 11,
     color: colors.textSecondary,
+    lineHeight: 16,
+    opacity: 0.8,
   },
-  modeArrow: {
-    width: 32,
-    height: 32,
-    borderRadius: borderRadius.sm,
-    alignItems: 'center',
-    justifyContent: 'center',
+  lockedOverlay: {
+    position: 'absolute',
+    top: spacing.md,
+    right: spacing.md,
   },
-  modeArrowText: {
-    fontSize: 18,
-    fontWeight: typography.bold,
-  },
-  levelsCard: {
+  quickStats: {
+    flexDirection: 'row',
     backgroundColor: colors.card,
-    borderRadius: borderRadius.xl,
+    borderRadius: borderRadius.lg,
+    borderWidth: 1,
+    borderColor: colors.border,
     padding: spacing.lg,
-    ...shadows.sm,
+    marginBottom: spacing.lg,
   },
-  levelRow: {
+  quickStatItem: {
+    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: spacing.md,
+    gap: spacing.sm,
   },
-  levelRowBorder: {
-    borderBottomWidth: 1,
-    borderBottomColor: colors.borderLight,
-  },
-  levelIcon: {
-    width: 32,
-    height: 32,
-    borderRadius: borderRadius.full,
+  quickStatIcon: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: spacing.md,
   },
-  levelIconUnlocked: {
-    backgroundColor: colors.success + '15',
-  },
-  levelIconLocked: {
-    backgroundColor: colors.cardAlt,
-  },
-  levelIconText: {
-    fontSize: 14,
-  },
-  levelInfo: {
-    flex: 1,
-  },
-  levelName: {
-    fontSize: typography.base,
-    fontWeight: typography.medium,
+  quickStatValue: {
+    fontSize: typography.sm,
+    fontWeight: typography.bold,
     color: colors.textPrimary,
-    marginBottom: 2,
   },
-  levelXp: {
-    fontSize: typography.xs,
-    color: colors.textMuted,
+  quickStatLabel: {
+    fontSize: 10,
+    color: colors.textSecondary,
   },
-  textMuted: {
-    color: colors.textMuted,
+  quickStatDivider: {
+    width: 1,
+    height: 36,
+    backgroundColor: colors.border,
+    marginHorizontal: spacing.sm,
   },
 });

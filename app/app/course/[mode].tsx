@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { useRouter, useLocalSearchParams, Stack } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { MaterialIcons } from '@expo/vector-icons';
 import {
   useGameStore,
   Level,
@@ -11,35 +12,45 @@ import { colors, spacing, borderRadius, typography, shadows } from '../../consta
 
 type ModeConfig = {
   name: string;
-  emoji: string;
+  nameId: string;
+  icon: keyof typeof MaterialIcons.glyphMap;
   color: string;
+  bgColor: string;
   description: string;
 };
 
 const MODE_CONFIG: Record<string, ModeConfig> = {
   repeat: {
-    name: 'Svara 1: Ucapkan',
-    emoji: '🔁',
+    name: 'Speak Fast',
+    nameId: 'Ucapkan',
+    icon: 'bolt',
     color: colors.repeat,
-    description: 'Lihat teks Indonesia, ucapkan terjemahan Inggrisnya',
+    bgColor: colors.repeatBg,
+    description: 'See Indonesian text, speak the English translation quickly',
   },
   respond: {
-    name: 'Svara 2: Jawab',
-    emoji: '💬',
+    name: 'Think & Answer',
+    nameId: 'Jawab',
+    icon: 'psychology',
     color: colors.respond,
-    description: 'Jawab pertanyaan dengan bahasa Inggris yang natural',
+    bgColor: colors.respondBg,
+    description: 'Answer questions naturally in English',
   },
   listen: {
-    name: 'Svara 3: Simak',
-    emoji: '👂',
+    name: 'Listen Sharp',
+    nameId: 'Simak',
+    icon: 'headphones',
     color: colors.listen,
-    description: 'Dengarkan audio, lalu ulangi atau jawab',
+    bgColor: colors.listenBg,
+    description: 'Listen to audio, then repeat or answer',
   },
   situation: {
-    name: 'Svara 4: Situasi',
-    emoji: '🎭',
+    name: 'Real Talk',
+    nameId: 'Situasi',
+    icon: 'storefront',
     color: colors.situation,
-    description: 'Praktik skenario profesional dan sosial dunia nyata',
+    bgColor: colors.situationBg,
+    description: 'Practice real-world professional and social scenarios',
   },
 };
 
@@ -82,8 +93,8 @@ export default function LevelSelectionScreen() {
     <>
       <Stack.Screen
         options={{
-          title: config.name,
-          headerBackTitle: 'Home',
+          title: config.nameId,
+          headerBackTitle: 'Back',
         }}
       />
       <SafeAreaView style={styles.container} edges={['bottom']}>
@@ -93,8 +104,8 @@ export default function LevelSelectionScreen() {
         >
           {/* Mode Header */}
           <View style={[styles.modeHeader, { borderColor: config.color }]}>
-            <View style={[styles.modeIconBg, { backgroundColor: config.color + '15' }]}>
-              <Text style={styles.modeEmoji}>{config.emoji}</Text>
+            <View style={[styles.modeIconBg, { backgroundColor: config.bgColor }]}>
+              <MaterialIcons name={config.icon} size={36} color={config.color} />
             </View>
             <Text style={styles.modeName}>{config.name}</Text>
             <Text style={styles.modeDescription}>{config.description}</Text>
@@ -123,11 +134,13 @@ export default function LevelSelectionScreen() {
                   <View style={styles.levelHeader}>
                     <View style={[
                       styles.levelIcon,
-                      unlocked ? { backgroundColor: config.color + '15' } : styles.levelIconLocked
+                      unlocked ? { backgroundColor: config.bgColor } : styles.levelIconLocked
                     ]}>
-                      <Text style={styles.levelIconText}>
-                        {unlocked ? '✓' : '🔒'}
-                      </Text>
+                      {unlocked ? (
+                        <MaterialIcons name="check" size={16} color={config.color} />
+                      ) : (
+                        <MaterialIcons name="lock" size={16} color={colors.textMuted} />
+                      )}
                     </View>
                     <View style={styles.levelInfo}>
                       <Text style={[styles.levelName, !unlocked && styles.textMuted]}>
@@ -138,7 +151,8 @@ export default function LevelSelectionScreen() {
                       </Text>
                     </View>
                     <View style={styles.timerBadge}>
-                      <Text style={styles.timerText}>⏱️ {timer}s</Text>
+                      <MaterialIcons name="schedule" size={12} color={colors.textSecondary} />
+                      <Text style={styles.timerText}>{timer}s</Text>
                     </View>
                   </View>
 
@@ -181,8 +195,9 @@ const styles = StyleSheet.create({
     padding: spacing.xxl,
     alignItems: 'center',
     marginBottom: spacing.xxl,
-    borderWidth: 2,
-    ...shadows.md,
+    borderWidth: 1,
+    borderColor: colors.border,
+    ...shadows.notion,
   },
   modeIconBg: {
     width: 72,
@@ -191,9 +206,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: spacing.md,
-  },
-  modeEmoji: {
-    fontSize: 36,
   },
   modeName: {
     fontSize: typography.xl,
@@ -220,6 +232,8 @@ const styles = StyleSheet.create({
   levelCard: {
     backgroundColor: colors.card,
     borderRadius: borderRadius.xl,
+    borderWidth: 1,
+    borderColor: colors.border,
     padding: spacing.lg,
     ...shadows.sm,
   },
@@ -241,9 +255,6 @@ const styles = StyleSheet.create({
   levelIconLocked: {
     backgroundColor: colors.cardAlt,
   },
-  levelIconText: {
-    fontSize: 16,
-  },
   levelInfo: {
     flex: 1,
   },
@@ -258,6 +269,9 @@ const styles = StyleSheet.create({
     color: colors.textSecondary,
   },
   timerBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
     backgroundColor: colors.cardAlt,
     paddingHorizontal: spacing.md,
     paddingVertical: spacing.sm,
@@ -274,7 +288,7 @@ const styles = StyleSheet.create({
     marginTop: spacing.md,
     paddingTop: spacing.md,
     borderTopWidth: 1,
-    borderTopColor: colors.borderLight,
+    borderTopColor: colors.border,
   },
   lockText: {
     fontSize: typography.sm,
@@ -284,6 +298,8 @@ const styles = StyleSheet.create({
   xpCard: {
     backgroundColor: colors.card,
     borderRadius: borderRadius.xl,
+    borderWidth: 1,
+    borderColor: colors.border,
     padding: spacing.lg,
     ...shadows.sm,
   },

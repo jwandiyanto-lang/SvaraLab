@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { MaterialIcons } from '@expo/vector-icons';
 import { useGameStore, LEVEL_XP_REQUIREMENTS, Level } from '../../stores/gameStore';
 import { colors, spacing, borderRadius, typography, shadows } from '../../constants/theme';
 
@@ -14,23 +15,37 @@ export default function ProgressScreen() {
     ? Math.round((stats.correctAnswers / stats.totalAnswers) * 100)
     : 0;
 
+  // Mock weekly data
+  const weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  const weeklyData = [45, 30, 60, 0, 15, 0, 0]; // minutes practiced each day
+
   return (
     <SafeAreaView style={styles.container} edges={['bottom']}>
       <ScrollView
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >
-        {/* XP Overview */}
+        {/* Header */}
+        <View style={styles.header}>
+          <Text style={styles.pageTitle}>Your Progress</Text>
+          <Text style={styles.pageSubtitle}>Track your English speaking journey</Text>
+        </View>
+
+        {/* XP Overview Card */}
         <View style={styles.xpCard}>
-          <View style={styles.xpIconBg}>
-            <Text style={styles.xpEmoji}>⭐</Text>
+          <View style={styles.xpContent}>
+            <View>
+              <Text style={styles.xpLabel}>Total XP</Text>
+              <Text style={styles.totalXP}>{stats.totalXP.toLocaleString()}</Text>
+            </View>
+            <View style={styles.xpIconBg}>
+              <MaterialIcons name="star" size={28} color={colors.warning} />
+            </View>
           </View>
-          <Text style={styles.totalXP}>{stats.totalXP}</Text>
-          <Text style={styles.xpLabel}>Total XP</Text>
 
           <View style={styles.progressSection}>
             <View style={styles.progressHeader}>
-              <Text style={styles.progressLabel}>Next Level</Text>
+              <Text style={styles.progressLabel}>Next Level Progress</Text>
               <Text style={styles.progressPercent}>
                 {Math.round(progress.percentage)}%
               </Text>
@@ -45,86 +60,151 @@ export default function ProgressScreen() {
             </View>
             <Text style={styles.progressDetail}>
               {progress.required > stats.totalXP
-                ? `${progress.required - stats.totalXP} XP to unlock`
+                ? `${progress.required - stats.totalXP} XP to unlock next level`
                 : 'All levels unlocked!'}
             </Text>
           </View>
         </View>
 
+        {/* Weekly Activity */}
+        <View style={styles.section}>
+          <View style={styles.sectionHeader}>
+            <Text style={styles.sectionTitle}>Weekly Activity</Text>
+            <Text style={styles.sectionBadge}>This week</Text>
+          </View>
+          <View style={styles.weeklyCard}>
+            <View style={styles.weeklyChart}>
+              {weekDays.map((day, index) => {
+                const height = weeklyData[index] > 0 ? (weeklyData[index] / 60) * 100 : 4;
+                const isActive = weeklyData[index] > 0;
+                const isToday = index === 3;
+
+                return (
+                  <View key={day} style={styles.chartColumn}>
+                    <View style={styles.chartBarContainer}>
+                      <View
+                        style={[
+                          styles.chartBar,
+                          { height: `${height}%` },
+                          isActive ? styles.chartBarActive : styles.chartBarInactive,
+                        ]}
+                      />
+                    </View>
+                    <Text style={[
+                      styles.chartLabel,
+                      isToday && styles.chartLabelToday
+                    ]}>
+                      {day}
+                    </Text>
+                  </View>
+                );
+              })}
+            </View>
+            <View style={styles.weeklyStats}>
+              <View style={styles.weeklyStatItem}>
+                <MaterialIcons name="schedule" size={16} color={colors.textSecondary} />
+                <Text style={styles.weeklyStatValue}>2h 30m</Text>
+                <Text style={styles.weeklyStatLabel}>Total Time</Text>
+              </View>
+              <View style={styles.weeklyStatItem}>
+                <MaterialIcons name="local-fire-department" size={16} color={colors.repeat} />
+                <Text style={styles.weeklyStatValue}>3</Text>
+                <Text style={styles.weeklyStatLabel}>Active Days</Text>
+              </View>
+            </View>
+          </View>
+        </View>
+
         {/* Stats Grid */}
-        <Text style={styles.sectionTitle}>Your Stats</Text>
-        <View style={styles.statsGrid}>
-          <View style={styles.statCard}>
-            <Text style={styles.statEmoji}>📚</Text>
-            <Text style={styles.statValue}>{stats.wordsLearned}</Text>
-            <Text style={styles.statLabel}>Words Learned</Text>
-          </View>
-          <View style={styles.statCard}>
-            <Text style={styles.statEmoji}>🎮</Text>
-            <Text style={styles.statValue}>{stats.totalGamesPlayed}</Text>
-            <Text style={styles.statLabel}>Sessions</Text>
-          </View>
-          <View style={styles.statCard}>
-            <Text style={styles.statEmoji}>🎯</Text>
-            <Text style={styles.statValue}>{accuracy}%</Text>
-            <Text style={styles.statLabel}>Accuracy</Text>
-          </View>
-          <View style={styles.statCard}>
-            <Text style={styles.statEmoji}>🔥</Text>
-            <Text style={styles.statValue}>{stats.currentStreak}</Text>
-            <Text style={styles.statLabel}>Day Streak</Text>
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Statistics</Text>
+          <View style={styles.statsGrid}>
+            <View style={styles.statCard}>
+              <View style={[styles.statIconBg, { backgroundColor: colors.listenBg }]}>
+                <MaterialIcons name="menu-book" size={20} color={colors.listen} />
+              </View>
+              <Text style={styles.statValue}>{stats.wordsLearned}</Text>
+              <Text style={styles.statLabel}>Words Learned</Text>
+            </View>
+            <View style={styles.statCard}>
+              <View style={[styles.statIconBg, { backgroundColor: colors.respondBg }]}>
+                <MaterialIcons name="play-circle" size={20} color={colors.respond} />
+              </View>
+              <Text style={styles.statValue}>{stats.totalGamesPlayed}</Text>
+              <Text style={styles.statLabel}>Sessions</Text>
+            </View>
+            <View style={styles.statCard}>
+              <View style={[styles.statIconBg, { backgroundColor: colors.repeatBg }]}>
+                <MaterialIcons name="check-circle" size={20} color={colors.repeat} />
+              </View>
+              <Text style={styles.statValue}>{accuracy}%</Text>
+              <Text style={styles.statLabel}>Accuracy</Text>
+            </View>
+            <View style={styles.statCard}>
+              <View style={[styles.statIconBg, { backgroundColor: colors.situationBg }]}>
+                <MaterialIcons name="local-fire-department" size={20} color={colors.situation} />
+              </View>
+              <Text style={styles.statValue}>{stats.currentStreak}</Text>
+              <Text style={styles.statLabel}>Day Streak</Text>
+            </View>
           </View>
         </View>
 
         {/* Level Unlocks */}
-        <Text style={styles.sectionTitle}>Levels</Text>
-        <View style={styles.levelsCard}>
-          {LEVELS.map((level, index) => {
-            const isUnlocked = unlockedLevels.includes(level);
-            const xpRequired = LEVEL_XP_REQUIREMENTS[level];
-            const isLast = index === LEVELS.length - 1;
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Levels</Text>
+          <View style={styles.levelsCard}>
+            {LEVELS.map((level, index) => {
+              const isUnlocked = unlockedLevels.includes(level);
+              const xpRequired = LEVEL_XP_REQUIREMENTS[level];
+              const isLast = index === LEVELS.length - 1;
 
-            return (
-              <View
-                key={level}
-                style={[styles.levelRow, !isLast && styles.levelRowBorder]}
-              >
-                <View style={[
-                  styles.levelIcon,
-                  isUnlocked ? styles.levelIconUnlocked : styles.levelIconLocked
-                ]}>
-                  <Text style={styles.levelIconText}>
-                    {isUnlocked ? '✓' : '🔒'}
-                  </Text>
-                </View>
-                <View style={styles.levelInfo}>
-                  <Text style={[styles.levelName, !isUnlocked && styles.textMuted]}>
-                    {level.charAt(0).toUpperCase() + level.slice(1)}
-                  </Text>
-                  <Text style={styles.levelXP}>
-                    {xpRequired} XP required
-                  </Text>
-                </View>
-                {isUnlocked && (
-                  <View style={styles.checkBadge}>
-                    <Text style={styles.checkText}>Unlocked</Text>
+              return (
+                <View
+                  key={level}
+                  style={[styles.levelRow, !isLast && styles.levelRowBorder]}
+                >
+                  <View style={[
+                    styles.levelIcon,
+                    isUnlocked ? styles.levelIconUnlocked : styles.levelIconLocked
+                  ]}>
+                    <MaterialIcons
+                      name={isUnlocked ? 'check' : 'lock'}
+                      size={16}
+                      color={isUnlocked ? colors.success : colors.textMuted}
+                    />
                   </View>
-                )}
-              </View>
-            );
-          })}
+                  <View style={styles.levelInfo}>
+                    <Text style={[styles.levelName, !isUnlocked && styles.textMuted]}>
+                      {level.charAt(0).toUpperCase() + level.slice(1)}
+                    </Text>
+                    <Text style={styles.levelXP}>
+                      {xpRequired.toLocaleString()} XP required
+                    </Text>
+                  </View>
+                  {isUnlocked && (
+                    <View style={styles.checkBadge}>
+                      <Text style={styles.checkText}>Unlocked</Text>
+                    </View>
+                  )}
+                </View>
+              );
+            })}
+          </View>
         </View>
 
         {/* Achievements placeholder */}
-        <Text style={styles.sectionTitle}>Achievements</Text>
-        <View style={styles.achievementsCard}>
-          <View style={styles.achievementIconBg}>
-            <Text style={styles.achievementEmoji}>🏆</Text>
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Achievements</Text>
+          <View style={styles.achievementsCard}>
+            <View style={styles.achievementIconBg}>
+              <MaterialIcons name="emoji-events" size={32} color={colors.textMuted} />
+            </View>
+            <Text style={styles.achievementTitle}>Coming Soon</Text>
+            <Text style={styles.achievementText}>
+              Achievements will be available in a future update
+            </Text>
           </View>
-          <Text style={styles.achievementTitle}>Coming Soon</Text>
-          <Text style={styles.achievementText}>
-            Achievements will be available in a future update
-          </Text>
         </View>
 
         <View style={{ height: 20 }} />
@@ -141,38 +221,61 @@ const styles = StyleSheet.create({
   content: {
     padding: spacing.xl,
   },
-  xpCard: {
-    backgroundColor: colors.card,
-    borderRadius: borderRadius.xxl,
-    padding: spacing.xxl,
-    alignItems: 'center',
+  header: {
     marginBottom: spacing.xxl,
-    ...shadows.md,
   },
-  xpIconBg: {
-    width: 64,
-    height: 64,
-    borderRadius: borderRadius.xl,
-    backgroundColor: colors.warning + '15',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: spacing.md,
-  },
-  xpEmoji: {
-    fontSize: 32,
-  },
-  totalXP: {
-    fontSize: 48,
+  pageTitle: {
+    fontSize: typography.xxl,
     fontWeight: typography.bold,
-    color: colors.warning,
+    color: colors.textPrimary,
+    marginBottom: spacing.xs,
   },
-  xpLabel: {
+  pageSubtitle: {
     fontSize: typography.sm,
     color: colors.textSecondary,
+  },
+  xpCard: {
+    backgroundColor: colors.card,
+    borderRadius: borderRadius.xl,
+    borderWidth: 1,
+    borderColor: colors.border,
+    padding: spacing.xl,
+    marginBottom: spacing.xxl,
+    ...shadows.notion,
+  },
+  xpContent: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
     marginBottom: spacing.xl,
+  },
+  xpIconBg: {
+    width: 48,
+    height: 48,
+    borderRadius: borderRadius.lg,
+    backgroundColor: colors.warningBg,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  totalXP: {
+    fontSize: 40,
+    fontWeight: typography.bold,
+    color: colors.textPrimary,
+    letterSpacing: -1,
+  },
+  xpLabel: {
+    fontSize: typography.xs,
+    fontWeight: typography.semibold,
+    color: colors.textSecondary,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+    marginBottom: spacing.xs,
   },
   progressSection: {
     width: '100%',
+    paddingTop: spacing.lg,
+    borderTopWidth: 1,
+    borderTopColor: colors.border,
   },
   progressHeader: {
     flexDirection: 'row',
@@ -180,17 +283,18 @@ const styles = StyleSheet.create({
     marginBottom: spacing.sm,
   },
   progressLabel: {
-    fontSize: typography.sm,
+    fontSize: typography.xs,
     color: colors.textSecondary,
+    fontWeight: typography.medium,
   },
   progressPercent: {
-    fontSize: typography.sm,
+    fontSize: typography.xs,
     color: colors.primary,
-    fontWeight: typography.semibold,
+    fontWeight: typography.bold,
   },
   progressBarBg: {
-    height: 8,
-    backgroundColor: colors.cardAlt,
+    height: 6,
+    backgroundColor: colors.border,
     borderRadius: borderRadius.full,
     overflow: 'hidden',
   },
@@ -203,31 +307,122 @@ const styles = StyleSheet.create({
     fontSize: typography.xs,
     color: colors.textMuted,
     marginTop: spacing.sm,
-    textAlign: 'center',
+  },
+  section: {
+    marginBottom: spacing.xxl,
+  },
+  sectionHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: spacing.md,
   },
   sectionTitle: {
+    fontSize: typography.xs,
+    fontWeight: typography.semibold,
+    color: colors.textSecondary,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+    marginBottom: spacing.md,
+  },
+  sectionBadge: {
+    fontSize: 10,
+    fontWeight: typography.medium,
+    color: colors.textSecondary,
+    backgroundColor: colors.cardAlt,
+    paddingHorizontal: spacing.sm,
+    paddingVertical: 2,
+    borderRadius: borderRadius.sm,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  weeklyCard: {
+    backgroundColor: colors.card,
+    borderRadius: borderRadius.xl,
+    borderWidth: 1,
+    borderColor: colors.border,
+    padding: spacing.xl,
+    ...shadows.notion,
+  },
+  weeklyChart: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    height: 100,
+    marginBottom: spacing.lg,
+  },
+  chartColumn: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  chartBarContainer: {
+    flex: 1,
+    width: 20,
+    justifyContent: 'flex-end',
+    marginBottom: spacing.sm,
+  },
+  chartBar: {
+    width: '100%',
+    borderRadius: 4,
+    minHeight: 4,
+  },
+  chartBarActive: {
+    backgroundColor: colors.primary,
+  },
+  chartBarInactive: {
+    backgroundColor: colors.border,
+  },
+  chartLabel: {
+    fontSize: 10,
+    color: colors.textMuted,
+    fontWeight: typography.medium,
+  },
+  chartLabelToday: {
+    color: colors.textPrimary,
+    fontWeight: typography.bold,
+  },
+  weeklyStats: {
+    flexDirection: 'row',
+    gap: spacing.md,
+    paddingTop: spacing.lg,
+    borderTopWidth: 1,
+    borderTopColor: colors.border,
+  },
+  weeklyStatItem: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  weeklyStatValue: {
     fontSize: typography.lg,
     fontWeight: typography.bold,
     color: colors.textPrimary,
-    marginBottom: spacing.md,
+    marginTop: spacing.sm,
+  },
+  weeklyStatLabel: {
+    fontSize: typography.xs,
+    color: colors.textSecondary,
   },
   statsGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: spacing.md,
-    marginBottom: spacing.xxl,
   },
   statCard: {
     width: '47%',
     backgroundColor: colors.card,
     borderRadius: borderRadius.lg,
+    borderWidth: 1,
+    borderColor: colors.border,
     padding: spacing.lg,
-    alignItems: 'center',
+    alignItems: 'flex-start',
     ...shadows.sm,
   },
-  statEmoji: {
-    fontSize: 28,
-    marginBottom: spacing.sm,
+  statIconBg: {
+    width: 36,
+    height: 36,
+    borderRadius: borderRadius.md,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: spacing.md,
   },
   statValue: {
     fontSize: typography.xxl,
@@ -236,15 +431,15 @@ const styles = StyleSheet.create({
   },
   statLabel: {
     fontSize: typography.xs,
-    color: colors.textMuted,
+    color: colors.textSecondary,
     marginTop: spacing.xs,
-    textAlign: 'center',
   },
   levelsCard: {
     backgroundColor: colors.card,
     borderRadius: borderRadius.xl,
+    borderWidth: 1,
+    borderColor: colors.border,
     padding: spacing.lg,
-    marginBottom: spacing.xxl,
     ...shadows.sm,
   },
   levelRow: {
@@ -254,7 +449,7 @@ const styles = StyleSheet.create({
   },
   levelRowBorder: {
     borderBottomWidth: 1,
-    borderBottomColor: colors.borderLight,
+    borderBottomColor: colors.border,
   },
   levelIcon: {
     width: 36,
@@ -265,13 +460,10 @@ const styles = StyleSheet.create({
     marginRight: spacing.md,
   },
   levelIconUnlocked: {
-    backgroundColor: colors.success + '15',
+    backgroundColor: colors.successBg,
   },
   levelIconLocked: {
     backgroundColor: colors.cardAlt,
-  },
-  levelIconText: {
-    fontSize: 16,
   },
   levelInfo: {
     flex: 1,
@@ -290,10 +482,12 @@ const styles = StyleSheet.create({
     color: colors.textMuted,
   },
   checkBadge: {
-    backgroundColor: colors.success + '15',
+    backgroundColor: colors.successBg,
     paddingHorizontal: spacing.md,
     paddingVertical: spacing.xs,
     borderRadius: borderRadius.full,
+    borderWidth: 1,
+    borderColor: colors.success + '30',
   },
   checkText: {
     fontSize: typography.xs,
@@ -303,6 +497,8 @@ const styles = StyleSheet.create({
   achievementsCard: {
     backgroundColor: colors.card,
     borderRadius: borderRadius.xl,
+    borderWidth: 1,
+    borderColor: colors.border,
     padding: spacing.xxl,
     alignItems: 'center',
     ...shadows.sm,
@@ -315,10 +511,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: spacing.md,
-  },
-  achievementEmoji: {
-    fontSize: 32,
-    opacity: 0.5,
   },
   achievementTitle: {
     fontSize: typography.base,

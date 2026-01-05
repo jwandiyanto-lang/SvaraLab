@@ -1,0 +1,2012 @@
+{
+  "metadata": {
+    "mode": "respond",
+    "totalItems": 200,
+    "itemsPerSession": 10,
+    "secondsPerItem": 30,
+    "version": "1.0.0",
+    "lastUpdated": "2026-01-06"
+  },
+  "items": [
+    {
+      "id": "res-001",
+      "question": "What is your name?",
+      "questionIndonesian": "Siapa nama kamu?",
+      "acceptedAnswers": ["My name is", "I am", "I'm", "Call me"],
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 1,
+      "hint": "Start with 'My name is...' or 'I am...'"
+    },
+    {
+      "id": "res-002",
+      "question": "How are you?",
+      "questionIndonesian": "Apa kabar?",
+      "acceptedAnswers": ["I am fine", "I'm good", "I'm doing well", "Good", "Fine", "Great", "Not bad"],
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 1,
+      "hint": "You can say 'I'm fine' or 'I'm good'"
+    },
+    {
+      "id": "res-003",
+      "question": "Where are you from?",
+      "questionIndonesian": "Dari mana asal kamu?",
+      "acceptedAnswers": ["I am from", "I'm from", "I come from"],
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 1,
+      "hint": "Say 'I am from...' followed by your country or city"
+    },
+    {
+      "id": "res-004",
+      "question": "What do you do?",
+      "questionIndonesian": "Apa pekerjaanmu?",
+      "acceptedAnswers": ["I am a", "I'm a", "I work as", "I work in"],
+      "category": "work",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Say 'I am a...' followed by your job"
+    },
+    {
+      "id": "res-005",
+      "question": "Do you speak English?",
+      "questionIndonesian": "Apakah kamu bisa bahasa Inggris?",
+      "acceptedAnswers": ["Yes", "Yes, I do", "A little", "I'm learning", "Yes, but not fluently"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 1,
+      "hint": "You can say 'Yes, a little' or 'I'm learning'"
+    },
+    {
+      "id": "res-006",
+      "question": "What time is it?",
+      "questionIndonesian": "Jam berapa sekarang?",
+      "acceptedAnswers": ["It is", "It's", "o'clock", "half past", "quarter"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Say 'It's...' followed by the time"
+    },
+    {
+      "id": "res-007",
+      "question": "What day is it today?",
+      "questionIndonesian": "Hari ini hari apa?",
+      "acceptedAnswers": ["Today is", "It's", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 1,
+      "hint": "Say 'Today is...' followed by the day"
+    },
+    {
+      "id": "res-008",
+      "question": "Are you hungry?",
+      "questionIndonesian": "Apakah kamu lapar?",
+      "acceptedAnswers": ["Yes", "No", "Yes, I am", "No, I'm not", "A little", "Very hungry", "Not really"],
+      "category": "food",
+      "level": "beginner",
+      "difficulty": 1,
+      "hint": "Answer with 'Yes, I am' or 'No, I'm not'"
+    },
+    {
+      "id": "res-009",
+      "question": "What would you like to drink?",
+      "questionIndonesian": "Mau minum apa?",
+      "acceptedAnswers": ["I would like", "I'd like", "I want", "Can I have", "Water", "Coffee", "Tea", "Juice"],
+      "category": "food",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Say 'I would like...' followed by a drink"
+    },
+    {
+      "id": "res-010",
+      "question": "Do you like coffee?",
+      "questionIndonesian": "Apakah kamu suka kopi?",
+      "acceptedAnswers": ["Yes", "No", "Yes, I do", "No, I don't", "I love it", "Not really", "Sometimes"],
+      "category": "food",
+      "level": "beginner",
+      "difficulty": 1,
+      "hint": "Answer with 'Yes, I do' or 'No, I don't'"
+    },
+    {
+      "id": "res-011",
+      "question": "How old are you?",
+      "questionIndonesian": "Berapa umurmu?",
+      "acceptedAnswers": ["I am", "I'm", "years old"],
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Say 'I am...' followed by your age"
+    },
+    {
+      "id": "res-012",
+      "question": "Where do you live?",
+      "questionIndonesian": "Di mana kamu tinggal?",
+      "acceptedAnswers": ["I live in", "I live at", "I'm from", "In"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Say 'I live in...' followed by your city"
+    },
+    {
+      "id": "res-013",
+      "question": "Do you have any siblings?",
+      "questionIndonesian": "Apakah kamu punya saudara?",
+      "acceptedAnswers": ["Yes", "No", "I have", "I don't have", "brother", "sister", "only child"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Say 'Yes, I have...' or 'No, I don't have any'"
+    },
+    {
+      "id": "res-014",
+      "question": "What is your favorite color?",
+      "questionIndonesian": "Warna kesukaan kamu apa?",
+      "acceptedAnswers": ["My favorite color is", "I like", "Blue", "Red", "Green", "Yellow", "Black", "White", "Pink"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 1,
+      "hint": "Say 'My favorite color is...' followed by a color"
+    },
+    {
+      "id": "res-015",
+      "question": "What is your favorite food?",
+      "questionIndonesian": "Makanan kesukaan kamu apa?",
+      "acceptedAnswers": ["My favorite food is", "I like", "I love"],
+      "category": "food",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Say 'My favorite food is...' followed by a food"
+    },
+    {
+      "id": "res-016",
+      "question": "Can you help me?",
+      "questionIndonesian": "Bisakah kamu bantu saya?",
+      "acceptedAnswers": ["Yes", "Sure", "Of course", "No problem", "How can I help"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 1,
+      "hint": "Answer with 'Sure' or 'Of course'"
+    },
+    {
+      "id": "res-017",
+      "question": "What is this?",
+      "questionIndonesian": "Ini apa?",
+      "acceptedAnswers": ["This is", "It's", "It is"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 1,
+      "hint": "Say 'This is...' followed by the name"
+    },
+    {
+      "id": "res-018",
+      "question": "How much does this cost?",
+      "questionIndonesian": "Berapa harga ini?",
+      "acceptedAnswers": ["It costs", "It's", "dollars", "rupiah", "thousand"],
+      "category": "shopping",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Say 'It costs...' followed by the price"
+    },
+    {
+      "id": "res-019",
+      "question": "Do you have this in a different size?",
+      "questionIndonesian": "Ada ukuran lain?",
+      "acceptedAnswers": ["Let me check", "What size", "Yes, we have", "No, sorry"],
+      "category": "shopping",
+      "level": "beginner",
+      "difficulty": 3,
+      "hint": "You can say 'What size do you need?'"
+    },
+    {
+      "id": "res-020",
+      "question": "Where is the bathroom?",
+      "questionIndonesian": "Di mana toilet?",
+      "acceptedAnswers": ["It's over there", "Down the hall", "On the right", "On the left", "Upstairs", "Downstairs"],
+      "category": "travel",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Give directions like 'It's on the right'"
+    },
+    {
+      "id": "res-021",
+      "question": "What are your hobbies?",
+      "questionIndonesian": "Apa hobi kamu?",
+      "acceptedAnswers": ["I like", "I enjoy", "My hobby is", "I love", "reading", "sports", "music", "cooking"],
+      "category": "social",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Say 'I like...' followed by your hobby"
+    },
+    {
+      "id": "res-022",
+      "question": "Do you like sports?",
+      "questionIndonesian": "Apakah kamu suka olahraga?",
+      "acceptedAnswers": ["Yes", "No", "I like", "I play", "I watch", "Not really"],
+      "category": "social",
+      "level": "beginner",
+      "difficulty": 1,
+      "hint": "Answer with 'Yes, I like...' and mention a sport"
+    },
+    {
+      "id": "res-023",
+      "question": "What music do you like?",
+      "questionIndonesian": "Musik apa yang kamu suka?",
+      "acceptedAnswers": ["I like", "I listen to", "pop", "rock", "jazz", "classical", "traditional"],
+      "category": "social",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Say 'I like...' followed by a music genre"
+    },
+    {
+      "id": "res-024",
+      "question": "What time do you wake up?",
+      "questionIndonesian": "Jam berapa kamu bangun?",
+      "acceptedAnswers": ["I wake up at", "I get up at", "o'clock", "in the morning"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Say 'I wake up at...' followed by the time"
+    },
+    {
+      "id": "res-025",
+      "question": "What time do you go to sleep?",
+      "questionIndonesian": "Jam berapa kamu tidur?",
+      "acceptedAnswers": ["I go to sleep at", "I sleep at", "o'clock", "at night"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Say 'I go to sleep at...' followed by the time"
+    },
+    {
+      "id": "res-026",
+      "question": "Are you married?",
+      "questionIndonesian": "Apakah kamu sudah menikah?",
+      "acceptedAnswers": ["Yes", "No", "Yes, I am", "No, I'm not", "I'm single", "I'm married"],
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Answer with 'Yes, I am' or 'No, I'm single'"
+    },
+    {
+      "id": "res-027",
+      "question": "Do you have children?",
+      "questionIndonesian": "Apakah kamu punya anak?",
+      "acceptedAnswers": ["Yes", "No", "I have", "I don't have", "children", "son", "daughter"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Say 'Yes, I have...' or 'No, not yet'"
+    },
+    {
+      "id": "res-028",
+      "question": "What is your phone number?",
+      "questionIndonesian": "Berapa nomor teleponmu?",
+      "acceptedAnswers": ["My number is", "It's", "My phone number"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Say 'My number is...' followed by digits"
+    },
+    {
+      "id": "res-029",
+      "question": "What is your email address?",
+      "questionIndonesian": "Apa alamat emailmu?",
+      "acceptedAnswers": ["My email is", "It's", "at", "dot com"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 3,
+      "hint": "Say 'My email is...' spell it out"
+    },
+    {
+      "id": "res-030",
+      "question": "Is this seat taken?",
+      "questionIndonesian": "Apakah kursi ini sudah ada yang duduk?",
+      "acceptedAnswers": ["No", "Yes", "No, please sit", "Yes, sorry", "Go ahead"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Say 'No, go ahead' or 'Yes, sorry'"
+    },
+    {
+      "id": "res-031",
+      "question": "Can I borrow your pen?",
+      "questionIndonesian": "Boleh pinjam pulpenmu?",
+      "acceptedAnswers": ["Yes", "Sure", "Of course", "Here you go", "No, sorry"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 1,
+      "hint": "Say 'Sure, here you go'"
+    },
+    {
+      "id": "res-032",
+      "question": "What did you have for breakfast?",
+      "questionIndonesian": "Tadi sarapan apa?",
+      "acceptedAnswers": ["I had", "I ate", "bread", "rice", "eggs", "nothing", "I didn't eat"],
+      "category": "food",
+      "level": "beginner",
+      "difficulty": 3,
+      "hint": "Say 'I had...' followed by food"
+    },
+    {
+      "id": "res-033",
+      "question": "What will you have for dinner?",
+      "questionIndonesian": "Mau makan malam apa?",
+      "acceptedAnswers": ["I will have", "I'm going to eat", "I don't know yet", "Maybe"],
+      "category": "food",
+      "level": "beginner",
+      "difficulty": 3,
+      "hint": "Say 'I will have...' followed by food"
+    },
+    {
+      "id": "res-034",
+      "question": "Is the food spicy?",
+      "questionIndonesian": "Makanannya pedas?",
+      "acceptedAnswers": ["Yes", "No", "A little", "Very spicy", "Not really", "Not at all"],
+      "category": "food",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Answer with 'Yes, it is' or 'No, it's not'"
+    },
+    {
+      "id": "res-035",
+      "question": "How is the weather today?",
+      "questionIndonesian": "Bagaimana cuaca hari ini?",
+      "acceptedAnswers": ["It's sunny", "It's rainy", "It's hot", "It's cold", "It's cloudy", "Nice"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Say 'It's...' followed by weather description"
+    },
+    {
+      "id": "res-036",
+      "question": "Did you sleep well?",
+      "questionIndonesian": "Tidurmu nyenyak?",
+      "acceptedAnswers": ["Yes", "No", "Yes, I did", "Not really", "Very well", "I couldn't sleep"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Answer with 'Yes, very well' or 'Not really'"
+    },
+    {
+      "id": "res-037",
+      "question": "Are you tired?",
+      "questionIndonesian": "Apakah kamu capek?",
+      "acceptedAnswers": ["Yes", "No", "Yes, I am", "No, I'm not", "A little", "Very tired"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 1,
+      "hint": "Answer with 'Yes, I am' or 'No, I'm fine'"
+    },
+    {
+      "id": "res-038",
+      "question": "Do you understand?",
+      "questionIndonesian": "Apakah kamu mengerti?",
+      "acceptedAnswers": ["Yes", "No", "Yes, I do", "I don't understand", "Can you repeat", "A little"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 1,
+      "hint": "Answer with 'Yes, I understand' or 'No, can you repeat?'"
+    },
+    {
+      "id": "res-039",
+      "question": "Can you speak slower?",
+      "questionIndonesian": "Bisa bicara lebih pelan?",
+      "acceptedAnswers": ["Yes", "Sure", "Of course", "No problem", "Okay"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 1,
+      "hint": "Say 'Sure, no problem'"
+    },
+    {
+      "id": "res-040",
+      "question": "What does this mean?",
+      "questionIndonesian": "Apa artinya ini?",
+      "acceptedAnswers": ["It means", "This means", "That's"],
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 2,
+      "hint": "Say 'It means...' followed by the meaning"
+    },
+    {
+      "id": "res-041",
+      "question": "How long have you been learning English?",
+      "questionIndonesian": "Sudah berapa lama belajar bahasa Inggris?",
+      "acceptedAnswers": ["I have been learning", "For", "years", "months", "Since"],
+      "category": "daily",
+      "level": "elementary",
+      "difficulty": 4,
+      "hint": "Say 'For...' followed by the duration"
+    },
+    {
+      "id": "res-042",
+      "question": "What do you do in your free time?",
+      "questionIndonesian": "Apa yang kamu lakukan di waktu luang?",
+      "acceptedAnswers": ["I like to", "I usually", "I enjoy", "I read", "I watch", "I play"],
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'I like to...' followed by activity"
+    },
+    {
+      "id": "res-043",
+      "question": "Have you ever been abroad?",
+      "questionIndonesian": "Apakah kamu pernah ke luar negeri?",
+      "acceptedAnswers": ["Yes", "No", "Yes, I have", "No, I haven't", "been to", "visited"],
+      "category": "travel",
+      "level": "elementary",
+      "difficulty": 4,
+      "hint": "Say 'Yes, I have been to...' or 'No, not yet'"
+    },
+    {
+      "id": "res-044",
+      "question": "Where would you like to travel?",
+      "questionIndonesian": "Ke mana kamu ingin berwisata?",
+      "acceptedAnswers": ["I would like to", "I want to visit", "I'd love to go to"],
+      "category": "travel",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'I would like to visit...' followed by a place"
+    },
+    {
+      "id": "res-045",
+      "question": "How was your weekend?",
+      "questionIndonesian": "Bagaimana akhir pekanmu?",
+      "acceptedAnswers": ["It was great", "It was good", "Not bad", "I stayed home", "I went out", "Relaxing"],
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'It was...' and describe your weekend"
+    },
+    {
+      "id": "res-046",
+      "question": "What are your plans for today?",
+      "questionIndonesian": "Apa rencanamu hari ini?",
+      "acceptedAnswers": ["I'm going to", "I will", "I plan to", "No plans", "I have to"],
+      "category": "daily",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'I'm going to...' followed by your plan"
+    },
+    {
+      "id": "res-047",
+      "question": "Can you recommend a good restaurant?",
+      "questionIndonesian": "Bisa rekomendasikan restoran yang bagus?",
+      "acceptedAnswers": ["I recommend", "You should try", "There's a good place", "I suggest"],
+      "category": "food",
+      "level": "elementary",
+      "difficulty": 4,
+      "hint": "Say 'I recommend...' followed by restaurant name"
+    },
+    {
+      "id": "res-048",
+      "question": "What kind of food do you prefer?",
+      "questionIndonesian": "Kamu lebih suka makanan jenis apa?",
+      "acceptedAnswers": ["I prefer", "I like", "I enjoy", "Indonesian", "Western", "Asian", "Seafood"],
+      "category": "food",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'I prefer...' followed by food type"
+    },
+    {
+      "id": "res-049",
+      "question": "How often do you exercise?",
+      "questionIndonesian": "Seberapa sering kamu olahraga?",
+      "acceptedAnswers": ["Every day", "Once a week", "Twice a week", "Rarely", "Never", "Sometimes"],
+      "category": "daily",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say how frequently like 'Twice a week'"
+    },
+    {
+      "id": "res-050",
+      "question": "What is your biggest goal?",
+      "questionIndonesian": "Apa tujuan terbesarmu?",
+      "acceptedAnswers": ["My goal is", "I want to", "I hope to", "I'm working towards"],
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 4,
+      "hint": "Say 'My goal is to...' followed by your goal"
+    },
+    {
+      "id": "res-051",
+      "question": "Do you prefer tea or coffee?",
+      "questionIndonesian": "Kamu lebih suka teh atau kopi?",
+      "acceptedAnswers": ["I prefer", "I like", "Tea", "Coffee", "Both", "Neither"],
+      "category": "food",
+      "level": "elementary",
+      "difficulty": 2,
+      "hint": "Say 'I prefer tea' or 'I prefer coffee'"
+    },
+    {
+      "id": "res-052",
+      "question": "What is your favorite movie?",
+      "questionIndonesian": "Film favorit kamu apa?",
+      "acceptedAnswers": ["My favorite movie is", "I like", "I love"],
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'My favorite movie is...' followed by movie name"
+    },
+    {
+      "id": "res-053",
+      "question": "What book are you reading?",
+      "questionIndonesian": "Buku apa yang sedang kamu baca?",
+      "acceptedAnswers": ["I'm reading", "I'm currently reading", "I'm not reading", "I don't read much"],
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'I'm reading...' followed by book title"
+    },
+    {
+      "id": "res-054",
+      "question": "How do you get to work?",
+      "questionIndonesian": "Bagaimana kamu pergi ke kantor?",
+      "acceptedAnswers": ["I take", "I drive", "I walk", "By bus", "By car", "By motorcycle", "I work from home"],
+      "category": "work",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'I take...' or 'By...' followed by transport"
+    },
+    {
+      "id": "res-055",
+      "question": "How long is your commute?",
+      "questionIndonesian": "Berapa lama perjalanan ke kantor?",
+      "acceptedAnswers": ["It takes", "About", "minutes", "hours", "I work from home"],
+      "category": "work",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'It takes about...' followed by duration"
+    },
+    {
+      "id": "res-056",
+      "question": "What do you like about your job?",
+      "questionIndonesian": "Apa yang kamu suka dari pekerjaanmu?",
+      "acceptedAnswers": ["I like", "I enjoy", "The best part is", "I love", "working with"],
+      "category": "work",
+      "level": "elementary",
+      "difficulty": 4,
+      "hint": "Say 'I like...' followed by aspect of work"
+    },
+    {
+      "id": "res-057",
+      "question": "What is the most challenging part of your job?",
+      "questionIndonesian": "Apa bagian tersulit dari pekerjaanmu?",
+      "acceptedAnswers": ["The most challenging is", "I find it hard to", "Dealing with", "Managing"],
+      "category": "work",
+      "level": "elementary",
+      "difficulty": 5,
+      "hint": "Say 'The most challenging is...' followed by challenge"
+    },
+    {
+      "id": "res-058",
+      "question": "Are you available tomorrow?",
+      "questionIndonesian": "Apakah kamu ada waktu besok?",
+      "acceptedAnswers": ["Yes", "No", "Yes, I am", "I'm not sure", "Let me check", "I'm busy"],
+      "category": "daily",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'Yes, I am' or 'Sorry, I'm busy'"
+    },
+    {
+      "id": "res-059",
+      "question": "Can we reschedule?",
+      "questionIndonesian": "Bisakah kita jadwal ulang?",
+      "acceptedAnswers": ["Yes", "Sure", "Of course", "When", "What time works", "No problem"],
+      "category": "daily",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'Sure, when works for you?'"
+    },
+    {
+      "id": "res-060",
+      "question": "What time should we meet?",
+      "questionIndonesian": "Jam berapa kita ketemu?",
+      "acceptedAnswers": ["How about", "Let's meet at", "Is", "o'clock", "works for me"],
+      "category": "daily",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'How about...' followed by time"
+    },
+    {
+      "id": "res-061",
+      "question": "Would you like to join us for lunch?",
+      "questionIndonesian": "Mau ikut makan siang?",
+      "acceptedAnswers": ["Yes", "Sure", "I'd love to", "Sorry, I can't", "Maybe next time", "Sounds good"],
+      "category": "food",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'Sure, I'd love to' or 'Sorry, I can't'"
+    },
+    {
+      "id": "res-062",
+      "question": "What is your opinion on this?",
+      "questionIndonesian": "Apa pendapatmu tentang ini?",
+      "acceptedAnswers": ["I think", "In my opinion", "I believe", "It seems", "From my perspective"],
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 4,
+      "hint": "Say 'I think...' followed by your opinion"
+    },
+    {
+      "id": "res-063",
+      "question": "Do you agree with me?",
+      "questionIndonesian": "Apakah kamu setuju dengan saya?",
+      "acceptedAnswers": ["Yes", "No", "I agree", "I disagree", "Partially", "It depends"],
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'Yes, I agree' or 'I have a different opinion'"
+    },
+    {
+      "id": "res-064",
+      "question": "What would you do differently?",
+      "questionIndonesian": "Apa yang akan kamu lakukan berbeda?",
+      "acceptedAnswers": ["I would", "I'd probably", "I might", "I think I would"],
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 4,
+      "hint": "Say 'I would...' followed by what you'd change"
+    },
+    {
+      "id": "res-065",
+      "question": "How did you learn about us?",
+      "questionIndonesian": "Bagaimana kamu tahu tentang kami?",
+      "acceptedAnswers": ["I heard from", "Through", "A friend told me", "Online", "Social media"],
+      "category": "daily",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'I heard from...' or 'Through...'"
+    },
+    {
+      "id": "res-066",
+      "question": "Is everything okay?",
+      "questionIndonesian": "Apakah semuanya baik-baik saja?",
+      "acceptedAnswers": ["Yes", "Everything is fine", "No", "I'm okay", "Not really", "I'm having some issues"],
+      "category": "daily",
+      "level": "elementary",
+      "difficulty": 2,
+      "hint": "Say 'Yes, everything is fine' or explain issue"
+    },
+    {
+      "id": "res-067",
+      "question": "Can I ask you something?",
+      "questionIndonesian": "Boleh saya bertanya sesuatu?",
+      "acceptedAnswers": ["Yes", "Sure", "Of course", "Go ahead", "What is it"],
+      "category": "daily",
+      "level": "elementary",
+      "difficulty": 2,
+      "hint": "Say 'Sure, go ahead'"
+    },
+    {
+      "id": "res-068",
+      "question": "What do you think I should do?",
+      "questionIndonesian": "Menurutmu apa yang harus saya lakukan?",
+      "acceptedAnswers": ["I think you should", "Maybe you could", "I suggest", "Have you tried"],
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 4,
+      "hint": "Say 'I think you should...' followed by advice"
+    },
+    {
+      "id": "res-069",
+      "question": "Have you tried Indonesian food?",
+      "questionIndonesian": "Sudah pernah coba makanan Indonesia?",
+      "acceptedAnswers": ["Yes", "No", "Yes, I have", "Not yet", "I love it", "I've tried"],
+      "category": "food",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'Yes, I have tried...' or 'Not yet'"
+    },
+    {
+      "id": "res-070",
+      "question": "What is your favorite Indonesian dish?",
+      "questionIndonesian": "Makanan Indonesia favorit kamu apa?",
+      "acceptedAnswers": ["My favorite is", "I like", "I love", "Nasi goreng", "Rendang", "Sate"],
+      "category": "food",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'My favorite is...' followed by dish name"
+    },
+    {
+      "id": "res-071",
+      "question": "Where is the nearest ATM?",
+      "questionIndonesian": "Di mana ATM terdekat?",
+      "acceptedAnswers": ["It's", "There's one", "Down the street", "Around the corner", "In the mall"],
+      "category": "travel",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Give directions to the ATM"
+    },
+    {
+      "id": "res-072",
+      "question": "How do I get to the train station?",
+      "questionIndonesian": "Bagaimana caranya ke stasiun kereta?",
+      "acceptedAnswers": ["Go straight", "Turn left", "Turn right", "Take the", "It's near"],
+      "category": "travel",
+      "level": "elementary",
+      "difficulty": 4,
+      "hint": "Give step-by-step directions"
+    },
+    {
+      "id": "res-073",
+      "question": "Is there a pharmacy nearby?",
+      "questionIndonesian": "Apakah ada apotek di dekat sini?",
+      "acceptedAnswers": ["Yes, there is", "No, there isn't", "There's one", "Down the road"],
+      "category": "health",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'Yes, there's one...' with location"
+    },
+    {
+      "id": "res-074",
+      "question": "What symptoms do you have?",
+      "questionIndonesian": "Apa gejalanya?",
+      "acceptedAnswers": ["I have", "I feel", "I'm experiencing", "headache", "fever", "cough"],
+      "category": "health",
+      "level": "elementary",
+      "difficulty": 4,
+      "hint": "Say 'I have...' followed by symptoms"
+    },
+    {
+      "id": "res-075",
+      "question": "When did it start?",
+      "questionIndonesian": "Kapan mulainya?",
+      "acceptedAnswers": ["It started", "Yesterday", "This morning", "A few days ago", "Last week"],
+      "category": "health",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'It started...' followed by when"
+    },
+    {
+      "id": "res-076",
+      "question": "Do you have any allergies?",
+      "questionIndonesian": "Apakah kamu punya alergi?",
+      "acceptedAnswers": ["Yes", "No", "I'm allergic to", "No allergies", "I don't have any"],
+      "category": "health",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'Yes, I'm allergic to...' or 'No, I don't have any'"
+    },
+    {
+      "id": "res-077",
+      "question": "Would you like a receipt?",
+      "questionIndonesian": "Mau struk?",
+      "acceptedAnswers": ["Yes", "No", "Yes, please", "No, thank you", "I don't need it"],
+      "category": "shopping",
+      "level": "elementary",
+      "difficulty": 2,
+      "hint": "Say 'Yes, please' or 'No, thank you'"
+    },
+    {
+      "id": "res-078",
+      "question": "Will that be cash or card?",
+      "questionIndonesian": "Bayar tunai atau kartu?",
+      "acceptedAnswers": ["Cash", "Card", "By card", "Cash please", "I'll pay by card"],
+      "category": "shopping",
+      "level": "elementary",
+      "difficulty": 2,
+      "hint": "Say 'Cash' or 'Card please'"
+    },
+    {
+      "id": "res-079",
+      "question": "Do you need a bag?",
+      "questionIndonesian": "Perlu tas?",
+      "acceptedAnswers": ["Yes", "No", "Yes, please", "No, I have one", "No, thanks"],
+      "category": "shopping",
+      "level": "elementary",
+      "difficulty": 2,
+      "hint": "Say 'Yes, please' or 'No, I'm fine'"
+    },
+    {
+      "id": "res-080",
+      "question": "Is this on sale?",
+      "questionIndonesian": "Apakah ini sedang diskon?",
+      "acceptedAnswers": ["Yes", "No", "Yes, it is", "No, it's not", "Let me check"],
+      "category": "shopping",
+      "level": "elementary",
+      "difficulty": 3,
+      "hint": "Say 'Yes, it's...' or 'No, full price'"
+    },
+    {
+      "id": "res-081",
+      "question": "Why are you interested in this position?",
+      "questionIndonesian": "Kenapa kamu tertarik dengan posisi ini?",
+      "acceptedAnswers": ["I'm interested because", "I want to", "I'm passionate about", "I believe"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Explain your motivation and interest"
+    },
+    {
+      "id": "res-082",
+      "question": "What are your strengths?",
+      "questionIndonesian": "Apa kelebihanmu?",
+      "acceptedAnswers": ["My strength is", "I'm good at", "I excel at", "One of my strengths"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Say 'My strength is...' followed by skill"
+    },
+    {
+      "id": "res-083",
+      "question": "What are your weaknesses?",
+      "questionIndonesian": "Apa kelemahanmu?",
+      "acceptedAnswers": ["I sometimes", "I tend to", "I'm working on", "One area I'm improving"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6,
+      "hint": "Be honest but show growth mindset"
+    },
+    {
+      "id": "res-084",
+      "question": "Where do you see yourself in five years?",
+      "questionIndonesian": "Di mana kamu melihat dirimu dalam lima tahun?",
+      "acceptedAnswers": ["In five years", "I hope to", "I see myself", "I want to be"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6,
+      "hint": "Describe your career goals"
+    },
+    {
+      "id": "res-085",
+      "question": "Tell me about a challenge you've faced.",
+      "questionIndonesian": "Ceritakan tentang tantangan yang pernah kamu hadapi.",
+      "acceptedAnswers": ["I faced", "One challenge was", "I had to deal with", "I overcame"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6,
+      "hint": "Describe a challenge and how you handled it"
+    },
+    {
+      "id": "res-086",
+      "question": "How do you handle stress?",
+      "questionIndonesian": "Bagaimana kamu mengatasi stres?",
+      "acceptedAnswers": ["I usually", "I manage stress by", "I try to", "I find that"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Explain your stress management strategies"
+    },
+    {
+      "id": "res-087",
+      "question": "Do you prefer working alone or in a team?",
+      "questionIndonesian": "Kamu lebih suka bekerja sendiri atau dalam tim?",
+      "acceptedAnswers": ["I prefer", "I like working", "Both", "It depends", "I enjoy"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 4,
+      "hint": "Say your preference and explain why"
+    },
+    {
+      "id": "res-088",
+      "question": "What motivates you?",
+      "questionIndonesian": "Apa yang memotivasimu?",
+      "acceptedAnswers": ["I'm motivated by", "What motivates me is", "I find motivation in", "I'm driven by"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Explain what drives you professionally"
+    },
+    {
+      "id": "res-089",
+      "question": "How do you prioritize your tasks?",
+      "questionIndonesian": "Bagaimana kamu memprioritaskan tugas-tugasmu?",
+      "acceptedAnswers": ["I prioritize by", "I usually", "I make a list", "I start with", "I focus on"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Describe your task management approach"
+    },
+    {
+      "id": "res-090",
+      "question": "Can you give me an example?",
+      "questionIndonesian": "Bisakah kamu beri contoh?",
+      "acceptedAnswers": ["For example", "Sure", "One example is", "Let me give you an example"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 4,
+      "hint": "Provide a specific example"
+    },
+    {
+      "id": "res-091",
+      "question": "What would you do in this situation?",
+      "questionIndonesian": "Apa yang akan kamu lakukan dalam situasi ini?",
+      "acceptedAnswers": ["I would", "I'd probably", "First, I would", "My approach would be"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Describe your approach step by step"
+    },
+    {
+      "id": "res-092",
+      "question": "How would you handle a difficult customer?",
+      "questionIndonesian": "Bagaimana kamu menangani pelanggan yang sulit?",
+      "acceptedAnswers": ["I would", "I'd listen", "I'd try to", "I would remain calm"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6,
+      "hint": "Explain customer service approach"
+    },
+    {
+      "id": "res-093",
+      "question": "What are your salary expectations?",
+      "questionIndonesian": "Berapa ekspektasi gajimu?",
+      "acceptedAnswers": ["I'm looking for", "Based on my experience", "I expect", "I'm flexible"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6,
+      "hint": "Give a range or show flexibility"
+    },
+    {
+      "id": "res-094",
+      "question": "Do you have any questions for me?",
+      "questionIndonesian": "Apakah kamu punya pertanyaan untuk saya?",
+      "acceptedAnswers": ["Yes", "I'd like to know", "Could you tell me", "What is", "How does"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Ask a thoughtful question about the role"
+    },
+    {
+      "id": "res-095",
+      "question": "When can you start?",
+      "questionIndonesian": "Kapan kamu bisa mulai?",
+      "acceptedAnswers": ["I can start", "Immediately", "In two weeks", "After", "I'm available"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 4,
+      "hint": "State your availability"
+    },
+    {
+      "id": "res-096",
+      "question": "What do you know about our company?",
+      "questionIndonesian": "Apa yang kamu ketahui tentang perusahaan kami?",
+      "acceptedAnswers": ["I know that", "I read that", "From what I understand", "I researched"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Share what you've learned about the company"
+    },
+    {
+      "id": "res-097",
+      "question": "How do you stay updated in your field?",
+      "questionIndonesian": "Bagaimana kamu mengikuti perkembangan di bidangmu?",
+      "acceptedAnswers": ["I read", "I follow", "I attend", "I take courses", "I subscribe to"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Describe your learning habits"
+    },
+    {
+      "id": "res-098",
+      "question": "Describe your ideal work environment.",
+      "questionIndonesian": "Jelaskan lingkungan kerja ideal kamu.",
+      "acceptedAnswers": ["My ideal environment is", "I work best in", "I prefer", "I thrive in"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Describe the environment you work best in"
+    },
+    {
+      "id": "res-099",
+      "question": "Have you ever had a disagreement with a coworker?",
+      "questionIndonesian": "Pernahkah kamu berselisih dengan rekan kerja?",
+      "acceptedAnswers": ["Yes", "There was a time", "I had a situation where", "Once"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6,
+      "hint": "Describe the situation and resolution"
+    },
+    {
+      "id": "res-100",
+      "question": "What's your biggest professional achievement?",
+      "questionIndonesian": "Apa pencapaian profesional terbesarmu?",
+      "acceptedAnswers": ["My biggest achievement is", "I'm most proud of", "I successfully"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6,
+      "hint": "Share a specific accomplishment"
+    },
+    {
+      "id": "res-101",
+      "question": "Could you please clarify what you mean?",
+      "questionIndonesian": "Bisakah kamu jelaskan maksudmu?",
+      "acceptedAnswers": ["What I mean is", "Let me clarify", "In other words", "To be more specific"],
+      "category": "formal",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Rephrase or provide more detail"
+    },
+    {
+      "id": "res-102",
+      "question": "What are the main points of your presentation?",
+      "questionIndonesian": "Apa poin utama presentasimu?",
+      "acceptedAnswers": ["The main points are", "I'll be covering", "My key points", "First", "Second"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Summarize your main points"
+    },
+    {
+      "id": "res-103",
+      "question": "Do you have any concerns about this project?",
+      "questionIndonesian": "Apakah kamu punya kekhawatiran tentang proyek ini?",
+      "acceptedAnswers": ["Yes", "No", "I'm concerned about", "My main concern", "I think we should"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Express concerns professionally"
+    },
+    {
+      "id": "res-104",
+      "question": "What alternative solutions would you suggest?",
+      "questionIndonesian": "Solusi alternatif apa yang akan kamu sarankan?",
+      "acceptedAnswers": ["I would suggest", "One alternative is", "We could also", "Another option"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6,
+      "hint": "Propose alternative approaches"
+    },
+    {
+      "id": "res-105",
+      "question": "How should we proceed from here?",
+      "questionIndonesian": "Bagaimana kita harus melanjutkan dari sini?",
+      "acceptedAnswers": ["I suggest we", "Let's", "The next step should be", "I think we should"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Propose next steps"
+    },
+    {
+      "id": "res-106",
+      "question": "What resources do we need?",
+      "questionIndonesian": "Sumber daya apa yang kita butuhkan?",
+      "acceptedAnswers": ["We need", "We'll require", "The necessary resources are", "We should have"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "List required resources"
+    },
+    {
+      "id": "res-107",
+      "question": "When is the deadline?",
+      "questionIndonesian": "Kapan deadline nya?",
+      "acceptedAnswers": ["The deadline is", "We need to finish by", "It's due on", "By"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 4,
+      "hint": "State the deadline"
+    },
+    {
+      "id": "res-108",
+      "question": "Who is responsible for this task?",
+      "questionIndonesian": "Siapa yang bertanggung jawab untuk tugas ini?",
+      "acceptedAnswers": ["I am", "is responsible", "will handle", "is in charge"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 4,
+      "hint": "Identify the responsible person"
+    },
+    {
+      "id": "res-109",
+      "question": "What are the risks involved?",
+      "questionIndonesian": "Apa risiko yang terlibat?",
+      "acceptedAnswers": ["The main risks are", "We should consider", "There's a risk of", "Potential risks include"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6,
+      "hint": "Identify potential risks"
+    },
+    {
+      "id": "res-110",
+      "question": "How will we measure success?",
+      "questionIndonesian": "Bagaimana kita akan mengukur keberhasilan?",
+      "acceptedAnswers": ["We can measure by", "Success will be measured by", "Our metrics are", "Key indicators include"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6,
+      "hint": "Describe success metrics"
+    },
+    {
+      "id": "res-111",
+      "question": "What's your opinion on the current situation?",
+      "questionIndonesian": "Apa pendapatmu tentang situasi saat ini?",
+      "acceptedAnswers": ["I think", "In my view", "From my perspective", "I believe"],
+      "category": "social",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Share your perspective"
+    },
+    {
+      "id": "res-112",
+      "question": "How has your experience been so far?",
+      "questionIndonesian": "Bagaimana pengalamanmu sejauh ini?",
+      "acceptedAnswers": ["It has been", "So far", "I've found it", "My experience has been"],
+      "category": "social",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Describe your overall experience"
+    },
+    {
+      "id": "res-113",
+      "question": "What improvements would you suggest?",
+      "questionIndonesian": "Perbaikan apa yang akan kamu sarankan?",
+      "acceptedAnswers": ["I would suggest", "We could improve", "One improvement", "I think we should"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Propose specific improvements"
+    },
+    {
+      "id": "res-114",
+      "question": "Can you summarize the main points?",
+      "questionIndonesian": "Bisakah kamu ringkas poin-poin utamanya?",
+      "acceptedAnswers": ["In summary", "The main points are", "To summarize", "Basically"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Provide a brief summary"
+    },
+    {
+      "id": "res-115",
+      "question": "What lessons have you learned?",
+      "questionIndonesian": "Pelajaran apa yang sudah kamu pelajari?",
+      "acceptedAnswers": ["I learned that", "The main lesson", "I realized", "One thing I learned"],
+      "category": "social",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Share key takeaways"
+    },
+    {
+      "id": "res-116",
+      "question": "How would you describe your communication style?",
+      "questionIndonesian": "Bagaimana kamu mendeskripsikan gaya komunikasimu?",
+      "acceptedAnswers": ["I would describe my style as", "I tend to be", "I'm usually", "I prefer to communicate"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6,
+      "hint": "Describe how you communicate"
+    },
+    {
+      "id": "res-117",
+      "question": "What do you value most in a workplace?",
+      "questionIndonesian": "Apa yang paling kamu hargai di tempat kerja?",
+      "acceptedAnswers": ["I value", "The most important thing", "I appreciate", "What matters most"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Share your workplace values"
+    },
+    {
+      "id": "res-118",
+      "question": "How do you approach problem-solving?",
+      "questionIndonesian": "Bagaimana pendekatan kamu dalam memecahkan masalah?",
+      "acceptedAnswers": ["I usually", "My approach is", "I start by", "First, I"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6,
+      "hint": "Explain your problem-solving method"
+    },
+    {
+      "id": "res-119",
+      "question": "What makes a good leader?",
+      "questionIndonesian": "Apa yang membuat pemimpin yang baik?",
+      "acceptedAnswers": ["A good leader should", "I believe", "Good leaders", "In my opinion"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Describe leadership qualities"
+    },
+    {
+      "id": "res-120",
+      "question": "How do you handle criticism?",
+      "questionIndonesian": "Bagaimana kamu menerima kritik?",
+      "acceptedAnswers": ["I try to", "I see criticism as", "I appreciate", "I take it"],
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5,
+      "hint": "Show growth mindset toward feedback"
+    },
+    {
+      "id": "res-121",
+      "question": "Could you elaborate on that point?",
+      "questionIndonesian": "Bisakah kamu menjelaskan poin itu lebih lanjut?",
+      "acceptedAnswers": ["Sure", "Of course", "What I mean is", "To elaborate", "Let me explain"],
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Provide more detailed explanation"
+    },
+    {
+      "id": "res-122",
+      "question": "What are the implications of this decision?",
+      "questionIndonesian": "Apa implikasi dari keputusan ini?",
+      "acceptedAnswers": ["The implications are", "This could mean", "This might lead to", "As a result"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Analyze potential outcomes"
+    },
+    {
+      "id": "res-123",
+      "question": "How would you justify this approach?",
+      "questionIndonesian": "Bagaimana kamu membenarkan pendekatan ini?",
+      "acceptedAnswers": ["I would justify it by", "The reason is", "This approach is valid because", "I believe this works because"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Provide reasoning and evidence"
+    },
+    {
+      "id": "res-124",
+      "question": "What factors should we consider?",
+      "questionIndonesian": "Faktor apa yang harus kita pertimbangkan?",
+      "acceptedAnswers": ["We should consider", "Important factors include", "We need to think about", "Key considerations are"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "List relevant considerations"
+    },
+    {
+      "id": "res-125",
+      "question": "How would you address this challenge?",
+      "questionIndonesian": "Bagaimana kamu akan mengatasi tantangan ini?",
+      "acceptedAnswers": ["I would address it by", "My approach would be", "To tackle this", "I would first"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Propose a strategic approach"
+    },
+    {
+      "id": "res-126",
+      "question": "What are the long-term consequences?",
+      "questionIndonesian": "Apa konsekuensi jangka panjangnya?",
+      "acceptedAnswers": ["In the long term", "The long-term effects", "This could lead to", "Over time"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Analyze future impact"
+    },
+    {
+      "id": "res-127",
+      "question": "How do you ensure quality in your work?",
+      "questionIndonesian": "Bagaimana kamu memastikan kualitas dalam pekerjaanmu?",
+      "acceptedAnswers": ["I ensure quality by", "I always", "My quality process includes", "I make sure to"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Describe your quality assurance methods"
+    },
+    {
+      "id": "res-128",
+      "question": "What's your strategy for this project?",
+      "questionIndonesian": "Apa strategimu untuk proyek ini?",
+      "acceptedAnswers": ["My strategy is", "I plan to", "The approach I'm taking", "I intend to"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Outline your strategic plan"
+    },
+    {
+      "id": "res-129",
+      "question": "How would you handle a conflict between team members?",
+      "questionIndonesian": "Bagaimana kamu menangani konflik antar anggota tim?",
+      "acceptedAnswers": ["I would", "First, I'd", "My approach would be to", "I believe in"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Describe conflict resolution approach"
+    },
+    {
+      "id": "res-130",
+      "question": "What innovations have you implemented?",
+      "questionIndonesian": "Inovasi apa yang sudah kamu implementasikan?",
+      "acceptedAnswers": ["I implemented", "I introduced", "I developed", "One innovation was"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Share specific innovations"
+    },
+    {
+      "id": "res-131",
+      "question": "How do you balance competing priorities?",
+      "questionIndonesian": "Bagaimana kamu menyeimbangkan prioritas yang bersaing?",
+      "acceptedAnswers": ["I balance priorities by", "I assess", "I determine which", "My approach is to"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Explain prioritization strategy"
+    },
+    {
+      "id": "res-132",
+      "question": "What metrics are most relevant here?",
+      "questionIndonesian": "Metrik apa yang paling relevan di sini?",
+      "acceptedAnswers": ["The relevant metrics are", "We should track", "Key metrics include", "I would focus on"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Identify key performance indicators"
+    },
+    {
+      "id": "res-133",
+      "question": "How would you scale this solution?",
+      "questionIndonesian": "Bagaimana kamu akan memperbesar solusi ini?",
+      "acceptedAnswers": ["To scale", "We could scale by", "For scalability", "The scaling approach"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Discuss scalability strategy"
+    },
+    {
+      "id": "res-134",
+      "question": "What contingency plans should we have?",
+      "questionIndonesian": "Rencana cadangan apa yang harus kita miliki?",
+      "acceptedAnswers": ["We should have", "In case of", "Our backup plan", "If that fails"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Outline backup strategies"
+    },
+    {
+      "id": "res-135",
+      "question": "How do you maintain stakeholder engagement?",
+      "questionIndonesian": "Bagaimana kamu mempertahankan keterlibatan stakeholder?",
+      "acceptedAnswers": ["I maintain engagement by", "I ensure", "Regular communication", "I keep stakeholders"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Describe stakeholder management"
+    },
+    {
+      "id": "res-136",
+      "question": "What assumptions are we making?",
+      "questionIndonesian": "Asumsi apa yang kita buat?",
+      "acceptedAnswers": ["We're assuming", "Our assumptions are", "This assumes", "We're working on the assumption"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Identify underlying assumptions"
+    },
+    {
+      "id": "res-137",
+      "question": "How would you optimize this process?",
+      "questionIndonesian": "Bagaimana kamu akan mengoptimalkan proses ini?",
+      "acceptedAnswers": ["I would optimize by", "We could improve", "To optimize", "Efficiency could be gained"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Suggest process improvements"
+    },
+    {
+      "id": "res-138",
+      "question": "What's your assessment of the situation?",
+      "questionIndonesian": "Apa penilaianmu terhadap situasi ini?",
+      "acceptedAnswers": ["My assessment is", "I believe", "Based on my analysis", "From what I can see"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Provide professional assessment"
+    },
+    {
+      "id": "res-139",
+      "question": "How do you foster innovation in your team?",
+      "questionIndonesian": "Bagaimana kamu mendorong inovasi di timmu?",
+      "acceptedAnswers": ["I foster innovation by", "I encourage", "I create an environment", "I promote"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Describe innovation leadership"
+    },
+    {
+      "id": "res-140",
+      "question": "What's the ROI on this initiative?",
+      "questionIndonesian": "Berapa ROI dari inisiatif ini?",
+      "acceptedAnswers": ["The ROI is", "We expect", "The return on investment", "Based on projections"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Discuss return on investment"
+    },
+    {
+      "id": "res-141",
+      "question": "How do you ensure compliance?",
+      "questionIndonesian": "Bagaimana kamu memastikan kepatuhan?",
+      "acceptedAnswers": ["I ensure compliance by", "We follow", "Our compliance process", "I make sure"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Explain compliance measures"
+    },
+    {
+      "id": "res-142",
+      "question": "What's your vision for the future?",
+      "questionIndonesian": "Apa visimu untuk masa depan?",
+      "acceptedAnswers": ["My vision is", "I envision", "I see", "In the future"],
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Share your future vision"
+    },
+    {
+      "id": "res-143",
+      "question": "How do you build trust with clients?",
+      "questionIndonesian": "Bagaimana kamu membangun kepercayaan dengan klien?",
+      "acceptedAnswers": ["I build trust by", "I ensure", "I focus on", "I maintain"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Describe trust-building strategies"
+    },
+    {
+      "id": "res-144",
+      "question": "What's your approach to risk management?",
+      "questionIndonesian": "Bagaimana pendekatan kamu terhadap manajemen risiko?",
+      "acceptedAnswers": ["My approach is", "I manage risk by", "I identify", "I assess and mitigate"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Explain risk management framework"
+    },
+    {
+      "id": "res-145",
+      "question": "How do you drive continuous improvement?",
+      "questionIndonesian": "Bagaimana kamu mendorong peningkatan berkelanjutan?",
+      "acceptedAnswers": ["I drive improvement by", "I regularly", "I implement", "I encourage"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Describe improvement methodologies"
+    },
+    {
+      "id": "res-146",
+      "question": "What differentiates our approach?",
+      "questionIndonesian": "Apa yang membedakan pendekatan kita?",
+      "acceptedAnswers": ["What differentiates us is", "Our unique approach", "We stand out because", "Unlike others"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Identify unique value proposition"
+    },
+    {
+      "id": "res-147",
+      "question": "How would you negotiate this deal?",
+      "questionIndonesian": "Bagaimana kamu akan menegosiasikan kesepakatan ini?",
+      "acceptedAnswers": ["I would negotiate by", "My strategy would be", "I would start by", "I'd focus on"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Outline negotiation approach"
+    },
+    {
+      "id": "res-148",
+      "question": "What's your leadership philosophy?",
+      "questionIndonesian": "Apa filosofi kepemimpinanmu?",
+      "acceptedAnswers": ["My philosophy is", "I believe in", "I lead by", "My approach to leadership"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Share your leadership beliefs"
+    },
+    {
+      "id": "res-149",
+      "question": "How do you measure customer satisfaction?",
+      "questionIndonesian": "Bagaimana kamu mengukur kepuasan pelanggan?",
+      "acceptedAnswers": ["I measure by", "We track", "Our metrics include", "We use surveys"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Describe satisfaction metrics"
+    },
+    {
+      "id": "res-150",
+      "question": "What's your competitive advantage?",
+      "questionIndonesian": "Apa keunggulan kompetitifmu?",
+      "acceptedAnswers": ["Our advantage is", "What sets us apart", "We excel at", "Our strength is"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Identify competitive strengths"
+    },
+    {
+      "id": "res-151",
+      "question": "How would you present this to the board?",
+      "questionIndonesian": "Bagaimana kamu akan mempresentasikan ini kepada dewan?",
+      "acceptedAnswers": ["I would present by", "I'd start with", "My presentation would", "I would structure"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Outline executive presentation approach"
+    },
+    {
+      "id": "res-152",
+      "question": "What market trends should we be aware of?",
+      "questionIndonesian": "Tren pasar apa yang harus kita ketahui?",
+      "acceptedAnswers": ["Key trends include", "We're seeing", "The market is moving toward", "Important trends are"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Identify relevant market trends"
+    },
+    {
+      "id": "res-153",
+      "question": "How do you ensure alignment across teams?",
+      "questionIndonesian": "Bagaimana kamu memastikan keselarasan antar tim?",
+      "acceptedAnswers": ["I ensure alignment by", "We hold regular", "I communicate", "Through clear goals"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Describe team alignment strategies"
+    },
+    {
+      "id": "res-154",
+      "question": "What's the best approach for this partnership?",
+      "questionIndonesian": "Apa pendekatan terbaik untuk kemitraan ini?",
+      "acceptedAnswers": ["The best approach is", "I would recommend", "We should focus on", "The key is to"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Propose partnership strategy"
+    },
+    {
+      "id": "res-155",
+      "question": "How do you cultivate talent?",
+      "questionIndonesian": "Bagaimana kamu mengembangkan talenta?",
+      "acceptedAnswers": ["I cultivate talent by", "I provide", "I mentor", "I create opportunities"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Describe talent development approach"
+    },
+    {
+      "id": "res-156",
+      "question": "What's your contingency if this fails?",
+      "questionIndonesian": "Apa rencana cadanganmu jika ini gagal?",
+      "acceptedAnswers": ["If it fails", "My contingency is", "We would pivot to", "Our backup plan"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Outline failure recovery plan"
+    },
+    {
+      "id": "res-157",
+      "question": "How would you respond to this crisis?",
+      "questionIndonesian": "Bagaimana kamu akan merespons krisis ini?",
+      "acceptedAnswers": ["I would respond by", "First, I'd", "My immediate action", "The priority is"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 9,
+      "hint": "Describe crisis management approach"
+    },
+    {
+      "id": "res-158",
+      "question": "What governance structure do you recommend?",
+      "questionIndonesian": "Struktur tata kelola apa yang kamu rekomendasikan?",
+      "acceptedAnswers": ["I recommend", "The structure should include", "We need", "The governance framework"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 9,
+      "hint": "Propose governance framework"
+    },
+    {
+      "id": "res-159",
+      "question": "How do you evaluate vendor proposals?",
+      "questionIndonesian": "Bagaimana kamu mengevaluasi proposal vendor?",
+      "acceptedAnswers": ["I evaluate by", "My criteria include", "I look at", "Key factors are"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Describe evaluation criteria"
+    },
+    {
+      "id": "res-160",
+      "question": "What's your approach to digital transformation?",
+      "questionIndonesian": "Bagaimana pendekatan kamu terhadap transformasi digital?",
+      "acceptedAnswers": ["My approach is", "I believe in", "Digital transformation requires", "We should focus on"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 9,
+      "hint": "Outline digital strategy"
+    },
+    {
+      "id": "res-161",
+      "question": "How do you build consensus?",
+      "questionIndonesian": "Bagaimana kamu membangun konsensus?",
+      "acceptedAnswers": ["I build consensus by", "I bring people together", "I facilitate", "I ensure everyone"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Describe consensus-building methods"
+    },
+    {
+      "id": "res-162",
+      "question": "What's your exit strategy?",
+      "questionIndonesian": "Apa strategi keluarmu?",
+      "acceptedAnswers": ["Our exit strategy is", "We plan to", "The exit options include", "We're considering"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 9,
+      "hint": "Outline exit planning"
+    },
+    {
+      "id": "res-163",
+      "question": "How do you handle sensitive information?",
+      "questionIndonesian": "Bagaimana kamu menangani informasi sensitif?",
+      "acceptedAnswers": ["I handle sensitive information by", "I ensure confidentiality", "I follow protocols", "I maintain strict"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Describe information security practices"
+    },
+    {
+      "id": "res-164",
+      "question": "What synergies do you see?",
+      "questionIndonesian": "Sinergi apa yang kamu lihat?",
+      "acceptedAnswers": ["I see synergies in", "We could leverage", "The synergies include", "There's potential for"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Identify potential synergies"
+    },
+    {
+      "id": "res-165",
+      "question": "How would you restructure this department?",
+      "questionIndonesian": "Bagaimana kamu akan merestrukturisasi departemen ini?",
+      "acceptedAnswers": ["I would restructure by", "My approach would be", "The new structure", "I'd propose"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 9,
+      "hint": "Outline restructuring plan"
+    },
+    {
+      "id": "res-166",
+      "question": "What's your due diligence process?",
+      "questionIndonesian": "Bagaimana proses uji tuntas kamu?",
+      "acceptedAnswers": ["My due diligence process", "I examine", "The process includes", "I thoroughly review"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 9,
+      "hint": "Describe due diligence methodology"
+    },
+    {
+      "id": "res-167",
+      "question": "How do you maintain competitive intelligence?",
+      "questionIndonesian": "Bagaimana kamu mempertahankan intelijen kompetitif?",
+      "acceptedAnswers": ["I maintain intelligence by", "I track", "I monitor", "I stay informed by"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 9,
+      "hint": "Describe competitive analysis methods"
+    },
+    {
+      "id": "res-168",
+      "question": "What's your change management approach?",
+      "questionIndonesian": "Bagaimana pendekatan manajemen perubahanmu?",
+      "acceptedAnswers": ["My approach is", "I manage change by", "I ensure", "The key elements are"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 9,
+      "hint": "Outline change management framework"
+    },
+    {
+      "id": "res-169",
+      "question": "How do you balance short-term and long-term goals?",
+      "questionIndonesian": "Bagaimana kamu menyeimbangkan tujuan jangka pendek dan jangka panjang?",
+      "acceptedAnswers": ["I balance by", "I prioritize", "My approach is", "I ensure both"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Describe strategic balancing"
+    },
+    {
+      "id": "res-170",
+      "question": "What ethical considerations should we address?",
+      "questionIndonesian": "Pertimbangan etis apa yang harus kita tangani?",
+      "acceptedAnswers": ["We should consider", "Ethical concerns include", "We need to address", "Important considerations"],
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 9,
+      "hint": "Identify ethical issues"
+    },
+    {
+      "id": "res-171",
+      "question": "How do you ensure transparency?",
+      "questionIndonesian": "Bagaimana kamu memastikan transparansi?",
+      "acceptedAnswers": ["I ensure transparency by", "I communicate openly", "I share", "I maintain"],
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Describe transparency practices"
+    },
+    {
+      "id": "res-172",
+      "question": "What's your approach to sustainability?",
+      "questionIndonesian": "Bagaimana pendekatan kamu terhadap keberlanjutan?",
+      "acceptedAnswers": ["My approach is", "I believe in", "We focus on", "Sustainability means"],
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Share sustainability philosophy"
+    },
+    {
+      "id": "res-173",
+      "question": "How do you handle ambiguity?",
+      "questionIndonesian": "Bagaimana kamu menangani ambiguitas?",
+      "acceptedAnswers": ["I handle ambiguity by", "I'm comfortable with", "I navigate uncertainty", "I approach it"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Describe dealing with uncertainty"
+    },
+    {
+      "id": "res-174",
+      "question": "What would make this initiative successful?",
+      "questionIndonesian": "Apa yang akan membuat inisiatif ini sukses?",
+      "acceptedAnswers": ["Success requires", "The key factors are", "We need", "Success will depend on"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Identify success factors"
+    },
+    {
+      "id": "res-175",
+      "question": "How do you manage expectations?",
+      "questionIndonesian": "Bagaimana kamu mengelola ekspektasi?",
+      "acceptedAnswers": ["I manage expectations by", "I communicate clearly", "I set realistic", "I ensure"],
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Describe expectation management"
+    },
+    {
+      "id": "res-176",
+      "question": "What would you do differently if you could start over?",
+      "questionIndonesian": "Apa yang akan kamu lakukan berbeda jika bisa mengulang?",
+      "acceptedAnswers": ["I would", "If I could start over", "Looking back", "I'd probably"],
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Reflect on lessons learned"
+    },
+    {
+      "id": "res-177",
+      "question": "How has this experience shaped you?",
+      "questionIndonesian": "Bagaimana pengalaman ini membentukmu?",
+      "acceptedAnswers": ["It has shaped me by", "I learned", "I grew", "This experience taught me"],
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Describe personal growth"
+    },
+    {
+      "id": "res-178",
+      "question": "What advice would you give to your younger self?",
+      "questionIndonesian": "Saran apa yang akan kamu berikan kepada dirimu yang lebih muda?",
+      "acceptedAnswers": ["I would tell", "My advice would be", "I'd say", "I would encourage"],
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Share wisdom and advice"
+    },
+    {
+      "id": "res-179",
+      "question": "What's the most important lesson you've learned?",
+      "questionIndonesian": "Apa pelajaran paling penting yang sudah kamu pelajari?",
+      "acceptedAnswers": ["The most important lesson is", "I've learned that", "What I've realized", "The key insight"],
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Share key life lesson"
+    },
+    {
+      "id": "res-180",
+      "question": "How do you define success?",
+      "questionIndonesian": "Bagaimana kamu mendefinisikan kesuksesan?",
+      "acceptedAnswers": ["I define success as", "Success to me is", "For me, success means", "I believe success"],
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Share your definition of success"
+    },
+    {
+      "id": "res-181",
+      "question": "What principles guide your decisions?",
+      "questionIndonesian": "Prinsip apa yang memandu keputusanmu?",
+      "acceptedAnswers": ["My principles are", "I'm guided by", "I believe in", "My core values"],
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Share guiding principles"
+    },
+    {
+      "id": "res-182",
+      "question": "How do you maintain work-life balance?",
+      "questionIndonesian": "Bagaimana kamu menjaga keseimbangan kerja-kehidupan?",
+      "acceptedAnswers": ["I maintain balance by", "I make sure to", "I prioritize", "I set boundaries"],
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Describe balance strategies"
+    },
+    {
+      "id": "res-183",
+      "question": "What keeps you motivated?",
+      "questionIndonesian": "Apa yang membuatmu tetap termotivasi?",
+      "acceptedAnswers": ["What motivates me is", "I'm driven by", "I find motivation in", "I stay motivated by"],
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Share sources of motivation"
+    },
+    {
+      "id": "res-184",
+      "question": "How do you handle setbacks?",
+      "questionIndonesian": "Bagaimana kamu menangani kemunduran?",
+      "acceptedAnswers": ["I handle setbacks by", "I see setbacks as", "I learn from", "I try to"],
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Describe resilience approach"
+    },
+    {
+      "id": "res-185",
+      "question": "What's your vision for the next decade?",
+      "questionIndonesian": "Apa visimu untuk dekade berikutnya?",
+      "acceptedAnswers": ["My vision is", "I see", "In the next decade", "I hope to"],
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Share long-term vision"
+    },
+    {
+      "id": "res-186",
+      "question": "How do you contribute to your community?",
+      "questionIndonesian": "Bagaimana kontribusimu kepada komunitas?",
+      "acceptedAnswers": ["I contribute by", "I volunteer", "I participate in", "I support"],
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Describe community involvement"
+    },
+    {
+      "id": "res-187",
+      "question": "What legacy do you want to leave?",
+      "questionIndonesian": "Warisan apa yang ingin kamu tinggalkan?",
+      "acceptedAnswers": ["I want to leave", "My legacy would be", "I hope to be remembered", "I want to have made"],
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Describe desired legacy"
+    },
+    {
+      "id": "res-188",
+      "question": "What responsibility do we have to future generations?",
+      "questionIndonesian": "Tanggung jawab apa yang kita miliki terhadap generasi mendatang?",
+      "acceptedAnswers": ["We have a responsibility to", "We should", "Future generations deserve", "We must ensure"],
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 9,
+      "hint": "Discuss intergenerational responsibility"
+    },
+    {
+      "id": "res-189",
+      "question": "How do you see technology shaping our future?",
+      "questionIndonesian": "Bagaimana menurutmu teknologi membentuk masa depan kita?",
+      "acceptedAnswers": ["I believe technology will", "Technology is", "In the future", "We're seeing"],
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Share perspective on technology"
+    },
+    {
+      "id": "res-190",
+      "question": "What makes a society flourish?",
+      "questionIndonesian": "Apa yang membuat masyarakat berkembang?",
+      "acceptedAnswers": ["A society flourishes when", "I believe", "Key factors include", "For a society to thrive"],
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 9,
+      "hint": "Discuss societal success factors"
+    },
+    {
+      "id": "res-191",
+      "question": "How should we address global challenges?",
+      "questionIndonesian": "Bagaimana seharusnya kita menangani tantangan global?",
+      "acceptedAnswers": ["We should address", "The approach needs to be", "It requires", "We must work together"],
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 9,
+      "hint": "Discuss global problem-solving"
+    },
+    {
+      "id": "res-192",
+      "question": "What role does education play in development?",
+      "questionIndonesian": "Peran apa yang dimainkan pendidikan dalam pembangunan?",
+      "acceptedAnswers": ["Education plays", "Education is", "Through education", "Education enables"],
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Discuss importance of education"
+    },
+    {
+      "id": "res-193",
+      "question": "How can we promote understanding between cultures?",
+      "questionIndonesian": "Bagaimana kita bisa mempromosikan pemahaman antar budaya?",
+      "acceptedAnswers": ["We can promote understanding by", "Through", "It starts with", "We need to"],
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Discuss cultural exchange"
+    },
+    {
+      "id": "res-194",
+      "question": "What values should guide technological development?",
+      "questionIndonesian": "Nilai apa yang harus memandu perkembangan teknologi?",
+      "acceptedAnswers": ["Technology should be guided by", "We must ensure", "Key values include", "Development should prioritize"],
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 9,
+      "hint": "Discuss ethical tech development"
+    },
+    {
+      "id": "res-195",
+      "question": "How do you balance progress with tradition?",
+      "questionIndonesian": "Bagaimana kamu menyeimbangkan kemajuan dengan tradisi?",
+      "acceptedAnswers": ["I believe we can", "Balance comes from", "It's about", "We should embrace"],
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Discuss modernization and heritage"
+    },
+    {
+      "id": "res-196",
+      "question": "What does leadership mean to you?",
+      "questionIndonesian": "Apa arti kepemimpinan bagimu?",
+      "acceptedAnswers": ["Leadership to me means", "I believe leadership is", "A true leader", "Leadership involves"],
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Define your leadership philosophy"
+    },
+    {
+      "id": "res-197",
+      "question": "How can we build a more inclusive society?",
+      "questionIndonesian": "Bagaimana kita bisa membangun masyarakat yang lebih inklusif?",
+      "acceptedAnswers": ["We can build inclusivity by", "It requires", "We need to", "Inclusion means"],
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 9,
+      "hint": "Discuss diversity and inclusion"
+    },
+    {
+      "id": "res-198",
+      "question": "What gives you hope for the future?",
+      "questionIndonesian": "Apa yang memberimu harapan untuk masa depan?",
+      "acceptedAnswers": ["What gives me hope is", "I'm hopeful because", "I see hope in", "I believe in"],
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7,
+      "hint": "Share sources of optimism"
+    },
+    {
+      "id": "res-199",
+      "question": "How do you stay grounded during success?",
+      "questionIndonesian": "Bagaimana kamu tetap membumi saat sukses?",
+      "acceptedAnswers": ["I stay grounded by", "I remind myself", "I maintain", "I never forget"],
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Describe humility practices"
+    },
+    {
+      "id": "res-200",
+      "question": "What message would you like to share with the world?",
+      "questionIndonesian": "Pesan apa yang ingin kamu sampaikan kepada dunia?",
+      "acceptedAnswers": ["My message is", "I would say", "I believe that", "I want people to know"],
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 8,
+      "hint": "Share your key message"
+    }
+  ]
+}

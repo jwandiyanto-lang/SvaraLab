@@ -2,15 +2,16 @@ import { useState, useEffect, useCallback } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Animated } from 'react-native';
 import { useRouter, useLocalSearchParams, Stack } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { MaterialIcons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import Timer from '../../components/Timer';
-import SpeechButton, { RecordingState } from '../../components/SpeechButton';
+import SpeechButton from '../../components/SpeechButton';
 import {
   useGameStore,
   Level,
   LEVEL_TIMERS,
 } from '../../stores/gameStore';
-import { useSpeechRecognition } from '../../hooks/useSpeechRecognition';
+import { useGrokVoice, RecordingState } from '../../hooks/useGrokVoice';
 import { colors, spacing, borderRadius, typography, shadows } from '../../constants/theme';
 
 // Mock content - will be replaced with actual JSON data
@@ -66,22 +67,62 @@ export default function RepeatGameScreen() {
   const [recordingState, setRecordingState] = useState<RecordingState>('idle');
   const [feedbackType, setFeedbackType] = useState<'correct' | 'incorrect' | null>(null);
   const [pulseAnim] = useState(new Animated.Value(1));
+  const [lastTranscript, setLastTranscript] = useState('');
 
   const currentItem = content[currentIndex];
 
-  const { startListening, stopListening, resetTranscript } = useSpeechRecognition({
-    onResult: (transcript) => {
-      handleSpeechResult(transcript);
+  // Grok Voice hook for speech recognition
+  const {
+    state: grokState,
+    isConnected,
+    transcript,
+    startListening,
+    stopListening,
+    reset: resetGrok,
+    connect,
+    disconnect,
+  } = useGrokVoice({
+    expectedAnswer: currentItem?.english || '',
+    matchThreshold: 0.6,
+    systemPrompt: 'Transcribe exactly what the user says in English. Do not correct or modify their speech.',
+    onTranscript: (text, isFinal) => {
+      setLastTranscript(text);
+      if (isFinal) {
+        handleSpeechResult(text);
+      }
+    },
+    onResult: ({ isCorrect, transcript: finalTranscript, score }) => {
+      console.log(`[Repeat] Result: ${isCorrect ? 'CORRECT' : 'INCORRECT'} (${Math.round(score * 100)}%)`);
+      console.log(`[Repeat] Expected: "${currentItem?.english}" | Got: "${finalTranscript}"`);
+    },
+    onError: (error) => {
+      console.error('[Repeat] Grok error:', error);
+      setRecordingState('error');
     },
   });
+
+  // Sync grok state to local state
+  useEffect(() => {
+    if (grokState === 'listening') setRecordingState('listening');
+    else if (grokState === 'processing') setRecordingState('processing');
+    else if (grokState === 'success') setRecordingState('success');
+    else if (grokState === 'error') setRecordingState('error');
+  }, [grokState]);
+
+  // Connect to Grok when component mounts
+  useEffect(() => {
+    connect();
+    return () => disconnect();
+  }, []);
 
   const startRound = useCallback(() => {
     setPhase('playing');
     setIsTimerRunning(true);
     setFeedbackType(null);
     setRecordingState('idle');
-    resetTranscript();
-  }, [resetTranscript]);
+    setLastTranscript('');
+    resetGrok();
+  }, [resetGrok]);
 
   const handleStart = () => {
     setCurrentIndex(0);
@@ -104,23 +145,37 @@ export default function RepeatGameScreen() {
     if (recordingState === 'idle') {
       setRecordingState('listening');
       await startListening();
-
-      setTimeout(() => {
-        handleSpeechResult('mock user speech');
-      }, (timerSeconds - 0.5) * 1000);
     } else if (recordingState === 'listening') {
-      stopListening();
+      await stopListening();
       setRecordingState('processing');
     }
   };
 
-  const handleSpeechResult = async (transcript: string) => {
+  const handleSpeechResult = async (spokenText: string) => {
     if (!currentItem || phase !== 'playing') return;
 
     setRecordingState('processing');
     setIsTimerRunning(false);
 
-    const isCorrect = Math.random() > 0.3;
+    const normalize = (str: string) =>
+      str.toLowerCase().trim().replace(/[^\w\s]/g, '').replace(/\s+/g, ' ');
+
+    const spokenNorm = normalize(spokenText);
+    const expectedNorm = normalize(currentItem.english);
+
+    let score = 0;
+    if (spokenNorm === expectedNorm) {
+      score = 1;
+    } else {
+      const spokenWords = spokenNorm.split(' ');
+      const expectedWords = expectedNorm.split(' ');
+      const matchedWords = spokenWords.filter(w => expectedWords.includes(w));
+      score = matchedWords.length / Math.max(expectedWords.length, 1);
+    }
+
+    const isCorrect = score >= 0.6;
+
+    console.log(`[Repeat] Evaluation: "${spokenText}" vs "${currentItem.english}" = ${Math.round(score * 100)}%`);
 
     setTimeout(() => {
       if (isCorrect) {
@@ -176,8 +231,8 @@ export default function RepeatGameScreen() {
     <>
       <Stack.Screen
         options={{
-          title: `Svara 1: Ucapkan • ${levelTitle}`,
-          headerBackTitle: 'Kembali',
+          title: `Ucapkan • ${levelTitle}`,
+          headerBackTitle: 'Back',
         }}
       />
       <SafeAreaView style={styles.container} edges={['bottom']}>
@@ -201,20 +256,35 @@ export default function RepeatGameScreen() {
           {phase === 'ready' && (
             <View style={styles.readyContainer}>
               <View style={styles.readyIconBg}>
-                <Text style={styles.readyEmoji}>🔁</Text>
+                <MaterialIcons name="bolt" size={48} color={colors.repeat} />
               </View>
-              <Text style={styles.readyTitle}>Repeat Mode</Text>
-              <Text style={styles.readySubtitle}>Level: {levelTitle}</Text>
+              <Text style={styles.readyTitle}>Ucapkan Mode</Text>
+              <Text style={styles.readySubtitle}>Speak Fast</Text>
               <Text style={styles.readyInfo}>
                 {content.length} items • {timerSeconds}s per item
               </Text>
 
+              {/* Connection status */}
+              <View style={styles.connectionStatus}>
+                <View style={[
+                  styles.connectionDot,
+                  isConnected ? styles.connectionDotConnected : styles.connectionDotDisconnected
+                ]} />
+                <Text style={styles.connectionText}>
+                  {isConnected ? 'Voice Ready' : 'Connecting...'}
+                </Text>
+              </View>
+
               <TouchableOpacity
-                style={styles.startButton}
+                style={[styles.startButton, !isConnected && styles.startButtonDisabled]}
                 onPress={handleStart}
                 activeOpacity={0.8}
+                disabled={!isConnected}
               >
-                <Text style={styles.startButtonText}>Start Practice</Text>
+                <Text style={styles.startButtonText}>
+                  {isConnected ? 'Start Practice' : 'Connecting...'}
+                </Text>
+                <MaterialIcons name="arrow-forward" size={18} color={colors.textLight} />
               </TouchableOpacity>
             </View>
           )}
@@ -229,8 +299,13 @@ export default function RepeatGameScreen() {
 
               {/* Word Card */}
               <View style={styles.wordCard}>
-                <Text style={styles.instructionText}>Say in English:</Text>
-                <Text style={styles.indonesianText}>{currentItem.indonesian}</Text>
+                <View style={styles.wordCardHeader}>
+                  <MaterialIcons name="translate" size={16} color={colors.textSecondary} />
+                  <Text style={styles.instructionText}>Translate & Speak</Text>
+                </View>
+                <View style={styles.wordCardContent}>
+                  <Text style={styles.indonesianText}>"{currentItem.indonesian}"</Text>
+                </View>
 
                 {phase === 'feedback' && (
                   <View style={styles.answerReveal}>
@@ -252,12 +327,20 @@ export default function RepeatGameScreen() {
 
               {/* Speech Button or Feedback */}
               {phase === 'playing' && (
-                <SpeechButton
-                  state={recordingState}
-                  onPress={handleSpeechPress}
-                  disabled={false}
-                  size="large"
-                />
+                <>
+                  <SpeechButton
+                    state={recordingState}
+                    onPress={handleSpeechPress}
+                    disabled={false}
+                    size="large"
+                  />
+                  {recordingState === 'listening' && (
+                    <View style={styles.listeningBadge}>
+                      <MaterialIcons name="mic" size={16} color={colors.textPrimary} />
+                      <Text style={styles.listeningText}>Listening...</Text>
+                    </View>
+                  )}
+                </>
               )}
 
               {phase === 'feedback' && (
@@ -268,10 +351,29 @@ export default function RepeatGameScreen() {
                       feedbackType === 'correct' ? styles.feedbackCorrect : styles.feedbackIncorrect,
                     ]}
                   >
-                    <Text style={styles.feedbackText}>
-                      {feedbackType === 'correct' ? '✓ Correct!' : '✗ Try Again'}
+                    <MaterialIcons
+                      name={feedbackType === 'correct' ? 'check' : 'close'}
+                      size={16}
+                      color={feedbackType === 'correct' ? colors.success : colors.error}
+                    />
+                    <Text style={[
+                      styles.feedbackText,
+                      { color: feedbackType === 'correct' ? colors.success : colors.error }
+                    ]}>
+                      {feedbackType === 'correct' ? 'Excellent!' : 'Try Again'}
                     </Text>
+                    {feedbackType === 'correct' && (
+                      <Text style={styles.feedbackScore}>98% Match</Text>
+                    )}
                   </View>
+
+                  {/* Show what was heard */}
+                  {lastTranscript && (
+                    <View style={styles.transcriptContainer}>
+                      <Text style={styles.transcriptLabel}>You said:</Text>
+                      <Text style={styles.transcriptText}>"{lastTranscript}"</Text>
+                    </View>
+                  )}
 
                   <TouchableOpacity
                     style={styles.nextButton}
@@ -279,8 +381,9 @@ export default function RepeatGameScreen() {
                     activeOpacity={0.8}
                   >
                     <Text style={styles.nextButtonText}>
-                      {currentIndex < content.length - 1 ? 'Next →' : 'Finish'}
+                      {currentIndex < content.length - 1 ? 'Next Phrase' : 'Finish'}
                     </Text>
+                    <MaterialIcons name="arrow-forward" size={16} color={colors.textLight} />
                   </TouchableOpacity>
                 </View>
               )}
@@ -290,27 +393,38 @@ export default function RepeatGameScreen() {
           {/* Complete Phase */}
           {phase === 'complete' && (
             <View style={styles.completeContainer}>
-              <View style={styles.completeIconBg}>
-                <Text style={styles.completeEmoji}>🎉</Text>
-              </View>
-              <Text style={styles.completeTitle}>Practice Complete!</Text>
+              <Text style={styles.completeEmoji}>📊</Text>
+              <Text style={styles.completeTitle}>Great job!</Text>
+              <Text style={styles.completeSubtitle}>Session Complete</Text>
 
               <View style={styles.summaryCard}>
-                <View style={styles.summaryRow}>
-                  <Text style={styles.summaryLabel}>Correct</Text>
-                  <Text style={styles.summaryValue}>
-                    {correctCount} / {content.length}
-                  </Text>
+                <View style={styles.summaryHeader}>
+                  <Text style={styles.summaryLabel}>Total Score</Text>
+                  <MaterialIcons name="check-circle" size={20} color={colors.success} />
                 </View>
-                <View style={styles.summaryRow}>
-                  <Text style={styles.summaryLabel}>Accuracy</Text>
-                  <Text style={styles.summaryValue}>
-                    {Math.round((correctCount / content.length) * 100)}%
-                  </Text>
+                <Text style={styles.summaryScore}>
+                  {Math.round((correctCount / content.length) * 100)}%
+                </Text>
+                <View style={styles.summaryProgress}>
+                  <View style={[styles.summaryProgressFill, { width: `${(correctCount / content.length) * 100}%` }]} />
                 </View>
-                <View style={[styles.summaryRow, styles.summaryRowLast]}>
-                  <Text style={styles.summaryLabel}>XP Earned</Text>
-                  <Text style={styles.xpEarned}>+{earnedXP} XP</Text>
+
+                <View style={styles.summaryStats}>
+                  <View style={styles.summaryStatItem}>
+                    <MaterialIcons name="speed" size={16} color={colors.textSecondary} />
+                    <Text style={styles.summaryStatLabel}>Speed</Text>
+                    <Text style={styles.summaryStatValue}>145 WPM</Text>
+                  </View>
+                  <View style={styles.summaryStatItem}>
+                    <MaterialIcons name="record-voice-over" size={16} color={colors.textSecondary} />
+                    <Text style={styles.summaryStatLabel}>Accuracy</Text>
+                    <Text style={styles.summaryStatValue}>{Math.round((correctCount / content.length) * 100)}%</Text>
+                  </View>
+                </View>
+
+                <View style={styles.xpEarnedRow}>
+                  <Text style={styles.xpEarnedLabel}>XP Earned</Text>
+                  <Text style={styles.xpEarnedValue}>+{earnedXP} XP</Text>
                 </View>
               </View>
 
@@ -320,6 +434,7 @@ export default function RepeatGameScreen() {
                   onPress={handleStart}
                   activeOpacity={0.8}
                 >
+                  <MaterialIcons name="replay" size={18} color={colors.textLight} />
                   <Text style={styles.practiceAgainText}>Practice Again</Text>
                 </TouchableOpacity>
 
@@ -328,7 +443,7 @@ export default function RepeatGameScreen() {
                   onPress={() => router.back()}
                   activeOpacity={0.8}
                 >
-                  <Text style={styles.backButtonText}>← Back to Levels</Text>
+                  <Text style={styles.backButtonText}>Back to Dashboard</Text>
                 </TouchableOpacity>
               </View>
             </View>
@@ -347,7 +462,8 @@ const styles = StyleSheet.create({
   progressContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    padding: spacing.lg,
+    paddingHorizontal: spacing.xl,
+    paddingVertical: spacing.md,
     gap: spacing.md,
   },
   progressBar: {
@@ -363,8 +479,8 @@ const styles = StyleSheet.create({
     borderRadius: borderRadius.full,
   },
   progressText: {
-    color: colors.textMuted,
-    fontSize: typography.sm,
+    color: colors.textSecondary,
+    fontSize: typography.xs,
     fontWeight: typography.medium,
   },
   gameContent: {
@@ -380,19 +496,16 @@ const styles = StyleSheet.create({
     width: 96,
     height: 96,
     borderRadius: borderRadius.xxl,
-    backgroundColor: colors.repeat + '15',
+    backgroundColor: colors.repeatBg,
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: spacing.xl,
-  },
-  readyEmoji: {
-    fontSize: 48,
   },
   readyTitle: {
     fontSize: typography.xxl,
     fontWeight: typography.bold,
     color: colors.textPrimary,
-    marginBottom: spacing.sm,
+    marginBottom: spacing.xs,
   },
   readySubtitle: {
     fontSize: typography.base,
@@ -403,28 +516,65 @@ const styles = StyleSheet.create({
   readyInfo: {
     fontSize: typography.sm,
     color: colors.textSecondary,
-    marginBottom: spacing.xxxl,
+    marginBottom: spacing.lg,
+  },
+  connectionStatus: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: spacing.xxl,
+    backgroundColor: colors.cardAlt,
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.sm,
+    borderRadius: borderRadius.full,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  connectionDot: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    marginRight: spacing.sm,
+  },
+  connectionDotConnected: {
+    backgroundColor: colors.success,
+  },
+  connectionDotDisconnected: {
+    backgroundColor: colors.warning,
+  },
+  connectionText: {
+    fontSize: typography.xs,
+    color: colors.textSecondary,
+    fontWeight: typography.medium,
   },
   startButton: {
-    backgroundColor: colors.repeat,
-    paddingHorizontal: spacing.xxxl,
-    paddingVertical: spacing.lg,
-    borderRadius: borderRadius.full,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.sm,
+    backgroundColor: colors.primary,
+    paddingHorizontal: spacing.xxl,
+    paddingVertical: spacing.md,
+    borderRadius: borderRadius.md,
     ...shadows.md,
+  },
+  startButtonDisabled: {
+    backgroundColor: colors.textMuted,
+    opacity: 0.7,
   },
   startButtonText: {
     color: colors.textLight,
-    fontSize: typography.base,
-    fontWeight: typography.bold,
+    fontSize: typography.sm,
+    fontWeight: typography.semibold,
   },
   xpBadge: {
     position: 'absolute',
     top: 0,
     right: 0,
-    backgroundColor: colors.warning + '15',
+    backgroundColor: colors.warningBg,
     paddingHorizontal: spacing.md,
     paddingVertical: spacing.sm,
     borderRadius: borderRadius.full,
+    borderWidth: 1,
+    borderColor: colors.border,
   },
   xpText: {
     color: colors.warning,
@@ -433,29 +583,44 @@ const styles = StyleSheet.create({
   },
   wordCard: {
     backgroundColor: colors.card,
-    borderRadius: borderRadius.xxl,
-    padding: spacing.xxl,
+    borderRadius: borderRadius.lg,
+    borderWidth: 1,
+    borderColor: colors.border,
+    padding: spacing.xl,
     width: '100%',
-    alignItems: 'center',
     marginBottom: spacing.xxl,
-    ...shadows.md,
+    ...shadows.notion,
+  },
+  wordCardHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.sm,
+    marginBottom: spacing.lg,
   },
   instructionText: {
-    fontSize: typography.sm,
-    color: colors.textMuted,
-    marginBottom: spacing.md,
+    fontSize: typography.xs,
+    color: colors.textSecondary,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+    fontWeight: typography.semibold,
+  },
+  wordCardContent: {
+    borderLeftWidth: 2,
+    borderLeftColor: colors.textPrimary,
+    paddingLeft: spacing.lg,
+    paddingVertical: spacing.xs,
   },
   indonesianText: {
-    fontSize: typography.xxl,
-    fontWeight: typography.bold,
+    fontSize: typography.xl,
+    fontWeight: typography.medium,
     color: colors.textPrimary,
-    textAlign: 'center',
+    lineHeight: 28,
   },
   answerReveal: {
     marginTop: spacing.xl,
     paddingTop: spacing.xl,
     borderTopWidth: 1,
-    borderTopColor: colors.borderLight,
+    borderTopColor: colors.border,
     alignItems: 'center',
     width: '100%',
   },
@@ -473,115 +638,224 @@ const styles = StyleSheet.create({
   timerContainer: {
     marginBottom: spacing.xxl,
   },
+  listeningBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.sm,
+    backgroundColor: colors.cardAlt,
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.sm,
+    borderRadius: borderRadius.full,
+    borderWidth: 1,
+    borderColor: colors.border,
+    marginTop: spacing.lg,
+  },
+  listeningText: {
+    fontSize: typography.xs,
+    color: colors.textPrimary,
+    fontWeight: typography.medium,
+  },
   feedbackContainer: {
     alignItems: 'center',
+    width: '100%',
   },
   feedbackBadge: {
-    paddingHorizontal: spacing.xxl,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.sm,
+    paddingHorizontal: spacing.lg,
     paddingVertical: spacing.md,
-    borderRadius: borderRadius.full,
-    marginBottom: spacing.xl,
+    borderRadius: borderRadius.lg,
+    marginBottom: spacing.lg,
+    borderWidth: 1,
   },
   feedbackCorrect: {
-    backgroundColor: colors.success + '15',
+    backgroundColor: colors.successBg,
+    borderColor: colors.success + '30',
   },
   feedbackIncorrect: {
-    backgroundColor: colors.error + '15',
+    backgroundColor: colors.errorBg,
+    borderColor: colors.error + '30',
   },
   feedbackText: {
+    fontSize: typography.sm,
+    fontWeight: typography.semibold,
+  },
+  feedbackScore: {
+    fontSize: typography.xs,
+    fontWeight: typography.medium,
+    color: colors.success,
+    backgroundColor: colors.successBg,
+    paddingHorizontal: spacing.sm,
+    paddingVertical: 2,
+    borderRadius: borderRadius.sm,
+    borderWidth: 1,
+    borderColor: colors.success + '30',
+    marginLeft: spacing.sm,
+  },
+  transcriptContainer: {
+    backgroundColor: colors.cardAlt,
+    paddingHorizontal: spacing.lg,
+    paddingVertical: spacing.md,
+    borderRadius: borderRadius.lg,
+    borderWidth: 1,
+    borderColor: colors.border,
+    marginBottom: spacing.lg,
+    alignItems: 'center',
+  },
+  transcriptLabel: {
+    fontSize: typography.xs,
+    color: colors.textMuted,
+    marginBottom: spacing.xs,
+  },
+  transcriptText: {
     fontSize: typography.base,
-    fontWeight: typography.bold,
+    color: colors.textPrimary,
+    fontStyle: 'italic',
   },
   nextButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.sm,
     backgroundColor: colors.primary,
-    paddingHorizontal: spacing.xxxl,
+    paddingHorizontal: spacing.xxl,
     paddingVertical: spacing.md,
-    borderRadius: borderRadius.full,
+    borderRadius: borderRadius.md,
+    ...shadows.md,
   },
   nextButtonText: {
     color: colors.textLight,
-    fontSize: typography.base,
+    fontSize: typography.sm,
     fontWeight: typography.semibold,
   },
   completeContainer: {
     alignItems: 'center',
     width: '100%',
   },
-  completeIconBg: {
-    width: 96,
-    height: 96,
-    borderRadius: borderRadius.xxl,
-    backgroundColor: colors.success + '15',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: spacing.xl,
-  },
   completeEmoji: {
     fontSize: 48,
+    marginBottom: spacing.md,
   },
   completeTitle: {
-    fontSize: typography.xxl,
+    fontSize: typography.xxxl,
     fontWeight: typography.bold,
     color: colors.textPrimary,
+    marginBottom: spacing.xs,
+  },
+  completeSubtitle: {
+    fontSize: typography.sm,
+    color: colors.textSecondary,
     marginBottom: spacing.xxl,
   },
   summaryCard: {
     backgroundColor: colors.card,
-    borderRadius: borderRadius.xl,
+    borderRadius: borderRadius.lg,
+    borderWidth: 1,
+    borderColor: colors.border,
     padding: spacing.xl,
     width: '100%',
     marginBottom: spacing.xxl,
-    ...shadows.sm,
+    ...shadows.notion,
   },
-  summaryRow: {
+  summaryHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingVertical: spacing.md,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.borderLight,
-  },
-  summaryRowLast: {
-    borderBottomWidth: 0,
-    paddingTop: spacing.md,
+    alignItems: 'center',
+    marginBottom: spacing.sm,
   },
   summaryLabel: {
+    fontSize: typography.sm,
+    fontWeight: typography.medium,
+    color: colors.textSecondary,
+  },
+  summaryScore: {
+    fontSize: 40,
+    fontWeight: typography.bold,
+    color: colors.textPrimary,
+    marginBottom: spacing.sm,
+  },
+  summaryProgress: {
+    height: 6,
+    backgroundColor: colors.border,
+    borderRadius: borderRadius.full,
+    overflow: 'hidden',
+    marginBottom: spacing.xl,
+  },
+  summaryProgressFill: {
+    height: '100%',
+    backgroundColor: colors.primary,
+    borderRadius: borderRadius.full,
+  },
+  summaryStats: {
+    flexDirection: 'row',
+    gap: spacing.md,
+    marginBottom: spacing.lg,
+  },
+  summaryStatItem: {
+    flex: 1,
+    backgroundColor: colors.cardAlt,
+    borderRadius: borderRadius.md,
+    borderWidth: 1,
+    borderColor: colors.border,
+    padding: spacing.md,
+  },
+  summaryStatLabel: {
+    fontSize: typography.xs,
+    color: colors.textSecondary,
+    fontWeight: typography.medium,
+    marginTop: spacing.sm,
+    marginBottom: spacing.xs,
+  },
+  summaryStatValue: {
+    fontSize: typography.xxl,
+    fontWeight: typography.bold,
+    color: colors.textPrimary,
+  },
+  xpEarnedRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingTop: spacing.lg,
+    borderTopWidth: 1,
+    borderTopColor: colors.border,
+  },
+  xpEarnedLabel: {
     fontSize: typography.base,
     color: colors.textSecondary,
   },
-  summaryValue: {
-    fontSize: typography.base,
-    color: colors.textPrimary,
-    fontWeight: typography.semibold,
-  },
-  xpEarned: {
+  xpEarnedValue: {
     fontSize: typography.lg,
-    color: colors.warning,
     fontWeight: typography.bold,
+    color: colors.warning,
   },
   completeActions: {
     width: '100%',
     gap: spacing.md,
   },
   practiceAgainButton: {
-    backgroundColor: colors.repeat,
-    paddingVertical: spacing.lg,
-    borderRadius: borderRadius.full,
+    flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
+    gap: spacing.sm,
+    backgroundColor: colors.primary,
+    paddingVertical: spacing.md,
+    borderRadius: borderRadius.md,
+    ...shadows.md,
   },
   practiceAgainText: {
     color: colors.textLight,
-    fontSize: typography.base,
-    fontWeight: typography.bold,
+    fontSize: typography.sm,
+    fontWeight: typography.semibold,
   },
   backButton: {
-    backgroundColor: colors.cardAlt,
-    paddingVertical: spacing.lg,
-    borderRadius: borderRadius.full,
+    backgroundColor: 'transparent',
+    paddingVertical: spacing.md,
+    borderRadius: borderRadius.md,
     alignItems: 'center',
   },
   backButtonText: {
     color: colors.textSecondary,
-    fontSize: typography.base,
+    fontSize: typography.sm,
     fontWeight: typography.medium,
   },
 });

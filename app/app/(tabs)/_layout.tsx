@@ -1,19 +1,24 @@
 import { Tabs } from 'expo-router';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 import { colors, typography } from '../../constants/theme';
 
+type IconName = 'dashboard' | 'bar-chart' | 'fitness-center';
+
 function TabIcon({ name, focused }: { name: string; focused: boolean }) {
-  const icons: Record<string, string> = {
-    index: '🏠',
-    progress: '📊',
-    settings: '⚙️',
+  const icons: Record<string, IconName> = {
+    index: 'dashboard',
+    progress: 'bar-chart',
+    vocab: 'fitness-center',
   };
 
   return (
     <View style={styles.tabIconContainer}>
-      <Text style={[styles.tabIcon, focused && styles.tabIconFocused]}>
-        {icons[name] || '📱'}
-      </Text>
+      <MaterialIcons
+        name={icons[name] || 'dashboard'}
+        size={24}
+        color={focused ? colors.primary : colors.textSecondary}
+      />
     </View>
   );
 }
@@ -23,25 +28,33 @@ export default function TabsLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: colors.primary,
-        tabBarInactiveTintColor: colors.textMuted,
+        tabBarInactiveTintColor: colors.textSecondary,
         tabBarStyle: {
-          backgroundColor: colors.card,
+          backgroundColor: colors.background,
           borderTopColor: colors.border,
           borderTopWidth: 1,
           paddingBottom: 8,
           paddingTop: 8,
           height: 70,
+          shadowColor: '#000',
+          shadowOffset: { width: 0, height: -4 },
+          shadowOpacity: 0.05,
+          shadowRadius: 10,
+          elevation: 10,
         },
         tabBarLabelStyle: {
-          fontSize: typography.xs,
-          fontWeight: typography.medium,
+          fontSize: 10,
+          fontWeight: '500',
         },
         headerStyle: {
           backgroundColor: colors.background,
+          shadowColor: 'transparent',
+          elevation: 0,
         },
         headerTintColor: colors.textPrimary,
         headerTitleStyle: {
-          fontWeight: typography.bold,
+          fontWeight: typography.semibold,
+          fontSize: typography.sm,
         },
         headerShadowVisible: false,
       }}
@@ -49,7 +62,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: 'Lessons',
           tabBarIcon: ({ focused }) => <TabIcon name="index" focused={focused} />,
           headerShown: false,
         }}
@@ -57,22 +70,22 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="progress"
         options={{
-          title: 'Progress',
+          title: 'Stats',
           tabBarIcon: ({ focused }) => <TabIcon name="progress" focused={focused} />,
-          headerTitle: 'Your Progress',
+          headerShown: false,
         }}
       />
-      <Tabs.Screen
-        name="settings"
-        options={{
-          title: 'Settings',
-          tabBarIcon: ({ focused }) => <TabIcon name="settings" focused={focused} />,
-          headerTitle: 'Settings',
-        }}
-      />
-      {/* Hide old screens from tabs */}
       <Tabs.Screen
         name="vocab"
+        options={{
+          title: 'Exercise',
+          tabBarIcon: ({ focused }) => <TabIcon name="vocab" focused={focused} />,
+          headerShown: false,
+        }}
+      />
+      {/* Hide screens from tabs */}
+      <Tabs.Screen
+        name="settings"
         options={{
           href: null,
         }}
@@ -91,12 +104,5 @@ const styles = StyleSheet.create({
   tabIconContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  tabIcon: {
-    fontSize: 22,
-    opacity: 0.5,
-  },
-  tabIconFocused: {
-    opacity: 1,
   },
 });

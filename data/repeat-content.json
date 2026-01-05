@@ -1,0 +1,2012 @@
+{
+  "metadata": {
+    "mode": "repeat",
+    "totalItems": 250,
+    "itemsPerSession": 15,
+    "secondsPerItem": 20,
+    "version": "1.0.0",
+    "lastUpdated": "2026-01-06"
+  },
+  "items": [
+    {
+      "id": "rep-001",
+      "indonesian": "Selamat pagi",
+      "english": "Good morning",
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-002",
+      "indonesian": "Selamat siang",
+      "english": "Good afternoon",
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-003",
+      "indonesian": "Selamat malam",
+      "english": "Good evening",
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-004",
+      "indonesian": "Selamat tidur",
+      "english": "Good night",
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-005",
+      "indonesian": "Apa kabar?",
+      "english": "How are you?",
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-006",
+      "indonesian": "Baik, terima kasih",
+      "english": "Fine, thank you",
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-007",
+      "indonesian": "Nama saya...",
+      "english": "My name is...",
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-008",
+      "indonesian": "Siapa nama kamu?",
+      "english": "What is your name?",
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-009",
+      "indonesian": "Senang bertemu dengan kamu",
+      "english": "Nice to meet you",
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-010",
+      "indonesian": "Sampai jumpa",
+      "english": "See you later",
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-011",
+      "indonesian": "Terima kasih",
+      "english": "Thank you",
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-012",
+      "indonesian": "Sama-sama",
+      "english": "You're welcome",
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-013",
+      "indonesian": "Maaf",
+      "english": "Sorry",
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-014",
+      "indonesian": "Permisi",
+      "english": "Excuse me",
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-015",
+      "indonesian": "Tolong",
+      "english": "Please",
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-016",
+      "indonesian": "Ya",
+      "english": "Yes",
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-017",
+      "indonesian": "Tidak",
+      "english": "No",
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-018",
+      "indonesian": "Saya tidak mengerti",
+      "english": "I don't understand",
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-019",
+      "indonesian": "Bisa bicara lebih pelan?",
+      "english": "Can you speak slower?",
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-020",
+      "indonesian": "Tolong ulangi",
+      "english": "Please repeat that",
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-021",
+      "indonesian": "Saya dari Indonesia",
+      "english": "I am from Indonesia",
+      "category": "greetings",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-022",
+      "indonesian": "Saya tinggal di Jakarta",
+      "english": "I live in Jakarta",
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-023",
+      "indonesian": "Saya seorang pelajar",
+      "english": "I am a student",
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-024",
+      "indonesian": "Saya sedang belajar bahasa Inggris",
+      "english": "I am learning English",
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-025",
+      "indonesian": "Hari ini cuacanya bagus",
+      "english": "The weather is nice today",
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-026",
+      "indonesian": "Jam berapa sekarang?",
+      "english": "What time is it?",
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-027",
+      "indonesian": "Hari ini hari apa?",
+      "english": "What day is it today?",
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-028",
+      "indonesian": "Saya lapar",
+      "english": "I am hungry",
+      "category": "food",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-029",
+      "indonesian": "Saya haus",
+      "english": "I am thirsty",
+      "category": "food",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-030",
+      "indonesian": "Saya mau makan",
+      "english": "I want to eat",
+      "category": "food",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-031",
+      "indonesian": "Saya mau minum",
+      "english": "I want to drink",
+      "category": "food",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-032",
+      "indonesian": "Makanannya enak",
+      "english": "The food is delicious",
+      "category": "food",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-033",
+      "indonesian": "Saya suka kopi",
+      "english": "I like coffee",
+      "category": "food",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-034",
+      "indonesian": "Saya tidak suka pedas",
+      "english": "I don't like spicy food",
+      "category": "food",
+      "level": "beginner",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-035",
+      "indonesian": "Minta air putih",
+      "english": "Water please",
+      "category": "food",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-036",
+      "indonesian": "Di mana toilet?",
+      "english": "Where is the bathroom?",
+      "category": "travel",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-037",
+      "indonesian": "Di mana stasiun?",
+      "english": "Where is the station?",
+      "category": "travel",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-038",
+      "indonesian": "Saya tersesat",
+      "english": "I am lost",
+      "category": "travel",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-039",
+      "indonesian": "Tolong bantu saya",
+      "english": "Please help me",
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-040",
+      "indonesian": "Berapa harganya?",
+      "english": "How much is it?",
+      "category": "shopping",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-041",
+      "indonesian": "Terlalu mahal",
+      "english": "Too expensive",
+      "category": "shopping",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-042",
+      "indonesian": "Bisa kurang?",
+      "english": "Can you lower the price?",
+      "category": "shopping",
+      "level": "beginner",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-043",
+      "indonesian": "Saya mau beli ini",
+      "english": "I want to buy this",
+      "category": "shopping",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-044",
+      "indonesian": "Ada ukuran lain?",
+      "english": "Do you have another size?",
+      "category": "shopping",
+      "level": "beginner",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-045",
+      "indonesian": "Saya cuma lihat-lihat",
+      "english": "I'm just looking",
+      "category": "shopping",
+      "level": "beginner",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-046",
+      "indonesian": "Saya lelah",
+      "english": "I am tired",
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-047",
+      "indonesian": "Saya senang",
+      "english": "I am happy",
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-048",
+      "indonesian": "Saya sedih",
+      "english": "I am sad",
+      "category": "daily",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-049",
+      "indonesian": "Saya sakit",
+      "english": "I am sick",
+      "category": "health",
+      "level": "beginner",
+      "difficulty": 1
+    },
+    {
+      "id": "rep-050",
+      "indonesian": "Saya butuh dokter",
+      "english": "I need a doctor",
+      "category": "health",
+      "level": "beginner",
+      "difficulty": 2
+    },
+    {
+      "id": "rep-051",
+      "indonesian": "Kepala saya sakit",
+      "english": "I have a headache",
+      "category": "health",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-052",
+      "indonesian": "Perut saya sakit",
+      "english": "I have a stomachache",
+      "category": "health",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-053",
+      "indonesian": "Saya demam",
+      "english": "I have a fever",
+      "category": "health",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-054",
+      "indonesian": "Saya alergi terhadap kacang",
+      "english": "I am allergic to peanuts",
+      "category": "health",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-055",
+      "indonesian": "Di mana apotek terdekat?",
+      "english": "Where is the nearest pharmacy?",
+      "category": "health",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-056",
+      "indonesian": "Saya mau pesan makanan",
+      "english": "I would like to order food",
+      "category": "food",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-057",
+      "indonesian": "Minta menu nya",
+      "english": "May I have the menu?",
+      "category": "food",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-058",
+      "indonesian": "Saya mau bayar",
+      "english": "I would like to pay",
+      "category": "food",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-059",
+      "indonesian": "Minta bonnya",
+      "english": "May I have the bill?",
+      "category": "food",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-060",
+      "indonesian": "Apakah ada meja untuk dua orang?",
+      "english": "Do you have a table for two?",
+      "category": "food",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-061",
+      "indonesian": "Saya vegetarian",
+      "english": "I am a vegetarian",
+      "category": "food",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-062",
+      "indonesian": "Apakah ini halal?",
+      "english": "Is this halal?",
+      "category": "food",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-063",
+      "indonesian": "Makanan ini terlalu asin",
+      "english": "This food is too salty",
+      "category": "food",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-064",
+      "indonesian": "Bisakah saya mendapat es?",
+      "english": "Can I get some ice?",
+      "category": "food",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-065",
+      "indonesian": "Saya ingin pesan taksi",
+      "english": "I would like to book a taxi",
+      "category": "travel",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-066",
+      "indonesian": "Berapa lama perjalanannya?",
+      "english": "How long is the journey?",
+      "category": "travel",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-067",
+      "indonesian": "Tolong antar saya ke bandara",
+      "english": "Please take me to the airport",
+      "category": "travel",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-068",
+      "indonesian": "Saya mau turun di sini",
+      "english": "I want to get off here",
+      "category": "travel",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-069",
+      "indonesian": "Apakah ini jalan yang benar?",
+      "english": "Is this the right way?",
+      "category": "travel",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-070",
+      "indonesian": "Belok kiri di lampu merah",
+      "english": "Turn left at the traffic light",
+      "category": "travel",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-071",
+      "indonesian": "Jalan terus lurus",
+      "english": "Go straight ahead",
+      "category": "travel",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-072",
+      "indonesian": "Ada di sebelah kanan",
+      "english": "It's on the right side",
+      "category": "travel",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-073",
+      "indonesian": "Saya mau pesan kamar",
+      "english": "I would like to book a room",
+      "category": "travel",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-074",
+      "indonesian": "Untuk berapa malam?",
+      "english": "For how many nights?",
+      "category": "travel",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-075",
+      "indonesian": "Apakah termasuk sarapan?",
+      "english": "Is breakfast included?",
+      "category": "travel",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-076",
+      "indonesian": "Jam berapa check out?",
+      "english": "What time is check out?",
+      "category": "travel",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-077",
+      "indonesian": "AC nya tidak berfungsi",
+      "english": "The air conditioning is not working",
+      "category": "travel",
+      "level": "elementary",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-078",
+      "indonesian": "Bisakah saya pindah kamar?",
+      "english": "Can I change rooms?",
+      "category": "travel",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-079",
+      "indonesian": "Saya bekerja di kantor",
+      "english": "I work in an office",
+      "category": "work",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-080",
+      "indonesian": "Saya seorang guru",
+      "english": "I am a teacher",
+      "category": "work",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-081",
+      "indonesian": "Saya bekerja dari rumah",
+      "english": "I work from home",
+      "category": "work",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-082",
+      "indonesian": "Jam kerja saya dari 9 sampai 5",
+      "english": "My working hours are from 9 to 5",
+      "category": "work",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-083",
+      "indonesian": "Saya ada rapat besok",
+      "english": "I have a meeting tomorrow",
+      "category": "work",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-084",
+      "indonesian": "Bisa kirim email ke saya?",
+      "english": "Can you send me an email?",
+      "category": "work",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-085",
+      "indonesian": "Saya sedang cuti",
+      "english": "I am on leave",
+      "category": "work",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-086",
+      "indonesian": "Kapan deadline nya?",
+      "english": "When is the deadline?",
+      "category": "work",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-087",
+      "indonesian": "Saya perlu bantuan dengan proyek ini",
+      "english": "I need help with this project",
+      "category": "work",
+      "level": "elementary",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-088",
+      "indonesian": "Bisa jelaskan lagi?",
+      "english": "Can you explain again?",
+      "category": "work",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-089",
+      "indonesian": "Saya setuju dengan pendapat kamu",
+      "english": "I agree with your opinion",
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-090",
+      "indonesian": "Saya tidak setuju",
+      "english": "I disagree",
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-091",
+      "indonesian": "Menurut saya...",
+      "english": "In my opinion...",
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-092",
+      "indonesian": "Itu ide yang bagus",
+      "english": "That's a good idea",
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-093",
+      "indonesian": "Saya senang bertemu kamu",
+      "english": "I'm glad to meet you",
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-094",
+      "indonesian": "Apa hobi kamu?",
+      "english": "What are your hobbies?",
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-095",
+      "indonesian": "Saya suka membaca buku",
+      "english": "I like reading books",
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-096",
+      "indonesian": "Apa kamu suka musik?",
+      "english": "Do you like music?",
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-097",
+      "indonesian": "Film apa yang kamu suka?",
+      "english": "What movies do you like?",
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-098",
+      "indonesian": "Akhir pekan ini ada acara apa?",
+      "english": "What are your plans for this weekend?",
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-099",
+      "indonesian": "Mau ikut?",
+      "english": "Do you want to come along?",
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-100",
+      "indonesian": "Kapan kita bisa ketemu?",
+      "english": "When can we meet?",
+      "category": "social",
+      "level": "elementary",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-101",
+      "indonesian": "Saya sedang mencari pekerjaan",
+      "english": "I am looking for a job",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-102",
+      "indonesian": "Bisakah kita jadwalkan pertemuan?",
+      "english": "Can we schedule a meeting?",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-103",
+      "indonesian": "Saya sangat menghargai bantuan Anda",
+      "english": "I really appreciate your help",
+      "category": "formal",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-104",
+      "indonesian": "Boleh saya minta waktu sebentar?",
+      "english": "May I have a moment of your time?",
+      "category": "formal",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-105",
+      "indonesian": "Saya ingin menyampaikan keluhan",
+      "english": "I would like to file a complaint",
+      "category": "formal",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-106",
+      "indonesian": "Apakah ada diskon untuk pembelian banyak?",
+      "english": "Is there a discount for bulk purchases?",
+      "category": "shopping",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-107",
+      "indonesian": "Saya ingin mengembalikan barang ini",
+      "english": "I would like to return this item",
+      "category": "shopping",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-108",
+      "indonesian": "Apakah ada garansi?",
+      "english": "Is there a warranty?",
+      "category": "shopping",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-109",
+      "indonesian": "Bisa dikirim ke alamat ini?",
+      "english": "Can you deliver to this address?",
+      "category": "shopping",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-110",
+      "indonesian": "Saya ingin membatalkan pesanan saya",
+      "english": "I would like to cancel my order",
+      "category": "shopping",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-111",
+      "indonesian": "Apakah bisa dibayar dengan kartu kredit?",
+      "english": "Can I pay by credit card?",
+      "category": "shopping",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-112",
+      "indonesian": "Saya ingin membuka rekening bank",
+      "english": "I would like to open a bank account",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-113",
+      "indonesian": "Berapa saldo rekening saya?",
+      "english": "What is my account balance?",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-114",
+      "indonesian": "Saya ingin transfer uang",
+      "english": "I would like to transfer money",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-115",
+      "indonesian": "Apakah ada biaya administrasi?",
+      "english": "Is there an administration fee?",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-116",
+      "indonesian": "Saya kehilangan kartu ATM saya",
+      "english": "I lost my ATM card",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-117",
+      "indonesian": "Bisakah Anda membantu saya mengisi formulir ini?",
+      "english": "Can you help me fill out this form?",
+      "category": "formal",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-118",
+      "indonesian": "Saya perlu memperpanjang visa saya",
+      "english": "I need to extend my visa",
+      "category": "travel",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-119",
+      "indonesian": "Di mana saya bisa menukar uang?",
+      "english": "Where can I exchange money?",
+      "category": "travel",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-120",
+      "indonesian": "Berapa nilai tukar hari ini?",
+      "english": "What is today's exchange rate?",
+      "category": "travel",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-121",
+      "indonesian": "Penerbangan saya ditunda",
+      "english": "My flight has been delayed",
+      "category": "travel",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-122",
+      "indonesian": "Bagasi saya tidak sampai",
+      "english": "My luggage hasn't arrived",
+      "category": "travel",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-123",
+      "indonesian": "Saya ingin mengubah jadwal penerbangan",
+      "english": "I would like to change my flight schedule",
+      "category": "travel",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-124",
+      "indonesian": "Apakah ada penerbangan yang lebih awal?",
+      "english": "Is there an earlier flight?",
+      "category": "travel",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-125",
+      "indonesian": "Saya ingin duduk di dekat jendela",
+      "english": "I would like a window seat",
+      "category": "travel",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-126",
+      "indonesian": "Apakah makanan disediakan di penerbangan ini?",
+      "english": "Is food provided on this flight?",
+      "category": "travel",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-127",
+      "indonesian": "Saya memiliki pengalaman lima tahun di bidang ini",
+      "english": "I have five years of experience in this field",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-128",
+      "indonesian": "Apa tanggung jawab utama posisi ini?",
+      "english": "What are the main responsibilities of this position?",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-129",
+      "indonesian": "Saya bisa bekerja di bawah tekanan",
+      "english": "I can work under pressure",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-130",
+      "indonesian": "Kapan saya bisa mulai bekerja?",
+      "english": "When can I start working?",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-131",
+      "indonesian": "Berapa gaji yang ditawarkan?",
+      "english": "What is the salary offered?",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-132",
+      "indonesian": "Apakah ada tunjangan kesehatan?",
+      "english": "Are there health benefits?",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-133",
+      "indonesian": "Saya tertarik dengan posisi ini",
+      "english": "I am interested in this position",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-134",
+      "indonesian": "Boleh saya tahu lebih lanjut tentang perusahaan ini?",
+      "english": "May I know more about this company?",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-135",
+      "indonesian": "Saya bisa berbahasa Inggris dengan lancar",
+      "english": "I can speak English fluently",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-136",
+      "indonesian": "Saya memiliki kemampuan komunikasi yang baik",
+      "english": "I have good communication skills",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-137",
+      "indonesian": "Saya bisa bekerja dalam tim",
+      "english": "I can work in a team",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-138",
+      "indonesian": "Apa kekuatan dan kelemahan Anda?",
+      "english": "What are your strengths and weaknesses?",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-139",
+      "indonesian": "Mengapa Anda ingin bekerja di sini?",
+      "english": "Why do you want to work here?",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-140",
+      "indonesian": "Ceritakan tentang diri Anda",
+      "english": "Tell me about yourself",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-141",
+      "indonesian": "Saya mohon maaf atas keterlambatan ini",
+      "english": "I apologize for the delay",
+      "category": "formal",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-142",
+      "indonesian": "Terima kasih atas kesabaran Anda",
+      "english": "Thank you for your patience",
+      "category": "formal",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-143",
+      "indonesian": "Saya akan menindaklanjuti hal ini",
+      "english": "I will follow up on this matter",
+      "category": "formal",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-144",
+      "indonesian": "Bisakah Anda menjelaskan lebih rinci?",
+      "english": "Could you explain in more detail?",
+      "category": "formal",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-145",
+      "indonesian": "Saya akan mempertimbangkan saran Anda",
+      "english": "I will consider your suggestion",
+      "category": "formal",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-146",
+      "indonesian": "Mari kita diskusikan lebih lanjut",
+      "english": "Let's discuss this further",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-147",
+      "indonesian": "Saya setuju dengan proposal ini",
+      "english": "I agree with this proposal",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-148",
+      "indonesian": "Ada beberapa poin yang perlu direvisi",
+      "english": "There are some points that need revision",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-149",
+      "indonesian": "Kapan kita bisa menyelesaikan proyek ini?",
+      "english": "When can we complete this project?",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-150",
+      "indonesian": "Saya akan menyiapkan laporan untuk besok",
+      "english": "I will prepare the report for tomorrow",
+      "category": "work",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-151",
+      "indonesian": "Bagaimana menurutmu soal cuaca akhir-akhir ini?",
+      "english": "What do you think about the weather lately?",
+      "category": "social",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-152",
+      "indonesian": "Saya dengar kamu baru saja liburan",
+      "english": "I heard you just went on vacation",
+      "category": "social",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-153",
+      "indonesian": "Bagaimana kabar keluargamu?",
+      "english": "How is your family doing?",
+      "category": "social",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-154",
+      "indonesian": "Sudah lama kita tidak bertemu",
+      "english": "It's been a long time since we met",
+      "category": "social",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-155",
+      "indonesian": "Apa rencana kamu untuk tahun depan?",
+      "english": "What are your plans for next year?",
+      "category": "social",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-156",
+      "indonesian": "Saya sangat menikmati percakapan kita",
+      "english": "I really enjoyed our conversation",
+      "category": "social",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-157",
+      "indonesian": "Kita harus bertemu lagi lain kali",
+      "english": "We should meet again sometime",
+      "category": "social",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-158",
+      "indonesian": "Selamat atas promosimu!",
+      "english": "Congratulations on your promotion!",
+      "category": "social",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-159",
+      "indonesian": "Saya turut prihatin atas berita itu",
+      "english": "I'm sorry to hear about that news",
+      "category": "social",
+      "level": "intermediate",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-160",
+      "indonesian": "Semoga cepat sembuh",
+      "english": "Get well soon",
+      "category": "social",
+      "level": "intermediate",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-161",
+      "indonesian": "Selamat ulang tahun!",
+      "english": "Happy birthday!",
+      "category": "social",
+      "level": "intermediate",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-162",
+      "indonesian": "Selamat tahun baru!",
+      "english": "Happy new year!",
+      "category": "social",
+      "level": "intermediate",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-163",
+      "indonesian": "Semoga sukses dengan ujianmu",
+      "english": "Good luck with your exam",
+      "category": "social",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-164",
+      "indonesian": "Terima kasih sudah mengundang saya",
+      "english": "Thank you for inviting me",
+      "category": "social",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-165",
+      "indonesian": "Maaf saya tidak bisa hadir",
+      "english": "Sorry I couldn't attend",
+      "category": "social",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-166",
+      "indonesian": "Saya sedang dalam perjalanan",
+      "english": "I am on my way",
+      "category": "daily",
+      "level": "intermediate",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-167",
+      "indonesian": "Saya akan terlambat sekitar 15 menit",
+      "english": "I will be about 15 minutes late",
+      "category": "daily",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-168",
+      "indonesian": "Apakah kamu sudah makan?",
+      "english": "Have you eaten yet?",
+      "category": "daily",
+      "level": "intermediate",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-169",
+      "indonesian": "Saya baru saja selesai bekerja",
+      "english": "I just finished work",
+      "category": "daily",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-170",
+      "indonesian": "Hari ini saya sangat sibuk",
+      "english": "I am very busy today",
+      "category": "daily",
+      "level": "intermediate",
+      "difficulty": 4
+    },
+    {
+      "id": "rep-171",
+      "indonesian": "Saya perlu istirahat sebentar",
+      "english": "I need to take a short break",
+      "category": "daily",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-172",
+      "indonesian": "Bisakah kamu menolong saya?",
+      "english": "Could you help me please?",
+      "category": "daily",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-173",
+      "indonesian": "Tidak masalah",
+      "english": "No problem",
+      "category": "daily",
+      "level": "intermediate",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-174",
+      "indonesian": "Itu bukan salahmu",
+      "english": "That's not your fault",
+      "category": "daily",
+      "level": "intermediate",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-175",
+      "indonesian": "Jangan khawatir",
+      "english": "Don't worry",
+      "category": "daily",
+      "level": "intermediate",
+      "difficulty": 3
+    },
+    {
+      "id": "rep-176",
+      "indonesian": "Saya ingin menyampaikan presentasi tentang proyek ini",
+      "english": "I would like to present this project",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-177",
+      "indonesian": "Mari kita diskusikan strategi pemasaran",
+      "english": "Let's discuss the marketing strategy",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-178",
+      "indonesian": "Kita perlu meningkatkan efisiensi operasional",
+      "english": "We need to improve operational efficiency",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-179",
+      "indonesian": "Bagaimana cara kita mengoptimalkan anggaran?",
+      "english": "How can we optimize the budget?",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-180",
+      "indonesian": "Saya ingin mengajukan proposal kerjasama",
+      "english": "I would like to submit a partnership proposal",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-181",
+      "indonesian": "Kita harus mempertimbangkan dampak jangka panjang",
+      "english": "We must consider the long-term impact",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-182",
+      "indonesian": "Berdasarkan analisis data kami",
+      "english": "Based on our data analysis",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-183",
+      "indonesian": "Saya ingin menjelaskan metodologi penelitian kami",
+      "english": "I would like to explain our research methodology",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-184",
+      "indonesian": "Hasil menunjukkan peningkatan yang signifikan",
+      "english": "The results show a significant improvement",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-185",
+      "indonesian": "Kami menghadapi beberapa tantangan",
+      "english": "We are facing several challenges",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-186",
+      "indonesian": "Saya yakin solusi ini akan efektif",
+      "english": "I believe this solution will be effective",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-187",
+      "indonesian": "Kami berkomitmen untuk memberikan layanan terbaik",
+      "english": "We are committed to providing the best service",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-188",
+      "indonesian": "Saya sangat mengapresiasi umpan balik Anda",
+      "english": "I greatly appreciate your feedback",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-189",
+      "indonesian": "Izinkan saya untuk mengklarifikasi poin tersebut",
+      "english": "Allow me to clarify that point",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-190",
+      "indonesian": "Saya ingin menyoroti beberapa hal penting",
+      "english": "I would like to highlight some important points",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-191",
+      "indonesian": "Dengan hormat saya sampaikan",
+      "english": "I respectfully submit",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-192",
+      "indonesian": "Saya memohon pengertian Anda",
+      "english": "I kindly ask for your understanding",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-193",
+      "indonesian": "Atas perhatian Anda, saya ucapkan terima kasih",
+      "english": "Thank you for your attention",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-194",
+      "indonesian": "Saya berharap dapat berdiskusi lebih lanjut",
+      "english": "I hope we can discuss this further",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-195",
+      "indonesian": "Mohon pertimbangan atas permohonan ini",
+      "english": "Please consider this request",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-196",
+      "indonesian": "Saya akan memastikan hal ini ditindaklanjuti",
+      "english": "I will ensure this is followed up",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-197",
+      "indonesian": "Keputusan akhir ada di tangan Anda",
+      "english": "The final decision is in your hands",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-198",
+      "indonesian": "Saya sangat menantikan kerjasama kita",
+      "english": "I am looking forward to our collaboration",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-199",
+      "indonesian": "Kami akan memberikan pembaruan secara berkala",
+      "english": "We will provide regular updates",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-200",
+      "indonesian": "Jika ada pertanyaan, jangan ragu untuk menghubungi saya",
+      "english": "If you have any questions, please don't hesitate to contact me",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-201",
+      "indonesian": "Saya ingin mengklarifikasi kesalahpahaman ini",
+      "english": "I would like to clarify this misunderstanding",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-202",
+      "indonesian": "Kami telah mempertimbangkan semua opsi yang tersedia",
+      "english": "We have considered all available options",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-203",
+      "indonesian": "Implementasi akan dimulai kuartal depan",
+      "english": "Implementation will begin next quarter",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-204",
+      "indonesian": "Kita perlu melakukan evaluasi menyeluruh",
+      "english": "We need to conduct a thorough evaluation",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-205",
+      "indonesian": "Strategi ini sejalan dengan visi perusahaan",
+      "english": "This strategy aligns with the company's vision",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 9
+    },
+    {
+      "id": "rep-206",
+      "indonesian": "Saya mengusulkan pendekatan yang berbeda",
+      "english": "I propose a different approach",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-207",
+      "indonesian": "Kita harus memprioritaskan kepuasan pelanggan",
+      "english": "We must prioritize customer satisfaction",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-208",
+      "indonesian": "Investasi ini akan memberikan hasil jangka panjang",
+      "english": "This investment will yield long-term results",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 9
+    },
+    {
+      "id": "rep-209",
+      "indonesian": "Kami sedang mengembangkan solusi inovatif",
+      "english": "We are developing innovative solutions",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-210",
+      "indonesian": "Kerjasama tim sangat penting untuk keberhasilan",
+      "english": "Teamwork is essential for success",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-211",
+      "indonesian": "Kami berkomitmen untuk keberlanjutan",
+      "english": "We are committed to sustainability",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-212",
+      "indonesian": "Pertumbuhan organik adalah prioritas kami",
+      "english": "Organic growth is our priority",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-213",
+      "indonesian": "Kami perlu mengidentifikasi risiko potensial",
+      "english": "We need to identify potential risks",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-214",
+      "indonesian": "Rencana kontingensi sudah disiapkan",
+      "english": "A contingency plan has been prepared",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 9
+    },
+    {
+      "id": "rep-215",
+      "indonesian": "Kita harus beradaptasi dengan perubahan pasar",
+      "english": "We must adapt to market changes",
+      "category": "work",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-216",
+      "indonesian": "Transparansi adalah nilai utama kami",
+      "english": "Transparency is our core value",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-217",
+      "indonesian": "Kami menjunjung tinggi integritas",
+      "english": "We uphold integrity",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-218",
+      "indonesian": "Kerahasiaan informasi akan dijaga",
+      "english": "Confidentiality of information will be maintained",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 9
+    },
+    {
+      "id": "rep-219",
+      "indonesian": "Kami menghargai masukan konstruktif",
+      "english": "We value constructive feedback",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-220",
+      "indonesian": "Peningkatan berkelanjutan adalah tujuan kami",
+      "english": "Continuous improvement is our goal",
+      "category": "formal",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-221",
+      "indonesian": "Santai saja, tidak perlu buru-buru",
+      "english": "Take it easy, no need to rush",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-222",
+      "indonesian": "Itu benar-benar luar biasa!",
+      "english": "That's absolutely amazing!",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-223",
+      "indonesian": "Saya sangat bangga dengan pencapaianmu",
+      "english": "I am so proud of your achievement",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-224",
+      "indonesian": "Kamu selalu bisa mengandalkan saya",
+      "english": "You can always count on me",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-225",
+      "indonesian": "Aku akan selalu mendukungmu",
+      "english": "I will always support you",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-226",
+      "indonesian": "Itu pengalaman yang tak terlupakan",
+      "english": "That was an unforgettable experience",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-227",
+      "indonesian": "Saya terinspirasi oleh ceritamu",
+      "english": "I am inspired by your story",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-228",
+      "indonesian": "Kita punya banyak kesamaan",
+      "english": "We have a lot in common",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-229",
+      "indonesian": "Saya menghargai kejujuranmu",
+      "english": "I appreciate your honesty",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-230",
+      "indonesian": "Terima kasih sudah mendengarkan",
+      "english": "Thank you for listening",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-231",
+      "indonesian": "Ini adalah momen yang tepat",
+      "english": "This is the right moment",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-232",
+      "indonesian": "Saya tidak bisa bayangkan hidup tanpamu",
+      "english": "I can't imagine life without you",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-233",
+      "indonesian": "Persahabatan kita sangat berarti",
+      "english": "Our friendship means a lot",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-234",
+      "indonesian": "Waktu berlalu begitu cepat",
+      "english": "Time flies so fast",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-235",
+      "indonesian": "Setiap hari adalah kesempatan baru",
+      "english": "Every day is a new opportunity",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-236",
+      "indonesian": "Kesabaran adalah kunci keberhasilan",
+      "english": "Patience is the key to success",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-237",
+      "indonesian": "Kegagalan adalah awal dari kesuksesan",
+      "english": "Failure is the beginning of success",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-238",
+      "indonesian": "Jangan pernah menyerah",
+      "english": "Never give up",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-239",
+      "indonesian": "Percaya pada dirimu sendiri",
+      "english": "Believe in yourself",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-240",
+      "indonesian": "Mimpi besar dimulai dari langkah kecil",
+      "english": "Big dreams start with small steps",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-241",
+      "indonesian": "Saya sedang dalam proses belajar",
+      "english": "I am in the process of learning",
+      "category": "daily",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-242",
+      "indonesian": "Ini adalah pengalaman pertama saya",
+      "english": "This is my first experience",
+      "category": "daily",
+      "level": "advanced",
+      "difficulty": 6
+    },
+    {
+      "id": "rep-243",
+      "indonesian": "Saya akan melakukan yang terbaik",
+      "english": "I will do my best",
+      "category": "daily",
+      "level": "advanced",
+      "difficulty": 5
+    },
+    {
+      "id": "rep-244",
+      "indonesian": "Tidak ada kata terlambat untuk memulai",
+      "english": "It's never too late to start",
+      "category": "daily",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-245",
+      "indonesian": "Saya menantikan hari esok dengan penuh harapan",
+      "english": "I look forward to tomorrow with hope",
+      "category": "daily",
+      "level": "advanced",
+      "difficulty": 8
+    },
+    {
+      "id": "rep-246",
+      "indonesian": "Pengalaman adalah guru terbaik",
+      "english": "Experience is the best teacher",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-247",
+      "indonesian": "Kerja keras tidak akan mengkhianati hasil",
+      "english": "Hard work will pay off",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-248",
+      "indonesian": "Mari kita buat kenangan indah bersama",
+      "english": "Let's make beautiful memories together",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-249",
+      "indonesian": "Hidup ini terlalu singkat untuk menyesal",
+      "english": "Life is too short for regrets",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7
+    },
+    {
+      "id": "rep-250",
+      "indonesian": "Terima kasih atas semua yang kamu lakukan",
+      "english": "Thank you for everything you do",
+      "category": "social",
+      "level": "advanced",
+      "difficulty": 7
+    }
+  ]
+}

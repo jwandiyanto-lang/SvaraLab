@@ -4,7 +4,7 @@ import * as Haptics from 'expo-haptics';
 import { useGameStore } from '../stores/gameStore';
 import { colors, borderRadius, typography, shadows } from '../constants/theme';
 
-export type RecordingState = 'idle' | 'listening' | 'processing' | 'success' | 'error';
+export type RecordingState = 'idle' | 'connecting' | 'listening' | 'processing' | 'success' | 'error';
 
 interface SpeechButtonProps {
   onPress: () => void;
@@ -75,6 +75,13 @@ export default function SpeechButton({
           icon: '🎤',
           label: 'Tap to speak',
           ringColor: colors.primary,
+        };
+      case 'connecting':
+        return {
+          backgroundColor: colors.cardAlt,
+          icon: '📡',
+          label: 'Connecting...',
+          ringColor: colors.cardAlt,
         };
       case 'listening':
         return {

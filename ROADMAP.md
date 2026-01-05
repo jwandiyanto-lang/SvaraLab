@@ -10,79 +10,82 @@ SvaraLab is an English speaking practice app for Indonesian students with 4 game
 ### 4 Difficulty Levels
 | Level | Name | Timer | XP Required |
 |-------|------|-------|-------------|
-| 1 | Beginner | 5-7 sec | Free |
-| 2 | Elementary | 4-5 sec | 500 XP |
-| 3 | Intermediate | 3-4 sec | 1500 XP |
-| 4 | Advanced | 2-3 sec | 3000 XP |
+| 1 | Beginner | 8 sec | Free |
+| 2 | Elementary | 6 sec | 500 XP |
+| 3 | Intermediate | 5 sec | 1500 XP |
+| 4 | Advanced | 4 sec | 3500 XP |
 
 ### 4 Game Modes
 | Mode | Name | Description | Evaluation |
 |------|------|-------------|------------|
-| 1 | Repeat | See Indonesian → Speak English | Whisper API |
-| 2 | Respond | Answer questions naturally | GPT-4 AI |
-| 3 | Listen | Audio only → Repeat/answer | Whisper API |
-| 4 | Situation | Role-play scenarios | GPT-4 AI |
+| 1 | **Speak Fast** | See Indonesian -> Speak English | xAI Grok Voice |
+| 2 | **Think & Answer** | Answer questions naturally | xAI Grok Voice |
+| 3 | **Listen Sharp** | Audio only -> Repeat/answer | xAI Grok Voice |
+| 4 | **Real Talk** | Role-play scenarios | xAI Grok Voice |
 
 ---
 
 ## Sprint Plan
 
-### Sprint 1: Foundation
+### Sprint 1: Foundation ✅ COMPLETE
 **Duration:** 1 week
-**Goal:** Repeat Mode + XP System
+**Goal:** Core App + Speak Fast Mode
 
 Tasks:
-- [ ] Restructure app navigation
-- [ ] Create mode selection home screen
-- [ ] Build level selection screen
-- [ ] Implement XP tracking in userStore
-- [ ] Create Repeat mode content (80 items)
-- [ ] Add level lock/unlock logic
+- [x] Restructure app navigation (Expo Router)
+- [x] Create mode selection home screen
+- [x] Build level selection screen
+- [x] Implement XP tracking in gameStore
+- [x] Create Speak Fast mode content (250 items - exceeded target!)
+- [x] Add level lock/unlock logic
+- [x] Settings screen with accent/speed options
+- [x] Progress tracking screen
 
-Deliverable: Repeat mode fully functional
+Deliverable: Speak Fast mode fully functional ✅
 
 ---
 
-### Sprint 2: AI Integration
+### Sprint 2: AI Integration ✅ COMPLETE
 **Duration:** 1 week
-**Goal:** Respond Mode with GPT
+**Goal:** Think & Answer Mode with AI
 
 Tasks:
-- [ ] Create gptService.ts for OpenAI API
-- [ ] Build evaluation prompt system
-- [ ] Create Respond mode game screen
-- [ ] Display AI feedback to user
-- [ ] Create Respond content (80 prompts)
+- [x] Create grokVoice service for xAI API
+- [x] Build real-time speech recognition
+- [x] Create Think & Answer mode game screen
+- [x] Display AI feedback to user
+- [x] Create Think & Answer content (200 prompts - exceeded target!)
 
-Deliverable: Respond mode with AI evaluation
+Deliverable: Think & Answer mode with AI evaluation ✅
 
 ---
 
-### Sprint 3: Audio Features
+### Sprint 3: Audio Features ✅ COMPLETE
 **Duration:** 1 week
-**Goal:** Listen Mode
+**Goal:** Listen Sharp Mode
 
 Tasks:
-- [ ] Create audioService.ts
-- [ ] Integrate ElevenLabs for TTS
-- [ ] Build Listen mode game screen
-- [ ] Generate audio for all content
-- [ ] Support accent selection
+- [x] Integrate xAI Grok Voice for TTS
+- [x] Build Listen Sharp mode game screen
+- [x] Create Listen Sharp content (70 topics)
+- [x] Support accent selection (US/UK/AU)
+- [x] useGrokVoice hook for speech handling
 
-Deliverable: Listen mode working
+Deliverable: Listen Sharp mode working ✅
 
 ---
 
-### Sprint 4: Situation Mode
+### Sprint 4: Situation Mode 🔄 IN PROGRESS
 **Duration:** 1 week
 **Goal:** Role-play scenarios
 
 Tasks:
-- [ ] Build Situation mode screen
+- [ ] Build Real Talk mode screen
 - [ ] Create scenario evaluation rubric
 - [ ] Add think time + speak time
-- [ ] Create 30 scenarios (3 categories)
-- [ ] Polish UI/UX
+- [ ] Create 60 scenarios (expanded from 30)
+- [ ] Character system (6 characters with different accents)
+- [ ] Placement test for level assignment
 
 Deliverable: All 4 modes complete
 
@@ -93,9 +96,8 @@ Deliverable: All 4 modes complete
 **Goal:** Backend + Launch
 
 Tasks:
-- [ ] Set up Emergent backend
-- [ ] User authentication
-- [ ] Progress sync
+- [ ] Set up backend (user authentication)
+- [ ] Progress sync across devices
 - [ ] Leaderboard
 - [ ] Final testing
 - [ ] App store submission
@@ -104,20 +106,35 @@ Deliverable: Production-ready app
 
 ---
 
-## Content Requirements
+## Content Status
 
-### Per Mode (Total: 320 items + 30 scenarios)
-| Mode | Beginner | Elementary | Intermediate | Advanced | Total |
-|------|----------|------------|--------------|----------|-------|
-| Repeat | 20 | 20 | 20 | 20 | 80 |
-| Respond | 20 | 20 | 20 | 20 | 80 |
-| Listen | 20 | 20 | 20 | 20 | 80 |
-| Situation | 8 | 8 | 7 | 7 | 30 |
+### Completed Content (580 items total)
+| Mode | Beginner | Elementary | Intermediate | Advanced | Total | Status |
+|------|----------|------------|--------------|----------|-------|--------|
+| Speak Fast | 50 | 75 | 75 | 50 | **250** | ✅ Done |
+| Think & Answer | 40 | 60 | 60 | 40 | **200** | ✅ Done |
+| Listen Sharp | 15 | 20 | 20 | 15 | **70** | ✅ Done |
+| Real Talk | 12 | 18 | 18 | 12 | **60** | 🔄 Pending |
 
-### Scenario Categories
-- **Professional (10):** Banker, customer service, meetings, interviews
-- **Daily Life (10):** Restaurant, hotel, shopping, directions
-- **Social (10):** Small talk, parties, making friends
+### Pending Content
+- [ ] Real Talk scenarios (60)
+- [ ] Character system (6 characters)
+- [ ] Placement test (5 questions)
+
+---
+
+## Pricing
+
+### Monthly Subscription
+**Rp 599,000/month**
+
+Features included:
+- All 4 game modes
+- All 580+ practice items
+- AI-powered speech evaluation
+- Progress tracking
+- Multiple accent options
+- Unlimited practice sessions
 
 ---
 
@@ -125,21 +142,19 @@ Deliverable: Production-ready app
 
 | Service | Cost per Use | Est. Monthly |
 |---------|--------------|--------------|
-| OpenAI Whisper | $0.006/min | $50 (10K uses) |
-| GPT-4 Evaluation | $0.02/eval | $100 (5K uses) |
+| xAI Grok Voice | ~$0.01/min | $100 (10K uses) |
 | ElevenLabs TTS | $0.18/1K chars | $22 (one-time) |
 
-**Total Monthly:** ~$150-200 for 10K active users
+**Total Monthly API Cost:** ~$100-150 for 10K active users
 
 ---
 
 ## Tech Stack
-- **Frontend:** React Native (Expo)
-- **Backend:** Emergent (PostgreSQL)
-- **Speech-to-Text:** OpenAI Whisper
-- **AI Evaluation:** GPT-4
-- **Text-to-Speech:** ElevenLabs
+- **Frontend:** React Native (Expo) with Expo Router
+- **Speech AI:** xAI Grok Voice API (real-time WebSocket)
+- **Text-to-Speech:** ElevenLabs (optional)
 - **State:** Zustand + AsyncStorage
+- **Backend:** TBD
 
 ---
 
@@ -156,19 +171,19 @@ Deliverable: Production-ready app
 ### Earning XP
 | Action | XP |
 |--------|-----|
-| Correct answer | +10 |
+| Correct answer | +10-30 (by difficulty) |
 | Speed bonus (first 50% of time) | +5 |
 | Streak bonus | +2 per streak |
 | Perfect round | +20 |
 | Daily challenge | +50 |
 
 ### Level Unlocks
-| Level | XP Required | Cumulative |
-|-------|-------------|------------|
-| Beginner | 0 | 0 |
-| Elementary | 500 | 500 |
-| Intermediate | 1000 | 1500 |
-| Advanced | 1500 | 3000 |
+| Level | XP Required |
+|-------|-------------|
+| Beginner | 0 (Free) |
+| Elementary | 500 |
+| Intermediate | 1500 |
+| Advanced | 3500 |
 
 ---
 
@@ -176,60 +191,36 @@ Deliverable: Production-ready app
 
 ```
 Home (Mode Selection)
-├── Repeat Mode
-│   ├── Beginner (20 items)
-│   ├── Elementary (20 items) 🔒
-│   ├── Intermediate (20 items) 🔒
-│   └── Advanced (20 items) 🔒
-├── Respond Mode
-│   └── (same structure)
-├── Listen Mode
-│   └── (same structure)
-└── Situation Mode
-    ├── Professional
-    ├── Daily Life
-    └── Social
+├── Speak Fast ⚡
+│   ├── Beginner (50 items)
+│   ├── Elementary (75 items)
+│   ├── Intermediate (75 items)
+│   └── Advanced (50 items)
+├── Think & Answer 💭
+│   ├── Beginner (40 items)
+│   ├── Elementary (60 items)
+│   ├── Intermediate (60 items)
+│   └── Advanced (40 items)
+├── Listen Sharp 👂
+│   ├── Beginner (15 topics)
+│   ├── Elementary (20 topics)
+│   ├── Intermediate (20 topics)
+│   └── Advanced (15 topics)
+├── Real Talk 🎭
+│   └── 60 scenarios across all levels
+├── Speed Challenge ⚡ (bonus mode)
+└── Settings ⚙️
 ```
 
 ---
 
-## Data Structures
+## Character System (Planned)
 
-### Repeat Mode Item
-```json
-{
-  "id": "rep-beg-001",
-  "indonesian": "Selamat pagi",
-  "english": "Good morning",
-  "audio_url": "audio/good-morning.mp3",
-  "timer_seconds": 5,
-  "xp_reward": 10
-}
-```
-
-### Respond Mode Item
-```json
-{
-  "id": "res-ele-001",
-  "prompt": "How are you doing today?",
-  "expected_topics": ["feeling", "wellbeing"],
-  "sample_answers": ["I'm good", "I'm doing well"],
-  "timer_seconds": 5,
-  "xp_reward": 15
-}
-```
-
-### Situation Mode Item
-```json
-{
-  "id": "sit-adv-001",
-  "category": "professional",
-  "role": "Bank Teller",
-  "scenario": "A customer is upset...",
-  "task": "Apologize professionally...",
-  "evaluation_criteria": ["apologetic tone", "clear explanation"],
-  "think_time": 10,
-  "speak_time": 30,
-  "xp_reward": 50
-}
-```
+| Character | Voice | Accent | Personality |
+|-----------|-------|--------|-------------|
+| Maya | Ara | American | Friendly teacher |
+| James | Rex | British | Professional mentor |
+| Sari | Eve | Australian | Energetic friend |
+| Budi | Leo | American | Patient coach |
+| Nina | Sal | British | Calm narrator |
+| Eko | Rex | Australian | Fun uncle |
