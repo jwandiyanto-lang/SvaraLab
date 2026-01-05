@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { colors, spacing, borderRadius, typography, shadows } from '../constants/theme';
 import { useGameStore, WordOfDay as WordOfDayType } from '../stores/gameStore';
-import vocabularyData from '../../data/vocabulary.json';
+import vocabularyData from '../data/vocabulary.json';
 
 // Word pool for daily words
 const WORD_POOL = vocabularyData.vocabulary.slice(0, 50);
