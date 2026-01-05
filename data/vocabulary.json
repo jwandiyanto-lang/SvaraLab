@@ -1,0 +1,838 @@
+{
+  "vocabulary": [
+    {
+      "id": 1,
+      "indonesian": "Selamat pagi",
+      "english": "Good morning",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 2,
+      "indonesian": "Terima kasih",
+      "english": "Thank you",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 3,
+      "indonesian": "Di mana toiletnya?",
+      "english": "Where is the bathroom?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "travel"
+    },
+    {
+      "id": 4,
+      "indonesian": "Berapa harganya?",
+      "english": "How much is it?",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 5,
+      "indonesian": "Santai aja",
+      "english": "Chill out",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "slang"
+    },
+    {
+      "id": 6,
+      "indonesian": "Gue lagi bokek",
+      "english": "I'm broke",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "slang"
+    },
+    {
+      "id": 7,
+      "indonesian": "Nama saya",
+      "english": "My name is",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 8,
+      "indonesian": "Saya dari Indonesia",
+      "english": "I am from Indonesia",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 9,
+      "indonesian": "Stasiun kereta di mana?",
+      "english": "Where is the train station?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "travel"
+    },
+    {
+      "id": 10,
+      "indonesian": "Saya mau pesan",
+      "english": "I want to order",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 11,
+      "indonesian": "Keren banget",
+      "english": "So cool",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "slang"
+    },
+    {
+      "id": 12,
+      "indonesian": "Tolong",
+      "english": "Please help",
+      "difficulty": "easy",
+      "timerSeconds": 2,
+      "category": "daily_life"
+    },
+    {
+      "id": 13,
+      "indonesian": "Maaf",
+      "english": "Sorry",
+      "difficulty": "easy",
+      "timerSeconds": 2,
+      "category": "daily_life"
+    },
+    {
+      "id": 14,
+      "indonesian": "Permisi",
+      "english": "Excuse me",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 15,
+      "indonesian": "Saya tidak mengerti",
+      "english": "I don't understand",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "daily_life"
+    },
+    {
+      "id": 16,
+      "indonesian": "Bisa bicara lebih pelan?",
+      "english": "Can you speak slower?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "daily_life"
+    },
+    {
+      "id": 17,
+      "indonesian": "Bandara di mana?",
+      "english": "Where is the airport?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "travel"
+    },
+    {
+      "id": 18,
+      "indonesian": "Saya butuh taksi",
+      "english": "I need a taxi",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "travel"
+    },
+    {
+      "id": 19,
+      "indonesian": "Sampai jumpa",
+      "english": "Goodbye",
+      "difficulty": "easy",
+      "timerSeconds": 2,
+      "category": "daily_life"
+    },
+    {
+      "id": 20,
+      "indonesian": "Selamat malam",
+      "english": "Good evening",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 21,
+      "indonesian": "Gue capek banget",
+      "english": "I'm so tired",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "slang"
+    },
+    {
+      "id": 22,
+      "indonesian": "Asik banget",
+      "english": "That's awesome",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "slang"
+    },
+    {
+      "id": 23,
+      "indonesian": "Mau ke mana?",
+      "english": "Where are you going?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "daily_life"
+    },
+    {
+      "id": 24,
+      "indonesian": "Saya lapar",
+      "english": "I am hungry",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 25,
+      "indonesian": "Saya haus",
+      "english": "I am thirsty",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 26,
+      "indonesian": "Ini enak sekali",
+      "english": "This is delicious",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 27,
+      "indonesian": "Saya mau air",
+      "english": "I want water",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 28,
+      "indonesian": "Boleh minta bon?",
+      "english": "Can I have the bill?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "daily_life"
+    },
+    {
+      "id": 29,
+      "indonesian": "Ada WiFi?",
+      "english": "Is there WiFi?",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "travel"
+    },
+    {
+      "id": 30,
+      "indonesian": "Apa password WiFi-nya?",
+      "english": "What is the WiFi password?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "travel"
+    },
+    {
+      "id": 31,
+      "indonesian": "Saya mau check in",
+      "english": "I want to check in",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "travel"
+    },
+    {
+      "id": 32,
+      "indonesian": "Saya mau check out",
+      "english": "I want to check out",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "travel"
+    },
+    {
+      "id": 33,
+      "indonesian": "Jam berapa sekarang?",
+      "english": "What time is it?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "daily_life"
+    },
+    {
+      "id": 34,
+      "indonesian": "Hari ini hari apa?",
+      "english": "What day is today?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "daily_life"
+    },
+    {
+      "id": 35,
+      "indonesian": "Cuaca hari ini bagus",
+      "english": "The weather is nice today",
+      "difficulty": "medium",
+      "timerSeconds": 5,
+      "category": "daily_life"
+    },
+    {
+      "id": 36,
+      "indonesian": "Hujan deras",
+      "english": "Heavy rain",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 37,
+      "indonesian": "Panas banget",
+      "english": "Very hot",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 38,
+      "indonesian": "Dingin banget",
+      "english": "Very cold",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 39,
+      "indonesian": "Saya sakit",
+      "english": "I am sick",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 40,
+      "indonesian": "Di mana apotek?",
+      "english": "Where is the pharmacy?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "travel"
+    },
+    {
+      "id": 41,
+      "indonesian": "Saya butuh dokter",
+      "english": "I need a doctor",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "daily_life"
+    },
+    {
+      "id": 42,
+      "indonesian": "Rumah sakit di mana?",
+      "english": "Where is the hospital?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "travel"
+    },
+    {
+      "id": 43,
+      "indonesian": "Saya alergi",
+      "english": "I am allergic",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 44,
+      "indonesian": "Tolong panggilkan ambulans",
+      "english": "Please call an ambulance",
+      "difficulty": "hard",
+      "timerSeconds": 5,
+      "category": "daily_life"
+    },
+    {
+      "id": 45,
+      "indonesian": "Bete banget",
+      "english": "So bored",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "slang"
+    },
+    {
+      "id": 46,
+      "indonesian": "Lebay deh",
+      "english": "So dramatic",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "slang"
+    },
+    {
+      "id": 47,
+      "indonesian": "Nggak ngerti gue",
+      "english": "I don't get it",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "slang"
+    },
+    {
+      "id": 48,
+      "indonesian": "Yuk jalan",
+      "english": "Let's go",
+      "difficulty": "easy",
+      "timerSeconds": 2,
+      "category": "slang"
+    },
+    {
+      "id": 49,
+      "indonesian": "Ogah ah",
+      "english": "No way",
+      "difficulty": "easy",
+      "timerSeconds": 2,
+      "category": "slang"
+    },
+    {
+      "id": 50,
+      "indonesian": "Serius lo?",
+      "english": "Are you serious?",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "slang"
+    },
+    {
+      "id": 51,
+      "indonesian": "Belok kiri",
+      "english": "Turn left",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "travel"
+    },
+    {
+      "id": 52,
+      "indonesian": "Belok kanan",
+      "english": "Turn right",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "travel"
+    },
+    {
+      "id": 53,
+      "indonesian": "Jalan terus",
+      "english": "Go straight",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "travel"
+    },
+    {
+      "id": 54,
+      "indonesian": "Berhenti di sini",
+      "english": "Stop here",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "travel"
+    },
+    {
+      "id": 55,
+      "indonesian": "Sudah sampai",
+      "english": "We have arrived",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "travel"
+    },
+    {
+      "id": 56,
+      "indonesian": "Berapa lama?",
+      "english": "How long?",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "travel"
+    },
+    {
+      "id": 57,
+      "indonesian": "Terlalu mahal",
+      "english": "Too expensive",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 58,
+      "indonesian": "Bisa lebih murah?",
+      "english": "Can it be cheaper?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "daily_life"
+    },
+    {
+      "id": 59,
+      "indonesian": "Saya mau bayar",
+      "english": "I want to pay",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 60,
+      "indonesian": "Bisa pakai kartu?",
+      "english": "Can I use a card?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "daily_life"
+    },
+    {
+      "id": 61,
+      "indonesian": "Hanya cash",
+      "english": "Cash only",
+      "difficulty": "easy",
+      "timerSeconds": 2,
+      "category": "daily_life"
+    },
+    {
+      "id": 62,
+      "indonesian": "Saya cari",
+      "english": "I am looking for",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 63,
+      "indonesian": "Ada yang bisa bantu?",
+      "english": "Can someone help?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "daily_life"
+    },
+    {
+      "id": 64,
+      "indonesian": "Saya tersesat",
+      "english": "I am lost",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "travel"
+    },
+    {
+      "id": 65,
+      "indonesian": "Di mana halte bus?",
+      "english": "Where is the bus stop?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "travel"
+    },
+    {
+      "id": 66,
+      "indonesian": "Bus ke mana ini?",
+      "english": "Where does this bus go?",
+      "difficulty": "medium",
+      "timerSeconds": 5,
+      "category": "travel"
+    },
+    {
+      "id": 67,
+      "indonesian": "Tiket satu",
+      "english": "One ticket",
+      "difficulty": "easy",
+      "timerSeconds": 2,
+      "category": "travel"
+    },
+    {
+      "id": 68,
+      "indonesian": "Pulang pergi",
+      "english": "Round trip",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "travel"
+    },
+    {
+      "id": 69,
+      "indonesian": "Sekali jalan",
+      "english": "One way",
+      "difficulty": "easy",
+      "timerSeconds": 2,
+      "category": "travel"
+    },
+    {
+      "id": 70,
+      "indonesian": "Jam berapa berangkat?",
+      "english": "What time does it leave?",
+      "difficulty": "medium",
+      "timerSeconds": 5,
+      "category": "travel"
+    },
+    {
+      "id": 71,
+      "indonesian": "Gue suka banget",
+      "english": "I love it",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "slang"
+    },
+    {
+      "id": 72,
+      "indonesian": "Nggak jelas",
+      "english": "Makes no sense",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "slang"
+    },
+    {
+      "id": 73,
+      "indonesian": "Mager",
+      "english": "Too lazy to move",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "slang"
+    },
+    {
+      "id": 74,
+      "indonesian": "Gercep dong",
+      "english": "Be quick about it",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "slang"
+    },
+    {
+      "id": 75,
+      "indonesian": "Mantap jiwa",
+      "english": "Absolutely great",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "slang"
+    },
+    {
+      "id": 76,
+      "indonesian": "Apa kabar?",
+      "english": "How are you?",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 77,
+      "indonesian": "Baik baik saja",
+      "english": "I am fine",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 78,
+      "indonesian": "Senang bertemu",
+      "english": "Nice to meet you",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 79,
+      "indonesian": "Dari mana?",
+      "english": "Where are you from?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "daily_life"
+    },
+    {
+      "id": 80,
+      "indonesian": "Berapa umurmu?",
+      "english": "How old are you?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "daily_life"
+    },
+    {
+      "id": 81,
+      "indonesian": "Kamu kerja apa?",
+      "english": "What do you do?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "daily_life"
+    },
+    {
+      "id": 82,
+      "indonesian": "Saya pelajar",
+      "english": "I am a student",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 83,
+      "indonesian": "Saya bekerja di",
+      "english": "I work at",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 84,
+      "indonesian": "Hobi kamu apa?",
+      "english": "What is your hobby?",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "daily_life"
+    },
+    {
+      "id": 85,
+      "indonesian": "Saya suka musik",
+      "english": "I like music",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 86,
+      "indonesian": "Saya suka olahraga",
+      "english": "I like sports",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 87,
+      "indonesian": "Di mana ATM?",
+      "english": "Where is the ATM?",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "travel"
+    },
+    {
+      "id": 88,
+      "indonesian": "Di mana bank?",
+      "english": "Where is the bank?",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "travel"
+    },
+    {
+      "id": 89,
+      "indonesian": "Saya mau tukar uang",
+      "english": "I want to exchange money",
+      "difficulty": "medium",
+      "timerSeconds": 5,
+      "category": "travel"
+    },
+    {
+      "id": 90,
+      "indonesian": "Kurs hari ini berapa?",
+      "english": "What is today's exchange rate?",
+      "difficulty": "hard",
+      "timerSeconds": 5,
+      "category": "travel"
+    },
+    {
+      "id": 91,
+      "indonesian": "Kepo banget sih",
+      "english": "So nosy",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "slang"
+    },
+    {
+      "id": 92,
+      "indonesian": "Jaim banget",
+      "english": "Acting too cool",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "slang"
+    },
+    {
+      "id": 93,
+      "indonesian": "Gabut",
+      "english": "Got nothing to do",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "slang"
+    },
+    {
+      "id": 94,
+      "indonesian": "Bucin",
+      "english": "Love slave",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "slang"
+    },
+    {
+      "id": 95,
+      "indonesian": "PHP",
+      "english": "Leading someone on",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "slang"
+    },
+    {
+      "id": 96,
+      "indonesian": "Saya mau foto",
+      "english": "I want to take a photo",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "travel"
+    },
+    {
+      "id": 97,
+      "indonesian": "Bisa foto bareng?",
+      "english": "Can we take a photo together?",
+      "difficulty": "hard",
+      "timerSeconds": 5,
+      "category": "travel"
+    },
+    {
+      "id": 98,
+      "indonesian": "Pemandangan indah",
+      "english": "Beautiful scenery",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "travel"
+    },
+    {
+      "id": 99,
+      "indonesian": "Saya senang",
+      "english": "I am happy",
+      "difficulty": "easy",
+      "timerSeconds": 3,
+      "category": "daily_life"
+    },
+    {
+      "id": 100,
+      "indonesian": "Semoga harimu menyenangkan",
+      "english": "Have a nice day",
+      "difficulty": "medium",
+      "timerSeconds": 4,
+      "category": "daily_life"
+    }
+  ],
+  "categories": [
+    {
+      "id": "travel",
+      "name": "Travel",
+      "description": "Directions, transportation, accommodation",
+      "icon": "plane"
+    },
+    {
+      "id": "daily_life",
+      "name": "Daily Life",
+      "description": "Common phrases, greetings, shopping",
+      "icon": "home"
+    },
+    {
+      "id": "slang",
+      "name": "Slang",
+      "description": "Indonesian and English casual expressions",
+      "icon": "chat"
+    }
+  ],
+  "difficulty_settings": {
+    "easy": {
+      "timerSeconds": 3,
+      "points": 10
+    },
+    "medium": {
+      "timerSeconds": 4,
+      "points": 20
+    },
+    "hard": {
+      "timerSeconds": 5,
+      "points": 30
+    }
+  }
+}
