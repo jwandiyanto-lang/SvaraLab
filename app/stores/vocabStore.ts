@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import vocabularyData from '../../data/vocabulary.json';
+import vocabularyData from '../data/vocabulary.json';
 
 // SRS intervals in days (SuperMemo-style)
 const SRS_INTERVALS = [0, 1, 3, 7, 14, 30]; // 0 = new, then increasing intervals

@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+/* SvaraLab Notion-Inspired Theme */
+:root {
+  /* Backgrounds */
+  --background: #ffffff;
+  --background-alt: #f7f7f5;
+  --card: #ffffff;
+  --card-alt: #f7f7f5;
+
+  /* Primary */
+  --primary: #0f172a;
+  --primary-hover: #334155;
+  --foreground: #37352f;
+
+  /* Text */
+  --text-primary: #37352f;
+  --text-secondary: #787774;
+  --text-tertiary: #9ca3af;
+  --text-light: #ffffff;
+
+  /* Game Mode Colors */
+  --repeat: #d9730d;
+  --repeat-bg: #faebdd;
+  --respond: #2b5f8c;
+  --respond-bg: #ebf5fe;
+  --listen: #2b8c55;
+  --listen-bg: #edfdf3;
+  --situation: #d44c47;
+  --situation-bg: #fbe4e4;
+
+  /* Functional */
+  --success: #2b8c55;
+  --success-bg: #edfdf3;
+  --warning: #d9730d;
+  --warning-bg: #faebdd;
+  --error: #d44c47;
+  --error-bg: #fbe4e4;
+
+  /* Borders */
+  --border: #e3e2e0;
+  --border-light: #f0f0f0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
+  --color-card: var(--card);
+  --color-card-alt: var(--card-alt);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-text-light: var(--text-light);
+
+  --color-repeat: var(--repeat);
+  --color-repeat-bg: var(--repeat-bg);
+  --color-respond: var(--respond);
+  --color-respond-bg: var(--respond-bg);
+  --color-listen: var(--listen);
+  --color-listen-bg: var(--listen-bg);
+  --color-situation: var(--situation);
+  --color-situation-bg: var(--situation-bg);
+
+  --color-success: var(--success);
+  --color-success-bg: var(--success-bg);
+  --color-warning: var(--warning);
+  --color-warning-bg: var(--warning-bg);
+  --color-error: var(--error);
+  --color-error-bg: var(--error-bg);
+
+  --color-border: var(--border);
+  --color-border-light: var(--border-light);
+
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: var(--respond-bg);
+  color: var(--respond);
+}
